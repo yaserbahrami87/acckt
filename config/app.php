@@ -175,6 +175,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         UxWeb\SweetAlert\SweetAlertServiceProvider::class,
+        Hekmatinasser\Verta\Laravel\VertaServiceProvider::class,
+        Kavenegar\Laravel\ServiceProvider::class,
+
 
 
     ],
@@ -229,6 +232,10 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Alert' => UxWeb\SweetAlert\SweetAlert::class,
+        'Verta' => Hekmatinasser\Verta\Verta::class,
+        'Kavenegar' => Kavenegar\Laravel\Facade::class,
+
+
 
     ],
 

@@ -17,3 +17,15 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
+Route::middleware(['can:isUser'])->prefix('panel')->group(function () {
+    Route::get('/profile','UserController@profile');
+
+    //USERS
+    Route::resource('user','UserController');
+
+    //Verify
+    Route::post('/verify/sendCode/tel','VerifyController@sendCodeTel');
+    Route::resource('verify','VerifyController');
+});
