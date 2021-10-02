@@ -8,7 +8,7 @@
         <div class="input-group-prepend">
             <span class="fa fa-user m-0"></span>
         </div>
-        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('پست الکترونیکی') }}" required autocomplete="email" autofocus />
+        <input id="email" type="text" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('پست الکترونیکی') }}" required autocomplete="email" autofocus />
         @error('email')
         <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>

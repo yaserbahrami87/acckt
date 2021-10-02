@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\verify;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -90,7 +91,7 @@ class VerifyController extends BaseController
         $status=verify::create([
             'tel'       =>Auth::user()->tel,
             'code'      =>$digit_random_number,
-            'type'      =>'tel',
+            'type'      =>'tel_verify',
             'date_fa'   =>$this->dateNow,
             'time_fa'   =>$this->timeNow,
 
@@ -108,5 +109,53 @@ class VerifyController extends BaseController
         }
 
         return back();
+    }
+
+    public function checkCodeTel(Request $request)
+    {
+        $this->validate($request,[
+            'code'  =>'required|numeric'
+        ]);
+
+        $verify=verify::where('code','=',$request->code)
+                    ->where('type','tel_verify')
+                    ->where('verify','=',1)
+                    ->latest()
+                    ->first();
+        if(is_null($verify))
+        {
+            alert()->error('کد وارد شده اشتباه است')->persistent('بستن');
+        }
+        else
+        {
+            if($verify->tel==Auth::user()->tel)
+            {
+                $verify->created_at=$verify->created_at->addMinutes(30);
+                if($verify->created_at>Carbon::now())
+                {
+                    $user=Auth::user();
+                    $user->tel_verify=1;
+                    $user->save();
+
+                    //مقدار به 0 تغییر پیدا میکند
+                    $verify->verify=0;
+                    $verify->save();
+                    alert()->success('شماره همراه شما فعال شد')->persistent('بستن');
+                }
+                else
+                {
+                    alert()->error('کد فعال سازی منقضی شده است')->persistent('بستن');
+
+                }
+
+            }
+            else
+            {
+                alert()->error('کد وارد شده مروبط به تلفن شما نمی باشد')->persistent('بستن');
+            }
+        }
+        return back();
+
+
     }
 }

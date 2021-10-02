@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -66,9 +67,26 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request,User $user)
     {
-        //
+        $this->validate($request,[
+            'fname' =>'nullable|persian_alpha|max:20',
+            'lname' =>'nullable|persian_alpha|max:100',
+            'tel'   =>'nullable|iran_mobile|',
+            'email' =>'nullable|email|',
+        ]);
+
+        $status=$user->update($request->all());
+        if($status)
+        {
+            alert()->success('بروزرسانی با موفقیت انجام شد')->persistent('بستن');
+        }
+        else
+        {
+            alert()->error('خطا در بروزرسانی ')->persistent('بستن');
+        }
+
+        return back();
     }
 
     /**
@@ -80,5 +98,12 @@ class UserController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+
+    //نمایش پروفایل کاربر
+    public function profile()
+    {
+        return view('panelUser.profile');
     }
 }

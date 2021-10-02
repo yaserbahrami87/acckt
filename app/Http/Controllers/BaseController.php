@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\User;
 use App\verify;
+use Hekmatinasser\Verta\Verta;
 use Illuminate\Http\Request;
 use Kavenegar;
 
@@ -12,6 +14,34 @@ class BaseController extends Controller
         $dateNow = verta();
         $this->dateNow = $dateNow->format('Y/m/d');
         $this->timeNow = $dateNow->format('H:i:s');
+    }
+
+    public function get_user($id=NULL,$tel=NULL,$type=NULL,$paginate='get')
+    {
+        User::when($id,function($query) use ($id)
+        {
+            return $query->where('id','=',$id);
+        })
+        ->when($tel,function($query) use($tel)
+        {
+            return $query->where('tel','=',$tel);
+        })
+        ->when($type,function($query) use ($type)
+        {
+            return $query->where('type','=',$type);
+        })
+        ->when($paginate=='get',function($query) use ($paginate)
+        {
+            return $query->get();
+        })
+        ->when($paginate=='paginate',function($query) use ($paginate)
+        {
+            return $query->paginate($this->get_paginate());
+        })
+        ->when($paginate=='first',function($query) use ($paginate)
+        {
+            return $query->first();
+        });
     }
 
     public function sendSMS($msg,$tel)
@@ -54,53 +84,70 @@ class BaseController extends Controller
         }
     }
 
-    public function verify($id=NULL,$tel=NULL,$code=NULL,$verify=NULL,$paginate='first',$type=NULL,$date_fa=NULL,$time_fa=NULL)
+    public function get_verify($id=NULL,$tel=NULL,$code=NULL,$verify=NULL,$type=NULL,$date_fa=NULL,$time_fa=NULL,$paginate='first')
     {
         return verify::when($id,function($query) use ($id)
         {
             return $query->where('id','=',$id);
         })
-            ->when($tel,function($query) use ($tel)
-            {
-                return $query->where('tel','=',$tel);
-            })
-            ->when($code,function($query) use($code)
-            {
-                return $query->where('code','=',$code);
-            })
-            ->when($verify,function($query) use($verify)
-            {
-                return $query->where('verify','=',$verify);
-            })
-            ->when($type,function($query) use($type)
-            {
-                return $query->where('type','=',$type);
-            })
-            ->when($date_fa,function($query) use($date_fa)
-            {
-                return $query->where('date_fa','=',$date_fa);
-            })
-            ->when($time_fa,function($query) use($time_fa)
-            {
-                return $query->where('time_fa','=',$time_fa);
-            })
-            ->when($paginate=='get',function($query)
-            {
-                return $query->get();
-            })
-            ->when($paginate=='paginate',function($query)
-            {
-                return $query->paginate($this->get_paginate());
-            })
-            ->when($paginate=='first',function($query)
-            {
-                return $query->first();
-            });
+        ->when($tel,function($query) use ($tel)
+        {
+            return $query->where('tel','=',$tel);
+        })
+        ->when($code,function($query) use($code)
+        {
+            return $query->where('code','=',$code);
+        })
+        ->when($verify,function($query) use($verify)
+        {
+            return $query->where('verify','=',$verify);
+        })
+        ->when($type,function($query) use($type)
+        {
+            return $query->where('type','=',$type);
+        })
+        ->when($date_fa,function($query) use($date_fa)
+        {
+            return $query->where('date_fa','=',$date_fa);
+        })
+        ->when($time_fa,function($query) use($time_fa)
+        {
+            return $query->where('time_fa','=',$time_fa);
+        })
+        ->when($paginate=='get',function($query)
+        {
+            return $query->get();
+        })
+        ->when($paginate=='paginate',function($query)
+        {
+            return $query->paginate($this->get_paginate());
+        })
+        ->when($paginate=='first',function($query)
+        {
+            $query->latest();
+            return $query->first();
+        });
     }
 
     public function get_paginate()
     {
         $count=30;
         return $count;
+    }
+
+    //تبدیل تاریخ میلادی به شمسی
+    public function changeTimestampToShamsi($date)
+    {
+        $dateMiladi=new verta($date);
+        return ($dateMiladi->hour.":".$dateMiladi->minute."  ".$dateMiladi->year."/".$dateMiladi->month."/".$dateMiladi->day);
+    }
+
+    //تبدیل تاریخ شمسی به میلادی
+    public function changeTimestampToMilad($date)
+    {
+        $dateShamsi=Verta::parse($date);
+        $dateMiladi= (Verta::getGregorian($dateShamsi->year,$dateShamsi->month,$dateShamsi->day));
+        $dateMiladi=($dateMiladi[0].'-'.$dateMiladi[1].'-'.$dateMiladi[2]);
+        return $dateMiladi;
     }
 }

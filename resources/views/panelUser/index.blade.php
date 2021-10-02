@@ -1,19 +1,38 @@
 @extends('panelUser.master.index')
 @section('content')
     @if(!Auth::user()->tel_verify)
-        <div class="col-12">
-            <div class="alert alert-danger">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <i class="material-icons">close</i>
-                </button>
-                <span>خطا -  برای ادامه لطفا تلفن همراه خود را با ارسال کد تائید کنید
-                    <form method="post" action="/panel/verify/sendCode/tel">
-                        {{csrf_field()}}
-                        <button type="submit" class="btn btn-success" href="#">ارسال کد</button>
-                    </form>
-                </span>
-            </div>
-        </div>
+            @if($verifyTel)
+                <div class="col-12">
+                    <div class="alert alert-warning">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <i class="material-icons">close</i>
+                        </button>
+
+                        <span>خطا -  کد ارسال شده را جهت فعال سازی وارد کنید
+                            <form method="post" action="/panel/verify/checkCode/tel" class="d-inline">
+                                {{csrf_field()}}
+                                  <input type="text" class="form-control" name="code" />
+                                  <button type="submit" class="btn btn-success" href="#">بررسی کد</button>
+                            </form>
+                        </span>
+                    </div>
+                </div>
+            @else
+                <div class="col-12">
+                    <div class="alert alert-danger">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <i class="material-icons">close</i>
+                        </button>
+                        <span>خطا -  برای ادامه لطفا تلفن همراه خود را با ارسال کد تائید کنید
+                            <form method="post" action="/panel/verify/sendCode/tel" class="d-inline">
+                                {{csrf_field()}}
+
+                                <button type="submit" class="btn btn-success" href="#">ارسال کد</button>
+                            </form>
+                        </span>
+                    </div>
+                </div>
+            @endif
     @endif
     <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
         <div class="card card-stats">

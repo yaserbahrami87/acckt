@@ -27,5 +27,6 @@ Route::middleware(['can:isUser'])->prefix('panel')->group(function () {
 
     //Verify
     Route::post('/verify/sendCode/tel','VerifyController@sendCodeTel');
+    Route::post('/verify/checkCode/tel','VerifyController@checkCodeTel');
     Route::resource('verify','VerifyController');
 });
