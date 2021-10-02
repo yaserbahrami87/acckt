@@ -69,6 +69,7 @@ class UserController extends Controller
      */
     public function update(Request $request,User $user)
     {
+
         $this->validate($request,[
             'fname' =>'nullable|persian_alpha|max:20',
             'lname' =>'nullable|persian_alpha|max:100',
