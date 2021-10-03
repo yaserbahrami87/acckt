@@ -46,6 +46,11 @@
             </button>
         </div>
         <div class="col-12">
+            <a class="btn btn-link text-light" href="{{ route('register') }}">
+                {{ __('ثبت نام') }}
+            </a>
+        </div>
+        <div class="col-12">
             @if (Route::has('password.request'))
                 <a class="btn btn-link text-light" href="{{ route('password.request') }}">
                     {{ __('رمز عبور خود را فراموش کردید؟') }}

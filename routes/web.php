@@ -29,4 +29,7 @@ Route::middleware(['can:isUser'])->prefix('panel')->group(function () {
     Route::post('/verify/sendCode/tel','VerifyController@sendCodeTel');
     Route::post('/verify/checkCode/tel','VerifyController@checkCodeTel');
     Route::resource('verify','VerifyController');
+
+    //amount capital
+    Route::resource('amountcapital','AmountcapitalController');
 });

@@ -175,6 +175,7 @@ class ComposerStaticInit8444b80d2cec16ec8fbf1152f75e84b6
         'C' => 
         array (
             'Cron\\' => 5,
+            'Collective\\Errors\\' => 18,
             'Carbon\\' => 7,
         ),
         'B' => 
@@ -497,6 +498,10 @@ class ComposerStaticInit8444b80d2cec16ec8fbf1152f75e84b6
         array (
             0 => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron',
         ),
+        'Collective\\Errors\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravelcollective/errors/src',
+        ),
         'Carbon\\' => 
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
@@ -561,6 +566,7 @@ class ComposerStaticInit8444b80d2cec16ec8fbf1152f75e84b6
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
+        'App\\amountcapital' => __DIR__ . '/../..' . '/app/amountcapital.php',
         'App\\verify' => __DIR__ . '/../..' . '/app/verify.php',
         'Asm89\\Stack\\Cors' => __DIR__ . '/..' . '/asm89/stack-cors/src/Cors.php',
         'Asm89\\Stack\\CorsService' => __DIR__ . '/..' . '/asm89/stack-cors/src/CorsService.php',
@@ -653,6 +659,7 @@ class ComposerStaticInit8444b80d2cec16ec8fbf1152f75e84b6
         'Carbon\\Traits\\Units' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Units.php',
         'Carbon\\Traits\\Week' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Traits/Week.php',
         'Carbon\\Translator' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Translator.php',
+        'Collective\\Errors\\ErrorsServiceProvider' => __DIR__ . '/..' . '/laravelcollective/errors/src/ErrorsServiceProvider.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Cron\\AbstractField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/AbstractField.php',
         'Cron\\CronExpression' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/CronExpression.php',

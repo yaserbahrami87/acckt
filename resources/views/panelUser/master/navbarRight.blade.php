@@ -22,8 +22,8 @@
                     <p>پروفایل</p>
                 </a>
             </li>
-            <li class="nav-item ">
-                <a class="nav-link" href="#">
+            <li class="nav-item @if(Request()->is('panel/amountcapital/create')) active @endif">
+                <a class="nav-link " href="/panel/amountcapital/create">
                     <i class="material-icons">content_paste</i>
                     <p>میزان سرمایه</p>
                 </a>
