@@ -76,7 +76,7 @@ class AmountcapitalController extends Controller
      */
     public function edit(amountcapital $amountcapital)
     {
-        //
+        dd($amountcapital);
     }
 
     /**

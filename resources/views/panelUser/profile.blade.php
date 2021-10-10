@@ -37,8 +37,8 @@
                         </div>
                         <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
                             <div class="form-group">
-                                <input type="file" class="form-control" id="customFile">
-                                <label class="custom-file-label" for="customFile">انتخاب عکس</label>
+                                <input type="file" class="form-control" id="image_profile" name="image_profile" />
+                                <label class="custom-file-label" for="image_profile">انتخاب عکس</label>
                             </div>
                         </div>
                         <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">

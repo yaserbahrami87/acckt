@@ -17,12 +17,22 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('/loginsms', function()
+{
+    return view('auth.loginSms');
+});
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
+Route::post('/loginsms/checkcode','VerifyController@checkCodeLogin');
+
 
 Route::middleware(['can:isUser'])->prefix('panel')->group(function () {
     Route::get('/profile','UserController@profile');
 
     //USERS
+    Route::get('/user/amountcapital/create','UserController@amountcapitalCreate');
+    Route::get('/user/venturecapital/create','UserController@venturecapitalCreate');
+    Route::patch('/user/amountcapital/{user}/update','UserController@amountcapitalUpdate');
+    Route::patch('/user/venturecapital/{user}/update','UserController@venturecapitalUpdate');
     Route::resource('user','UserController');
 
     //Verify

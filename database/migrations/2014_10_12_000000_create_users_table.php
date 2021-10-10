@@ -23,6 +23,9 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->tinyInteger('type')->default(1);
+            $table->string('image_profile',250)->nullable();
+            $table->bigInteger('amountcapitals_id')->nullable();
+            $table->bigInteger('investmentIndex_id')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

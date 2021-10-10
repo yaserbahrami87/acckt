@@ -167,6 +167,15 @@
         <div class="container text-center">
             <div class="row">
                 <div class="col-12 col-md-6 col-xl-6 col-lg-6" id="login">
+                    @if($errors->any())
+                        <div class="col-12">
+                            <div class="alert alert-danger" role="alert">
+                                @foreach($errors->all() as $error)
+                                    <li>{{$error}}</li>
+                                @endforeach
+                            </div>
+                        </div>
+                    @endif
                     @yield('forms')
                     <div class="clearfix"></div>
 

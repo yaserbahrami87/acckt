@@ -158,4 +158,34 @@ class VerifyController extends BaseController
 
 
     }
+
+    public  function checkCodeLogin(Request $request)
+    {
+        $this->validate($request,[
+            'tel'   =>'required|iran_mobile',
+        ]);
+
+        $digit_random_number = mt_rand(100, 999999);
+        $status=verify::create([
+            'tel'       =>$request->tel,
+            'code'      =>$digit_random_number,
+            'type'      =>'login',
+            'date_fa'   =>$this->dateNow,
+            'time_fa'   =>$this->timeNow,
+
+        ]);
+
+        if($status)
+        {
+            $msg="کد یکبار مصرف:".$digit_random_number;
+            $this->sendSMS($msg,$request->tel);
+            alert()->success('کد یکبار مصرف به تلفن شما ارسال شد')->persistent('بستن');
+        }
+        else
+        {
+            alert()->error('خطا در ارسال کد یکبار مصرف')->persistent('بستن');
+        }
+
+        return back();
+    }
 }
