@@ -16,7 +16,27 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', 'HomeController@index')->name('home');
+Route::get('/panel', 'HomeController@index')->name('home');
+Route::get('/', function()
+{
+    return view('acckt_master.pages.main');
+});
+
+Route::get('/sarmaye', function()
+{
+    return view('sarmayeh.index');
+});
+
+Route::get('/startup', function()
+{
+    return view('idea.index');
+});
+
+Route::get('/register_idea', function()
+{
+    return view('auth.register_idea');
+});
+
 Route::get('/loginsms', function()
 {
     return view('auth.loginSms');
@@ -24,8 +44,14 @@ Route::get('/loginsms', function()
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::post('/loginsms/checkcode','VerifyController@checkCodeLogin');
 
+Route::middleware(['can:isAdmin'])->prefix('admin')->group(function () {
+    Route::get('/profile','UserController@profile');
+    Route::get('/user/all','UserController@users');
+    Route::get('/user/{user}','UserController@showUser');
+});
 
-Route::middleware(['can:isUser'])->prefix('panel')->group(function () {
+
+Route::middleware(['can:isUser'])->prefix('portal')->group(function () {
     Route::get('/profile','UserController@profile');
 
     //USERS
@@ -33,7 +59,13 @@ Route::middleware(['can:isUser'])->prefix('panel')->group(function () {
     Route::get('/user/venturecapital/create','UserController@venturecapitalCreate');
     Route::patch('/user/amountcapital/{user}/update','UserController@amountcapitalUpdate');
     Route::patch('/user/venturecapital/{user}/update','UserController@venturecapitalUpdate');
+    Route::get('/user/user_further_information','UserController@userFurtherInformationCreate');
+    Route::get('/user/social_networks','UserController@socialNetworksCreate');
+
     Route::resource('user','UserController');
+
+    //Idea
+    Route::get('/idea','IdeaController@index');
 
     //Verify
     Route::post('/verify/sendCode/tel','VerifyController@sendCodeTel');
@@ -42,4 +74,26 @@ Route::middleware(['can:isUser'])->prefix('panel')->group(function () {
 
     //amount capital
     Route::resource('amountcapital','AmountcapitalController');
+});
+
+
+Route::middleware(['can:isIdea'])->prefix('portal_idea')->group(function () {
+    //USERS
+//    Route::get('/user/amountcapital/create','UserController@amountcapitalCreate');
+//    Route::get('/user/venturecapital/create','UserController@venturecapitalCreate');
+//    Route::patch('/user/amountcapital/{user}/update','UserController@amountcapitalUpdate');
+//    Route::patch('/user/venturecapital/{user}/update','UserController@venturecapitalUpdate');
+    Route::get('/user/user_further_information','UserController@userFurtherInformationCreate');
+    Route::get('/user/social_networks','UserController@socialNetworksCreate');
+    Route::resource('user','UserController');
+
+    //Idea
+
+    Route::resource('idea','IdeaController');
+});
+
+//test
+Route::get('/test',function()
+{
+    return view('acckt_master.pages.panel.index');
 });

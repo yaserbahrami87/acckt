@@ -29,12 +29,6 @@ class HomeController extends BaseController
      */
     public function index()
     {
-//        $check_verify= verify::where('tel','=',Auth::user()->tel)
-//                                ->where('verify','=',1)
-//                                ->where('type','=','tel_verify')
-//                                ->where('date_fa','=',$this->dateNow)
-//                                ->latest()
-//                                ->first();
         $check_verify=$this->get_verify(NULL,Auth::user()->tel,NULL,1,'tel_verify',$this->dateNow,NULL,'first');
 
         $verifyTel=false;
@@ -49,7 +43,18 @@ class HomeController extends BaseController
         }
 
 
-        return view('panelUser.index')
-                    ->with('verifyTel',$verifyTel);
+
+        if(Auth::user()->type==2)
+        {
+            return view('acckt_master.pages.panel.index')
+                ->with('verifyTel',$verifyTel);
+        }
+        elseif(Auth::user()->type==1)
+        {
+            return view('acckt_sarmayeh.pages.panel.index')
+                ->with('verifyTel',$verifyTel);
+        }
+
+
     }
 }

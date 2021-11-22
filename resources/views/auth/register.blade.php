@@ -3,6 +3,7 @@
 @section('forms')
     <form method="POST" action="{{ route('register') }}">
         {{csrf_field()}}
+        <input type="hidden" value="1" name="type" />
         <div class="input-group mb-3">
             <div class="input-group-prepend">
                 <span class="fa fa-phone m-0"></span>

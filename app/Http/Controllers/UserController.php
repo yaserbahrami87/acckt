@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Gate;
 
 class UserController extends Controller
 {
@@ -69,34 +71,47 @@ class UserController extends Controller
      */
     public function update(Request $request,User $user)
     {
-
         $this->validate($request,[
             'fname'         =>'nullable|persian_alpha|max:20',
             'lname'         =>'nullable|persian_alpha|max:100',
             'tel'           =>'nullable|iran_mobile|',
             'email'         =>'nullable|email|',
-            'image_profile' =>'nullable|max:600|mimes:jpeg,jpg,png'
+            'avatar'        =>'nullable|max:600|mimes:jpeg,jpg,png',
+            'national_code' =>'nullable|numeric|min:12',
+            'biography'     =>'nullable|string|',
+            'birth_date'    =>'nullable|string|',
+            'address'       =>'nullable|string|',
+            'phone'         =>'nullable|numeric|',
+            'site'          =>'nullable|url|',
+            'university'    =>'nullable|string|',
+            'faculty'       =>'nullable|string|',
+            'study_field'   =>'nullable|string|',
+            'major'         =>'nullable|string|',
+            'instagram'     =>'nullable|string|',
+            'linkedin'      =>'nullable|string|',
         ]);
+
+
         $status=$user->update($request->all());
         if($status)
         {
-            if($request->has('image_profile')&&($request->file('image_profile')->isvalid()))
+            if($request->has('avatar')&&($request->file('avatar')->isvalid()))
             {
-                $file=$request->file('image_profile');
-                $image_profile="profile_".$user->tel.".".$request->file('image_profile')->extension();
+                $file=$request->file('avatar');
+                $image_profile="profile_".$user->tel.".".$request->file('avatar')->extension();
                 $path=public_path('images/users/');
-                $files=$request->file('image_profile')->move($path,$image_profile);
+                $files=$request->file('avatar')->move($path,$image_profile);
                 if($files)
                 {
-                    $user->image_profile=$image_profile;
+                    $user->avatar=$image_profile;
                     $user->save();
-                    alert()->success('بروزرسانی با موفقیت انجام شد')->persistent('بستن');
                 }
                 else
                 {
                     alert()->error('خطا در بارگذاری عکس')->persistent('بستن');
                 }
             }
+            alert()->success('بروزرسانی با موفقیت انجام شد')->persistent('بستن');
 
         }
         else
@@ -122,7 +137,17 @@ class UserController extends Controller
     //نمایش پروفایل کاربر
     public function profile()
     {
-        return view('panelUser.profile');
+        if(Auth::user()->type==2)
+        {
+
+            return view('sarmayeh.index');
+        }
+        else
+        {
+
+            return view('panelUser.profile');
+        }
+
     }
 
     public function amountcapitalCreate()
@@ -170,9 +195,72 @@ class UserController extends Controller
         {
             alert()->error('خطا در ثبت اطلاعات سرمایه گذاری خطرپذیر')->persistent('بستن');
         }
-
         return back();
+    }
+
+    public function users()
+    {
+        $users=User::where('type','=',1)
+                        ->orderby('id','desc')
+                        ->paginate(30);
+
+        return view('sarmayeh.users')
+                        ->with('users',$users);
+    }
+
+    public  function showUser(User $user)
+    {
+        switch($user->amountcapitals_id)
+        {
+            case 1:$user->amountcapitals_id="کمتر از یک میلیارد تومان";
+                    break;
+            case 2:$user->amountcapitals_id="بین یک تا دو میلیارد تومان";
+                    break;
+            case 3:$user->amountcapitals_id="بیش از دو میلیارد تومان";
+                break;
+            default:$user->amountcapitals_id="خطا";
+                break;
+        }
 
 
+        switch ($user->investmentindex_id)
+        {
+            case 1:$user->investmentindex_id="کم";
+                    break;
+            case 2:$user->investmentindex_id="متوسط";
+                break;
+            case 3:$user->investmentindex_id="زیاد";
+                break;
+            default:$user->investmentindex_id="خطا";
+                break;
+
+        }
+        return view('sarmayeh.profile')
+                    ->with('user',$user);
+    }
+
+    public function userFurtherInformationCreate()
+    {
+        if(Auth::user()->type==1)
+        {
+            return view('acckt_sarmayeh.pages.panel.further_information');
+        }
+        elseif(Auth::user()->type==2)
+        {
+            return view('acckt_master.pages.panel.further_information');
+        }
+
+    }
+
+    public function socialNetworksCreate()
+    {
+        if(Auth::user()->type==1)
+        {
+            return view('acckt_sarmayeh.pages.panel.social_networks');
+        }
+        elseif(Auth::user()->type==2)
+        {
+            return view('acckt_master.pages.panel.social_networks');
+        }
     }
 }
