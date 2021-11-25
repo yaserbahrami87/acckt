@@ -31,11 +31,11 @@ class InvestmentmodelController extends Controller
             ->first();
         if(is_null($investmentmodel) )
         {
-            return view('acckt_sarmayeh.pages.panel.investmentmodel_insert');
+            return view('acckt_sarmayeh.pages.panel.investmentModel_insert');
         }
         else
         {
-            return view('acckt_sarmayeh.pages.panel.investmentmodel_edit')
+            return view('acckt_sarmayeh.pages.panel.investmentModel_edit')
                 ->with('investmentModel',$investmentmodel);
         }
     }
