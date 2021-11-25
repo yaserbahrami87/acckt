@@ -190,8 +190,6 @@ bottom: -15px;
 
 .section2-item {
     mix-blend-mode: lighten;
-    margin-top: 10px;
-    height:85%;
 }
 
 .my-video-content {
@@ -202,7 +200,7 @@ bottom: -15px;
     padding-right: 10px;
     direction: rtl;
     vertical-align: top;
-    margin-top: 15%;
+    margin-top: 14%;
     line-height: 1.7em;
 }
 
@@ -214,7 +212,7 @@ bottom: -15px;
 .my-video {
     width: 45%;
     display: inline-block;
-    margin-top: 7%;
+    margin-top: 5%;
     margin-right: 15%;
 }
 
@@ -253,7 +251,6 @@ bottom: -15px;
     width: 500px;
     overflow: hidden;
     font-size: 4em;
-    margin: 0 auto;
 }
 
 .section3 {
@@ -513,6 +510,7 @@ bottom: -15px;
     animation: pulse 1.5s 0s infinite normal ease forwards;
    /*background-image: url("https://jamesmuspratt.com/codepen/img/arrow-down.svg");*/
     background-image: url("../img/double-down-arrow.svg");
+    transform: rotate(-90deg);
     background-repeat: no-repeat;
 }
 .scroll-down a:before, .scroll-down a:
@@ -610,7 +608,11 @@ circle {
 .my-header .nav-item {
     margin: 0 5px;
 }
-
+@media (max-width){
+    h1{
+        font-size: 20px;
+    }
+}
 @media (max-width:767px) {
     .panel3 .btn-actions {
         width: 120px;
