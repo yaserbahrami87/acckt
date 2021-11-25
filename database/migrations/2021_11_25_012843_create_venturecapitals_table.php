@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAmountcapitalsTable extends Migration
+class CreateVenturecapitalsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateAmountcapitalsTable extends Migration
      */
     public function up()
     {
-        Schema::create('amountcapitals', function (Blueprint $table) {
+        Schema::create('venturecapitals', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('user_id')->nullable()->index();
-            $table->bigInteger('amountcapitals_id')->nullable();
+            $table->bigInteger('user_id')->nullable();
+            $table->tinyInteger('venturecapital_id')->nullable();
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateAmountcapitalsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('amountcapitals');
+        Schema::dropIfExists('venturecapitals');
     }
 }

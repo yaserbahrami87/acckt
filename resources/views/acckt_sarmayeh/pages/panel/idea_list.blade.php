@@ -61,23 +61,17 @@
                                               <th>عنوان ایده</th>
                                               <th>خلاصه ایده</th>
                                               <th>زمان ثبت</th>
-                                              <th>قیمت (ريال)</th>
-                                              <th>وضعیت فروش</th>
                                               <th>وضعیت</th>
-                                              <th>ویرایش</th>
                                           </tr>
                                       </thead>
                                       <tbody>
                                         @foreach($idea as $item)
                                           <tr>
                                               <td>1</td>
-                                              <td><a href="/portal/new_idea">{{$item->group_name}}</a></td>
+                                              <td><a href="/portal/idea/{{$item->id}}">{{$item->group_name}}</a></td>
                                               <td>{{$item->description}}</td>
-                                              <td>1399/01/14</td>
-                                              <td>10،000،000</td>
-                                              <td>خیر</td>
+                                              <td>{{$item->date_fa}}</td>
                                               <td><span class="badge bg-rgba-success text-success">فعال</span></td>
-                                              <td><a href="/portal/new_idea"><i class="bx bx-edit-alt"></i></a></td>
                                           </tr>
                                         @endforeach
                                       </tbody>

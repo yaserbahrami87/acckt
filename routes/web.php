@@ -55,17 +55,19 @@ Route::middleware(['can:isUser'])->prefix('portal')->group(function () {
     Route::get('/profile','UserController@profile');
 
     //USERS
-    Route::get('/user/amountcapital/create','UserController@amountcapitalCreate');
-    Route::get('/user/venturecapital/create','UserController@venturecapitalCreate');
-    Route::patch('/user/amountcapital/{user}/update','UserController@amountcapitalUpdate');
+//    Route::get('/user/amountcapital/create','UserController@amountcapitalCreate');
+//    Route::get('/user/venturecapital/create','UserController@venturecapitalCreate');
+//    Route::patch('/user/amountcapital/{user}/update','UserController@amountcapitalUpdate');
     Route::patch('/user/venturecapital/{user}/update','UserController@venturecapitalUpdate');
     Route::get('/user/user_further_information','UserController@userFurtherInformationCreate');
     Route::get('/user/social_networks','UserController@socialNetworksCreate');
 
     Route::resource('user','UserController');
+    Route::resource('venturecapital','VenturecapitalController');
 
     //Idea
     Route::get('/idea','IdeaController@index');
+    Route::get('/idea/{idea}','IdeaController@show');
 
     //Verify
     Route::post('/verify/sendCode/tel','VerifyController@sendCodeTel');
@@ -74,7 +76,14 @@ Route::middleware(['can:isUser'])->prefix('portal')->group(function () {
 
     //amount capital
     Route::resource('amountcapital','AmountcapitalController');
+
+    //investmentmodel
+    Route::resource('investmentmodel',"InvestmentmodelController");
 });
+
+
+
+
 
 
 Route::middleware(['can:isIdea'])->prefix('portal_idea')->group(function () {

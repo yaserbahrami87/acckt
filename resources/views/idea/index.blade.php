@@ -60,7 +60,7 @@
                     </li>
                     <li class="nav-item">
                         @if(Auth::check())
-                            {{Auth::user()->lname}}
+                            <a href="/panel" class="btn btn-actions-header">پروفایل</a>
                         @else
                             <a href="/login" class="btn btn-actions-header">ورود</a>
                             <a href="/register_idea" class="btn btn-actions-header">ثبت ایده</a>
@@ -382,7 +382,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="{{asset('/acckt/js/popper.min.js')}}"></script>
     <script src="{{asset('/acckt/js/bootstrap.min.js')}}"></script>
-  <script src="{{asset('/acckt/js/jquery.scrollify.js')}}"></script>-->
+    <script src="{{asset('/acckt/js/jquery.scrollify.js')}}"></script>
 
     <script src="{{asset('/acckt/js/jquery.horizonScroll.js')}}"></script>
     <script>

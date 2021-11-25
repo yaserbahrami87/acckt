@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\amountcapital;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -152,50 +153,53 @@ class UserController extends Controller
 
     public function amountcapitalCreate()
     {
-        return view('panelUser.amountCapital_insert');
+//        $user=Auth::user()->amountcapital->select('users.*')->first();
+//        $amountcapital=Auth::user()->amountcapital->first();
+//        $amountcapital=user::join('amountcapitals','users.id','=','amountcapitals.user_id')
+//                    ->where('amountcapitals.user_id','=',Auth::user()->id)
+//                    ->first();
+//
+//        if(is_null($amountcapital) )
+//        {
+//            return view('acckt_sarmayeh.pages.amountCapital_insert')
+//                        ->with('amountcapital',$amountcapital);
+//        }
+//        else
+//        {
+//
+//        }
+
     }
 
     public function amountcapitalUpdate(User $user,Request $request)
     {
-        $this->validate($request,[
-            'amountcapitals_id'     =>'required|numeric',
-        ]);
-
-        $status=$user->update($request->all());
-        if($status)
-        {
-            alert()->success('اطلاعات میزان سرمایه با موفقیت بارگذاری شد')->persistent('بستن');
-        }
-        else
-        {
-            alert()->error('خطا در ثبت اطلاعات میزان سرمایه')->persistent('بستن');
-        }
-
-        return back();
+//        $this->validate($request,[
+//            'amountcapitals_id'     =>'required|numeric',
+//        ]);
+//
+//        $status=$user->update($request->all());
+//        if($status)
+//        {
+//            alert()->success('اطلاعات میزان سرمایه با موفقیت بارگذاری شد')->persistent('بستن');
+//        }
+//        else
+//        {
+//            alert()->error('خطا در ثبت اطلاعات میزان سرمایه')->persistent('بستن');
+//        }
+//
+//        return back();
 
     }
 
     public function venturecapitalCreate()
     {
-        return view('panelUser.venturecapital_insert');
+
     }
 
     public function venturecapitalUpdate(User $user,Request $request)
     {
 
-        $this->validate($request,[
-            'investmentIndex_id'    =>'required|numeric'
-        ]);
-        $status=$user->update($request->all());
-        if($status)
-        {
-            alert()->success('اطلاعات سرمایه گذاری خطرپذیر با موفقیت بارگذاری شد')->persistent('بستن');
-        }
-        else
-        {
-            alert()->error('خطا در ثبت اطلاعات سرمایه گذاری خطرپذیر')->persistent('بستن');
-        }
-        return back();
+
     }
 
     public function users()

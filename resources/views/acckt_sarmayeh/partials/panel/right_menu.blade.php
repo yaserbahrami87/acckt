@@ -24,7 +24,7 @@
             <li class=" navigation-header"><span>پورتال صاحبان سرمایه</span></li>
             <li class=" nav-item has-sub {% if this.page.id == 'panel-index' or this.page.id == 'panel-further_information' or this.page.id == 'panel-social_networks' or this.page.id == 'panel-change_password' %}sidebar-group-active open{% endif %}"><a href="#"><span class="menu-title" data-i18n="Email">تنظیمات حساب کاربری</span></a>
                 <ul class="menu-content">
-                    <li><a href="/"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">اطلاعات عمومی</span></a></li>
+                    <li><a href="/panel"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">اطلاعات عمومی</span></a></li>
                     <li><a href="/portal/user/user_further_information"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">اطلاعات تکمیلی</span></a></li>
                     <li><a href="/portal/user/social_networks"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">شبکه های اجتماعی</span></a></li>
                     <li><a href="/portal/user/change_password"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">تغییر رمز</span></a></li>
@@ -45,11 +45,23 @@
                     </li>
                 </ul>
             </li>
-            <li class=" nav-item"><a href="#"><span class="menu-title" data-i18n="Chat">ایده/طرح</span></a>
+            <li class=" nav-item"><a href="#"><span class="menu-title" data-i18n="Chat">مدیریت سرمایه</span></a>
                 <ul class="menu-content">
-                    <li><a href="/portal/idea"  ><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">نمایش ایده ها</span></a></li>
-                    <li><a href="/portal/user/amountcapital/create" ><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">میزان سرمایه</span></a></li>
-                    <li><a href="/portal/user/venturecapital/create" ><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">سرمایه گذاری خطر پذیر</span></a></li>
+                    <li><a href="/portal/amountcapital/create"  ><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">ثبت سرمایه</span></a></li>
+                    <li><a href="/portal/investmentmodel/create" ><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">تعیین مدل سرمایه گذاری</span></a></li>
+                    <li><a href="/portal/venturecapital/create" ><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">تعیین درصد خطرپذیری</span></a></li>
+                </ul>
+            </li>
+            <li class=" nav-item"><a href="#"><span class="menu-title" data-i18n="Chat">مدیریت پروژه</span></a>
+                <ul class="menu-content">
+                    <li><a href="#"  ><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">پروژه های من</span></a></li>
+                    <li><a href="/portal/idea" ><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">پروژه های جدید</span></a></li>
+                    <li><a href="/portal/user/venturecapital/create" ><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">ارزش گذاری پروژه</span></a></li>
+                </ul>
+            </li>
+            <li class=" nav-item"><a href="#"><span class="menu-title" data-i18n="Chat">اعتبارات</span></a>
+                <ul class="menu-content">
+                    <li><a href="/portal/idea"  ><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">ثبت اعتبار</span></a></li>
                 </ul>
             </li>
             <li class=" nav-item"><a href="#"><span class="menu-title" data-i18n="Chat">خدمات آنلاین</span></a>

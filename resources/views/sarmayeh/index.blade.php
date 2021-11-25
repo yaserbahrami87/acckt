@@ -31,9 +31,13 @@
             <li>
                 <a href="/login">
                     @if(Auth::check())
-                        <span>{{Auth::user()->lname}}</span>
+                        <a href="/panel">
+                            <span>پروفایل</span>
+                        </a>
                     @else
-                        <span>ثبت نام/ورود</span>
+                        <a href="/login">
+                            <span>ثبت نام/ورود</span>
+                        </a>
                     @endif
                 </a>
             </li>
@@ -401,15 +405,15 @@
 </section>
 
 <!------------------------------------------------------------- ABOUT US ----------------->
-<section data-role="section" id="section-section5">
+<section data-role="section" id="section-section6">
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 p-0 ">
                 <div id="client-grid" class="position-absolute"></div>
-                <div id="logo"></div>
+                <div id="logo-about"></div>
                 <div id="grid" class="position-absolute"></div>
-                <video autoplay muted loop>
-                    <source src="{{asset('/sarmayeh/videos/jongel.mp4')}}" type="video/mp4">
+                <a referrerpolicy="origin" target="_blank" href="https://trustseal.enamad.ir/?id=202462&amp;Code=OnP9iP7WhdPHvSabe0Km"><img referrerpolicy="origin" src="https://Trustseal.eNamad.ir/logo.aspx?id=202462&amp;Code=OnP9iP7WhdPHvSabe0Km" alt="" style="cursor:pointer" id="OnP9iP7WhdPHvSabe0Km"></a>                <video autoplay muted loop>
+                    <source src="{{asset('/acckt/video/about-us.mp4')}}" type="video/mp4">
                 </video>
             </div>
         </div>

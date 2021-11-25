@@ -40,27 +40,19 @@
                                                                 </div>
                                                             </div>
                                                         @endif
-                                                            <form class="row" method="POST" action="/panel/user/venturecapital/{{Auth::user()->id}}/update" >
+                                                            <form class="row" method="POST" action="/portal/amountcapital" >
                                                                 {{csrf_field()}}
-                                                                {{method_field('PATCH')}}
                                                                 <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                                     <div class="form-group">
-                                                                        <label for="amountcapitals" class="d-block">میزان آشنایی شما با شاخص های سرمایه گذاری خطرپذیر چقدر است ؟</label>
-                                                                        <div class="custom-control custom-radio custom-control-inline">
-                                                                            <input type="radio" id="investmentIndex1" name="investmentIndex_id" class="custom-control-input" value="1" @if(Auth::user()->investmentindex_id==1) checked @endif  />
-                                                                            <label class="custom-control-label" for="investmentIndex1">کم</label>
-                                                                        </div>
-                                                                        <div class="custom-control custom-radio custom-control-inline">
-                                                                            <input type="radio" id="investmentIndex2" name="investmentIndex_id" class="custom-control-input" value="2" @if(Auth::user()->investmentindex_id==2) checked @endif />
-                                                                            <label class="custom-control-label" for="investmentIndex2">متوسط</label>
-                                                                        </div>
-                                                                        <div class="custom-control custom-radio custom-control-inline">
-                                                                            <input type="radio" id="investmentIndex3" name="investmentIndex_id" class="custom-control-input" value="3" @if(Auth::user()->investmentindex_id==3) checked @endif />
-                                                                            <label class="custom-control-label" for="investmentIndex3">زیاد</label>
-                                                                        </div>
+                                                                        <label for="amountcapitals">میزان سرمایه ای که تمایل دارید برای یک کسب و کار نو سرمایه گذاری کنید چقدر است؟</label>
+                                                                        <select class="form-control" id="amountcapitals" name="amountcapitals_id">
+                                                                            <option selected disabled>انتخاب کنید</option>
+                                                                            <option value="1">کمتر از یک میلیارد تومان</option>
+                                                                            <option value="2">بین یک تا دو میلیارد تومان</option>
+                                                                            <option value="3">بیش از دو میلیارد تومان</option>
+                                                                        </select>
                                                                     </div>
                                                                 </div>
-
                                                                 <div class="col-12">
                                                                     <input type="submit" value="ثبت" class="btn btn-success" />
                                                                 </div>

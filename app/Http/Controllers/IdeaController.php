@@ -90,7 +90,14 @@ class IdeaController extends BaseController
      */
     public function show(idea $idea)
     {
-        //
+        $idea['full_name']=explode(',',$idea->full_name) ;
+        $idea['birth_date']=explode(',',$idea->birth_date) ;
+        $idea['mobile']=explode(',',$idea->mobile) ;
+        $idea['email']=explode(',',$idea->email) ;
+        $idea['degree_and_field_of_study']=explode(',',$idea->degree_and_field_of_study) ;
+        $idea['specialty']=explode(',',$idea->specialty) ;
+        return view('acckt_sarmayeh.pages.panel.idea_show')
+                        ->with('idea',$idea);
     }
 
     /**
