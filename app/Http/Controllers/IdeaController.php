@@ -16,8 +16,18 @@ class IdeaController extends BaseController
     public function index()
     {
         $idea=idea::orderby('id','desc')->get();
-        return view('acckt_sarmayeh.pages.panel.idea_list')
-                        ->with('idea',$idea);
+
+        if(Auth::user()->type==1)
+        {
+            return view('acckt_sarmayeh.pages.panel.idea_list')
+                ->with('idea', $idea);
+        }
+        elseif(Auth::user()->type==2)
+        {
+            return view('acckt_master.pages.panel.idea_list')
+                ->with('idea', $idea);
+        }
+
     }
 
     /**
@@ -96,8 +106,16 @@ class IdeaController extends BaseController
         $idea['email']=explode(',',$idea->email) ;
         $idea['degree_and_field_of_study']=explode(',',$idea->degree_and_field_of_study) ;
         $idea['specialty']=explode(',',$idea->specialty) ;
-        return view('acckt_sarmayeh.pages.panel.idea_show')
+        if(Auth::user()->type==1)
+        {
+            return view('acckt_sarmayeh.pages.panel.idea_show')
                         ->with('idea',$idea);
+        }
+        elseif(Auth::user()->type==2)
+        {
+            return view('acckt_master.pages.panel.idea_show')
+                ->with('idea',$idea);
+        }
     }
 
     /**
@@ -108,7 +126,15 @@ class IdeaController extends BaseController
      */
     public function edit(idea $idea)
     {
-        //
+        $idea['full_name']=explode(',',$idea->full_name) ;
+        $idea['birth_date']=explode(',',$idea->birth_date) ;
+        $idea['mobile']=explode(',',$idea->mobile) ;
+        $idea['email']=explode(',',$idea->email) ;
+        $idea['degree_and_field_of_study']=explode(',',$idea->degree_and_field_of_study) ;
+        $idea['specialty']=explode(',',$idea->specialty) ;
+        return view('acckt_master.pages.panel.idea_edit')
+                    ->with('idea',$idea);
+
     }
 
     /**
@@ -120,7 +146,44 @@ class IdeaController extends BaseController
      */
     public function update(Request $request, idea $idea)
     {
-        //
+        $this->validate($request,[
+            'group'                     =>'required|numeric',
+            'category'                  =>'required|numeric',
+            'status'                    =>'required|numeric',
+            'group_name'                =>'required|string',
+            'full_name'                 =>'required|array',
+            'birth_date'                =>'required|array',
+            'email'                     =>'required|array',
+            'degree_and_field_of_study' =>'required|array',
+            'specialty'                 =>'required|array',
+            'title'                     =>'required|string',
+            'description'               =>'required|string',
+            'similar_idea'              =>'required|string',
+            'level'                     =>'required|numeric',
+            'idea_property'             =>'required|string',
+            'amountcapitals_id'         =>'required|numeric',
+            'your_request'              =>'nullable|string',
+        ]);
+
+
+        $request['full_name']=implode(',',$request->full_name);
+        $request['birth_date']=implode(',',$request->birth_date);
+        $request['email']=implode(',',$request->email);
+        $request['degree_and_field_of_study']=implode(',',$request->degree_and_field_of_study);
+        $request['specialty']=implode(',',$request->specialty);
+        $request['mobile']=implode(',',$request->mobile);
+
+        $status=$idea->update($request->all());
+        if($status)
+        {
+            alert()->success('ایده بروزرسانی شد')->persistent('بستن');
+        }
+        else
+        {
+            alert()->error('خطا در بروزرسانی شد')->persistent('بستن');
+        }
+
+        return back();
     }
 
     /**
@@ -132,5 +195,15 @@ class IdeaController extends BaseController
     public function destroy(idea $idea)
     {
         //
+    }
+
+    public function myIdea()
+    {
+        $ideas=idea::join('users','ideas.user_id','=','users.id')
+            ->where('user_id','=',Auth::user()->id)
+            ->select('ideas.*')
+            ->get();
+        return view('acckt_master.pages.panel.idea_list')
+                    ->with('ideas',$ideas);
     }
 }

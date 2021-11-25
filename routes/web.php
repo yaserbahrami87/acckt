@@ -97,7 +97,7 @@ Route::middleware(['can:isIdea'])->prefix('portal_idea')->group(function () {
     Route::resource('user','UserController');
 
     //Idea
-
+    Route::get('/idea/my','IdeaController@myIdea');
     Route::resource('idea','IdeaController');
 });
 

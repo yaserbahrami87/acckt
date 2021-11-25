@@ -6,7 +6,13 @@
             <li class="nav-item mr-auto">
                 <a class="navbar-brand" href="/portal">
                     <!--<div class="brand-logo"><img class="logo" src="{{ asset('/acckt/assets/img/logo.png') }}" width=""></div>-->
-                    <div class="brand-logo"><img class="round" src="{{asset('/panel_assets/images/profile/user-profile-thumbnail.png')}}" width="40"></div>
+                    <div class="brand-logo">
+                        @if(is_null(Auth::user()->avatar))
+                            <img class="round" src="{{asset('/panel_assets/images/profile/user-profile-thumbnail.png')}}" width="40">
+                        @else
+                            <img class="round" src="{{asset('/images/users/'.Auth::user()->avatar)}}" width="40">
+                        @endif
+                    </div>
                     <h5 class="brand-text mb-0" style="font-size: 1.2rem;"></h5>
                 </a>
             </li>
@@ -51,7 +57,7 @@
                     <li><a href="#" class="disabled" ><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">فروشگاه ایده بازار</span></a></li>
                     <li><a href="#"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">مشاهده ایده ها</span></a>
                         <ul class="menu-content">
-                            <li><a href="/portal/idea_list" class="disabled" ><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">ایده های شخصی</span></a></li>
+                            <li><a href="/portal_idea/idea/my"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">ایده های شخصی</span></a></li>
                             <li><a href="#" class="disabled"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">دسترسی به بانک ایده ها</span></a></li>
                         </ul>
                     </li>

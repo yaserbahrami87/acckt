@@ -72,7 +72,13 @@
                     </li>
                     <li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
                         <!--<div class="user-nav d-sm-flex d-none"><span class="user-name"></span></div>-->
-                        <span><img class="round" src="" alt="avatar" height="40" width="40"></span></a>
+                        <span>
+                            @if(is_null(Auth::user()->avatar))
+                                <img class="round" src="{{asset('/panel_assets/images/profile/user-profile-thumbnail.png')}}" alt="avatar" height="40" width="40">
+                            @else
+                                <img class="round" src="{{asset('/images/users/'.Auth::user()->avatar)}}" alt="avatar" height="40" width="40">
+                            @endif
+                        </span></a>
                         <div class="dropdown-menu pb-0">
                             <a class="dropdown-item" href="/panel"><i class="bx bx-user mr-50"></i> ویرایش پروفایل</a>
                             <div class="dropdown-divider mb-0"></div>
