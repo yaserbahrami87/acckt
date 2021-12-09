@@ -20,39 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f0467a3-24f9-4bd2-92a8-1d1263ae5c34" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/idea/idea_2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/img/trl1.JPG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/fa/auth.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/fa/pagination.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/fa/passwords.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/fa/validation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/idea_demand_create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AmountcapitalController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AmountcapitalController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BaseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IdeaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IdeaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/InvestmentmodelController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/InvestmentmodelController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/amountcapital.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/amountcapital.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/investmentmodel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/investmentmodel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_10_02_234911_create_amountcapitals_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_10_02_234911_create_amountcapitals_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_11_21_014023_create_ideas_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_11_21_014023_create_ideas_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_11_25_020306_create_investmentmodels_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_11_25_020306_create_investmentmodels_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/new_idea.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/new_idea.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/online_acceleration.htm" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/online_acceleration.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/amountCapital_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/amountCapital_edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/amountCapital_insert.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/amountCapital_insert.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/further_information.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/further_information.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/idea_list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/idea_list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/idea_show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/idea_show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/investmentModel_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/investmentModel_edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/investmentModel_insert.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/investmentModel_insert.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/venturecapital_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/venturecapital_edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/venturecapital_insert.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/venturecapital_insert.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/partials/panel/right_menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/partials/panel/right_menu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/idea_demand_create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/idea_demand_create.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,6 +229,7 @@
       <workItem from="1638946220480" duration="6569000" />
       <workItem from="1638953550621" duration="10047000" />
       <workItem from="1638996297558" duration="9014000" />
+      <workItem from="1639029767044" duration="3170000" />
     </task>
     <servers />
   </component>

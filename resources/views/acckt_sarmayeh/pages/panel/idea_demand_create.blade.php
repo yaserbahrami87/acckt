@@ -41,7 +41,7 @@
                                                             </div>
                                                         @endif
                                                         <h5> ثبت درخواست برای ایده {{$idea->group_name}}</h5>
-                                                        <form class="row" method="POST" action="/portal/demand/" >
+                                                        <form class="row" method="post" action="/portal/demand" >
                                                             {{csrf_field()}}
                                                             <input type="hidden" value="{{$idea->id}}" name="idea_id" />
                                                             <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
