@@ -51,8 +51,11 @@ class InvestmentmodelController extends Controller
 
         $this->validate($request,
         [
-            'investmentmodel_id'    =>'required|numeric',
+            'familiaritymodel_id'       =>'required|numeric',
+            'investmentmodel_id'        =>'required|array',
+            'investmentmethod_id'       =>'required|numeric',
         ]);
+        $request['investmentmodel_id']=implode(',',$request->investmentmodel_id);
 
         $status=investmentmodel::create($request->all()+[
             'user_id'   =>Auth::user()->id,
@@ -102,8 +105,11 @@ class InvestmentmodelController extends Controller
     {
         $this->validate($request,
             [
-                'investmentmodel_id'    =>'required|numeric',
+                'familiaritymodel_id'       =>'required|numeric',
+                'investmentmodel_id'        =>'required|array',
+                'investmentmethod_id'       =>'required|numeric',
             ]);
+        $request['investmentmodel_id']=implode(',',$request->investmentmodel_id);
 
         $status=$investmentmodel->update($request->all());
         if($status)

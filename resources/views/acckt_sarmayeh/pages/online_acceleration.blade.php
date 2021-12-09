@@ -1,8 +1,3 @@
-title = "شتابدهی آنلاین"
-url = "/online-acceleration"
-description = "صفحه به زودی"
-is_hidden = 0
-==
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,9 +7,9 @@ is_hidden = 0
     <link rel="icon" href="/themes/acckt/assets/img/favicon-16x16.png" type="image/png" sizes="16x16" color="">
     <link rel="icon" href="/themes/acckt/assets/img/favicon-32x32.png" type="image/png" sizes="32x32" color="">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lalezar">
-    <link rel="stylesheet" href="{{ 'assets/css/bootstrap.min.css'|theme }}">
-    <link rel="stylesheet" href="{{ 'assets/css/home.css'|theme }}">
-    <link rel="stylesheet" href="{{ 'assets/css/acceleration.css'|theme }}">
+    <link rel="stylesheet" href="{{ asset('/acckt/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/acckt/css/home.css')}}">
+    <link rel="stylesheet" href="{{ asset('/acckt/css/acceleration.css')}}">
 
 </head>
 <body>
@@ -26,7 +21,7 @@ is_hidden = 0
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">
-                <img src="https://acckt.ir/themes/acckt/assets/img/logo.png" height="36">
+                <img src="{{asset('/acckt/img/logo.png')}}" height="36">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -72,7 +67,7 @@ is_hidden = 0
     </div>
     <div class="rocket-container">
         <div class="rocket-body">
-            <img src="{{ 'assets/img/rocket/3.png'|theme }}" class="rocket-part" />
+            <img src="{{ asset('acckt/img/rocket/3.png') }}" class="rocket-part" />
             <div class="circle rocket-body-circle">۳</div>
             <div class="rocket-body-text">برگزاری<br />جلسات<br />در اتاق اعضا</div>
         </div>
@@ -81,7 +76,7 @@ is_hidden = 0
     position: absolute;
     top: 200px;
     right: -100px;
-"><img src="/themes/acckt/assets/img/29584.svg"  style="
+"><img src="{{asset('/acckt/img/29584.svg')}}"  style="
     width: 200px;">
     <div style="
     direction: rtl;
@@ -103,7 +98,7 @@ is_hidden = 0
     ۵۰٪ از اعضاء در این مرحله هستند</div>
 </div>
         <div class="rocket-head">
-            <img src="{{ 'assets/img/rocket/7.png'|theme }}" class="rocket-part" />
+            <img src="{{ asset('/acckt/img/rocket/7.png')}}" class="rocket-part" />
             <div class="circle rocket-head-circle">۶</div>
             <div class="rocket-head-text">دریافت<br />اعتبارنامه</div>
         </div>
@@ -112,7 +107,7 @@ is_hidden = 0
     position: absolute;
     top: 0;
     right: -20px;
-"><img src="/themes/acckt/assets/img/29584.svg"  style="
+"><img src="{{asset('/acckt/img/29584.svg')}}"  style="
     width: 200px;">
     <div style="
     direction: rtl;
@@ -134,7 +129,7 @@ is_hidden = 0
     ۵۰٪ از اعضاء در این مرحله هستند</div>
 </div>
         <div class="rocket-left-engine">
-            <img src="{{ 'assets/img/rocket/4.png'|theme }}" class="rocket-part" />
+            <img src="{{ asset('/acckt/img/rocket/4.png')}}" class="rocket-part" />
             <div class="circle rocket-left-engine-circle">۵</div>
             <div class="rocket-left-engine-text">منتورینگ و کوچینگ فردی و گروهی</div>
         </div>
@@ -143,7 +138,7 @@ is_hidden = 0
     position: absolute;
     top: 200px;
     left: -120px;
-"><img src="/themes/acckt/assets/img/29584.svg"  style="
+"><img src="{{asset('/acckt/img/29584.svg')}}"  style="
     width: 200px;">
     <div style="
     direction: rtl;
@@ -165,7 +160,7 @@ is_hidden = 0
     ۵۰٪ از اعضاء در این مرحله هستند</div>
 </div>
         <div class="rocket-right-engine">
-            <img src="{{ 'assets/img/rocket/5.png'|theme }}" class="rocket-part" />
+            <img src="{{ asset('acckt/img/rocket/5.png')}}" class="rocket-part" />
             <div class="circle rocket-right-engine-circle">۴</div>
             <div class="rocket-right-engine-text">شرکت در دوره‌ها و وبینارها</div>
         </div>
@@ -174,7 +169,7 @@ is_hidden = 0
     position: absolute;
     top: 200px;
     right: -100px;
-"><img src="/themes/acckt/assets/img/29584.svg"  style="
+"><img src="{{asset('acckt/img/29584.svg')}}"  style="
     width: 200px;">
     <div style="
     direction: rtl;
@@ -196,7 +191,7 @@ is_hidden = 0
     ۵۰٪ از اعضاء در این مرحله هستند</div>
 </div>
         <div class="rocket-left-wing">
-            <img src="{{ 'assets/img/rocket/2.png'|theme }}" class="rocket-part" />
+            <img src="{{ asset('acckt/img/rocket/2.png') }}" class="rocket-part" />
             <div class="circle rocket-left-wing-circle">۲</div>
             <div class="rocket-left-wing-text">ثبت<br />ایده یا<br />طرح</div>
         </div>
@@ -205,7 +200,7 @@ is_hidden = 0
     position: absolute;
     top: 430px;
     left: -190px;
-"><img src="/themes/acckt/assets/img/29584.svg"  style="
+"><img src="{{asset('acckt/img/29584.svg')}}"  style="
     width: 200px;">
     <div style="
     direction: rtl;
@@ -227,7 +222,7 @@ is_hidden = 0
     ۵۰٪ از اعضاء در این مرحله هستند</div>
 </div>
         <div class="rocket-right-wing">
-            <img src="{{ 'assets/img/rocket/1.png'|theme }}" class="rocket-part" />
+            <img src="{{ asset('/acckt/img/rocket/1.png')}}" class="rocket-part" />
             <div class="circle rocket-right-wing-circle">۱</div>
             <div class="rocket-right-wing-text">ورود<br />به پورتال</div>
         </div>
@@ -236,7 +231,7 @@ is_hidden = 0
     position: absolute;
     top: 430px;
     right: -170px;
-"><img src="/themes/acckt/assets/img/29584.svg"  style="
+"><img src="{{asset('/acckt/img/29584.svg')}}"  style="
     width: 200px;">
     <div style="
     direction: rtl;
@@ -257,7 +252,7 @@ is_hidden = 0
 ">۱</div>
     ۵۰٪ از اعضاء در این مرحله هستند</div>
 </div>
-        
+
     </div>
     <div class="row" style="padding-top: 10px; direction: rtl; text-align: center; font-size: 2em">
     </div>
@@ -266,7 +261,7 @@ is_hidden = 0
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="{{ 'assets/js/bootstrap.min.js'|theme }}"></script>
+<script src="{{ asset('acckt/js/bootstrap.min.js') }}"></script>
 <script>
 $(function () {
         setTimeout(function () {

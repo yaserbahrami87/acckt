@@ -49,15 +49,46 @@ class AmountcapitalController extends Controller
      */
     public function store(Request $request)
     {
+
         $this->validate($request,[
-            'amountcapitals_id'    =>'required|string|max:250'
+            'capitalgroup_id'       =>'required|numeric|',
+            'capitalcategory_id'    =>'required|numeric|',
+            'trl'                   =>'required|array|',
+            'amountcapitals_id'     =>'required|numeric|',
+            'description'           =>'required|string|max:250',
+            'description_startup'   =>'required|string|max:250',
+            'injectioncapital_id'   =>'required|numeric',
+            'outstanding_investment'=>'required|string|max:250',
+            'request'               =>'required|string|max:250',
+            'statute'               =>'nullable,max:600|mimes:jpeg,jpg,png',
         ]);
 
+        $request['trl']=implode(',',$request->trl);
         $status=amountcapital::create($request->all()+
             [
                 'user_id'   =>Auth::user()->id
             ]
         );
+
+        if($request->has('statute')&&($request->file('statute')->isvalid()))
+        {
+            $file=$request->file('statute');
+            $statute="statute_".$status->id.".".$request->file('statute')->extension();
+            $path=public_path('images/users/');
+            $files=$request->file('statute')->move($path,$statute);
+            if($files)
+            {
+                $status->statute=$statute;
+                $status->save();
+            }
+            else
+            {
+                alert()->error('خطا در بارگذاری فایل')->persistent('بستن');
+            }
+        }
+
+
+
         if($status)
         {
             alert()->success('اطلاعات میزان سرمایه با موفقیت بارگذاری شد')->persistent('بستن');
@@ -102,10 +133,35 @@ class AmountcapitalController extends Controller
     public function update(Request $request, amountcapital $amountcapital)
     {
         $this->validate($request,[
-            'amountcapitals_id'    =>'required|string|max:250'
+            'capitalgroup_id'       =>'required|numeric|',
+            'capitalcategory_id'    =>'required|numeric|',
+            'trl'                   =>'required|array|',
+            'amountcapitals_id'     =>'required|numeric|',
+            'description'           =>'required|string|max:250',
+            'description_startup'   =>'required|string|max:250',
+            'injectioncapital_id'   =>'required|numeric',
+            'outstanding_investment'=>'required|string|max:250',
+            'request'               =>'required|string|max:250',
         ]);
-
+        $request['trl']=implode(',',$request->trl);
         $status=$amountcapital->update($request->all());
+        if($request->has('statute')&&($request->file('statute')->isvalid()))
+        {
+            $file=$request->file('statute');
+            $statute="statute_".$amountcapital->id.".".$request->file('statute')->extension();
+            $path=public_path('images/users/');
+            $files=$request->file('statute')->move($path,$statute);
+            if($files)
+            {
+                $amountcapital->statute=$statute;
+                $amountcapital->save();
+            }
+            else
+            {
+                alert()->error('خطا در بارگذاری فایل')->persistent('بستن');
+            }
+        }
+
         if($status)
         {
             alert()->success('اطلاعات با موفقیت بروزرسانی شد')->persistent('بستن');

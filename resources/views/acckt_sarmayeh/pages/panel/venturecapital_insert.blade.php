@@ -44,18 +44,22 @@
                                                                 {{csrf_field()}}
                                                                 <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                                     <div class="form-group">
-                                                                        <label for="amountcapitals" class="d-block">میزان آشنایی شما با شاخص های سرمایه گذاری خطرپذیر چقدر است ؟</label>
+                                                                        <label for="amountcapitals" class="d-block">کدامیک از گزینه های زیر در مورد سرمایه گذاری خطرپذیر صحیح است ؟</label>
                                                                         <div class="custom-control custom-radio custom-control-inline">
                                                                             <input type="radio" id="investmentIndex1" name="venturecapital_id" class="custom-control-input" value="1"   />
-                                                                            <label class="custom-control-label" for="investmentIndex1">کم</label>
+                                                                            <label class="custom-control-label" for="investmentIndex1">. دوره بازگشت کوتاه مدت استو سودآوری مناسبی در زمان کوتاه خواهد داشت.</label>
                                                                         </div>
                                                                         <div class="custom-control custom-radio custom-control-inline">
                                                                             <input type="radio" id="investmentIndex2" name="venturecapital_id" class="custom-control-input" value="2" />
-                                                                            <label class="custom-control-label" for="investmentIndex2">متوسط</label>
+                                                                            <label class="custom-control-label" for="investmentIndex2">دوره ی سرمایه گذاری بلندمدت است و سودآوری خوبی در کوتاه مدت خواهد داشت.</label>
                                                                         </div>
                                                                         <div class="custom-control custom-radio custom-control-inline">
                                                                             <input type="radio" id="investmentIndex3" name="venturecapital_id" class="custom-control-input" value="3"  />
-                                                                            <label class="custom-control-label" for="investmentIndex3">زیاد</label>
+                                                                            <label class="custom-control-label" for="investmentIndex3">دوره سرمایه گذاری بلندمدت است و میزان سود متناسب با درصد ریسک می باشد.</label>
+                                                                        </div>
+                                                                        <div class="custom-control custom-radio custom-control-inline">
+                                                                            <input type="radio" id="investmentIndex4" name="venturecapital_id" class="custom-control-input" value="4"  />
+                                                                            <label class="custom-control-label" for="investmentIndex4">گزینه ی الف و ج</label>
                                                                         </div>
                                                                     </div>
                                                                 </div>

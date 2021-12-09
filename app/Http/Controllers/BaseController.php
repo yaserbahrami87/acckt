@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\demand;
 use App\User;
 use App\verify;
 use Hekmatinasser\Verta\Verta;
@@ -149,5 +150,43 @@ class BaseController extends Controller
         $dateMiladi= (Verta::getGregorian($dateShamsi->year,$dateShamsi->month,$dateShamsi->day));
         $dateMiladi=($dateMiladi[0].'-'.$dateMiladi[1].'-'.$dateMiladi[2]);
         return $dateMiladi;
+    }
+
+    public function get_demand($id=NULL,$user_id=NULL,$idea_id=NULL,$condition=NULL,$status=NULL,$date_fa=NULL,$paginate='paginate')
+    {
+        return demand::when($id,function($query) use($id)
+        {
+            return $query->where('id','=',$id);
+        })
+        ->when($user_id,function($query) use($user_id)
+        {
+            return $query->where('user_id','=',$user_id);
+        })
+        ->when($idea_id,function($query) use($idea_id)
+        {
+            return $query->where('idea_id','=',$idea_id);
+        })
+        ->when($condition,function($query) use($condition)
+        {
+            return $query->where($condition[0],$condition[1],$condition[2]);
+        })
+        ->when($status,function($query) use($status)
+        {
+            return $query->where('status','=',$status);
+        })
+        ->when($paginate=='get',function($query)
+        {
+            return $query->get();
+        })
+        ->when($paginate=='paginate',function($query)
+        {
+            return $query->paginate($this->get_paginate());
+        })
+        ->when($paginate=='first',function($query)
+        {
+            $query->latest();
+            return $query->first();
+        });
+
     }
 }

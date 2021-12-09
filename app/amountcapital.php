@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class amountcapital extends Model
 {
     protected $fillable=[
-        'user_id','amountcapitals_id'
+        'user_id','capitalgroup_id','capitalcategory_id','trl','amountcapitals_id','statute','description','description_startup','injectioncapital_id','outstanding_investment','request'
     ];
 
     public function getRouteKey()

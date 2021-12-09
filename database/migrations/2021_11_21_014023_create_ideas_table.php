@@ -17,6 +17,7 @@ class CreateIdeasTable extends Migration
             $table->id();
             $table->bigInteger('user_id')->nullable();
             $table->integer('group')->nullable();
+            $table->string('avatar',250)->nullable();
             $table->tinyInteger('category')->nullable();
             $table->tinyInteger('status')->default(1);
             $table->string('group_name',100)->nullable();

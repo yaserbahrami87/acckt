@@ -40,33 +40,22 @@
                                                                 </div>
                                                             </div>
                                                         @endif
-                                                        <form class="row" method="POST" action="/portal/venturecapital/{{$venturecapital->id}}" >
+                                                        <h5> ثبت درخواست برای ایده {{$idea->group_name}}</h5>
+                                                        <form class="row" method="POST" action="/portal/demand/" >
                                                             {{csrf_field()}}
-                                                            {{method_field('PATCH')}}
+                                                            <input type="hidden" value="{{$idea->id}}" name="idea_id" />
                                                             <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                                                 <div class="form-group">
-                                                                    <label for="amountcapitals" class="d-block">کدامیک از گزینه های زیر در مورد سرمایه گذاری خطرپذیر صحیح است ؟</label>
-                                                                    <div class="custom-control custom-radio custom-control-inline">
-                                                                        <input type="radio" id="investmentIndex1" name="venturecapital_id" class="custom-control-input" value="1"  {{ old('venturecapital_id',$venturecapital->venturecapital_id) == 1 ? 'checked' : '' }} />
-                                                                        <label class="custom-control-label" for="investmentIndex1">. دوره بازگشت کوتاه مدت استو سودآوری مناسبی در زمان کوتاه خواهد داشت.</label>
-                                                                    </div>
-                                                                    <div class="custom-control custom-radio custom-control-inline">
-                                                                        <input type="radio" id="investmentIndex2" name="venturecapital_id" class="custom-control-input" value="2" {{ old('venturecapital_id',$venturecapital->venturecapital_id) == 2 ? 'checked' : '' }} />
-                                                                        <label class="custom-control-label" for="investmentIndex2">دوره ی سرمایه گذاری بلندمدت است و سودآوری خوبی در کوتاه مدت خواهد داشت.</label>
-                                                                    </div>
-                                                                    <div class="custom-control custom-radio custom-control-inline">
-                                                                        <input type="radio" id="investmentIndex3" name="venturecapital_id" class="custom-control-input" value="3" {{ old('venturecapital_id',$venturecapital->venturecapital_id) == 3 ? 'checked' : '' }}  />
-                                                                        <label class="custom-control-label" for="investmentIndex3">دوره سرمایه گذاری بلندمدت است و میزان سود متناسب با درصد ریسک می باشد.</label>
-                                                                    </div>
-                                                                    <div class="custom-control custom-radio custom-control-inline">
-                                                                        <input type="radio" id="investmentIndex4" name="venturecapital_id" class="custom-control-input" value="4" {{ old('venturecapital_id',$venturecapital->venturecapital_id) == 4 ? 'checked' : '' }}  />
-                                                                        <label class="custom-control-label" for="investmentIndex4">گزینه ی الف و ج</label>
-                                                                    </div>
+                                                                    <label for="proposed_price">مبلغ سرمایه گذاری (تومان): <span class="text-danger">*</span></label>
+                                                                    <input type="number" class="form-control" id="proposed_price" name="proposed_price" min="0"/>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="description">توضیحات</label>
+                                                                    <textarea class="form-control" id="description" rows="3" name="description"></textarea>
                                                                 </div>
                                                             </div>
-
                                                             <div class="col-12">
-                                                                <input type="submit" value="بروزرسانی" class="btn btn-success" />
+                                                                <input type="submit" value="ثبت" class="btn btn-success" />
                                                             </div>
                                                         </form>
                                                     </div>

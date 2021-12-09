@@ -54,9 +54,15 @@
             </li>
             <li class=" nav-item"><a href="#"><span class="menu-title" data-i18n="Chat">مدیریت پروژه</span></a>
                 <ul class="menu-content">
-                    <li><a href="#" class="disabled" ><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">پروژه های من</span></a></li>
+                    <li><a href="/portal/demand/my"  ><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">پروژه های من</span></a></li>
                     <li><a href="/portal/idea" ><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">پروژه های جدید</span></a></li>
-                    <li><a href="/portal/user/venturecapital/create" ><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">ارزش گذاری پروژه</span></a></li>
+                    <li><a href="#" ><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">ارزش گذاری پروژه</span></a></li>
+                </ul>
+            </li>
+            <li class=" nav-item"><a href="#"><span class="menu-title" data-i18n="Chat">فهرست سرمایه ها</span></a>
+                <ul class="menu-content">
+                    <li><a href="#" class="disabled" ><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">سرمایه های من</span></a></li>
+                    <li><a href="#" class="disabled"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">دسترسی به بانک سرمایه گذاران</span></a></li>
                 </ul>
             </li>
             <li class=" nav-item"><a href="#"><span class="menu-title" data-i18n="Chat">اعتبارات</span></a>

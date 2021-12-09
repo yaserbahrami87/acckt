@@ -68,6 +68,13 @@ Route::middleware(['can:isUser'])->prefix('portal')->group(function () {
     //Idea
     Route::get('/idea','IdeaController@index');
     Route::get('/idea/{idea}','IdeaController@show');
+    Route::get('/idea/{idea}/create',"IdeaController@create_demand");
+
+
+    //Demand
+    Route::post('/demand','DemandController@store');
+    Route::get('/demand/my','DemandController@my');
+
 
     //Verify
     Route::post('/verify/sendCode/tel','VerifyController@sendCodeTel');
@@ -79,6 +86,8 @@ Route::middleware(['can:isUser'])->prefix('portal')->group(function () {
 
     //investmentmodel
     Route::resource('investmentmodel',"InvestmentmodelController");
+
+
 });
 
 
@@ -105,4 +114,10 @@ Route::middleware(['can:isIdea'])->prefix('portal_idea')->group(function () {
 Route::get('/test',function()
 {
     return view('acckt_master.pages.panel.index');
+});
+
+
+Route::get('/online-acceleration',function()
+{
+   return view ('acckt_sarmayeh.pages.online_acceleration');
 });

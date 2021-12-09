@@ -15,7 +15,23 @@ class IdeaController extends BaseController
      */
     public function index()
     {
-        $idea=idea::orderby('id','desc')->get();
+        $idea=idea::orderby('id','desc')->paginate(30);
+        foreach ($idea as $item)
+        {
+            switch($item->amountcapitals_id)
+            {
+                case 1:$item->amountcapitals='کمتر از یک میلیارد تومان';
+                        break;
+                case 2:$item->amountcapitals='بین یک تا دو میلیارد تومان';
+                    break;
+                case 3:$item->amountcapitals='بیش از دو میلیارد تومان';
+                    break;
+            }
+
+            $item->demand=$this->get_demand(NULL,NULL,$item->id,NULL,1,NULL,'get')->count();
+            $item->demandUser=$this->get_demand(NULL,Auth::user()->id,$item->id,NULL,1,NULL,'first')->count();
+        }
+
 
         if(Auth::user()->type==1)
         {
@@ -205,5 +221,19 @@ class IdeaController extends BaseController
             ->get();
         return view('acckt_master.pages.panel.idea_list')
                     ->with('ideas',$ideas);
+    }
+
+    public function create_demand(idea $idea)
+    {
+        if($idea->status==1)
+        {
+            return view('acckt_sarmayeh.pages.panel.idea_demand_create')
+                        ->with('idea',$idea);
+        }
+        else
+        {
+            alert()->error('امکان ارسال درخواست برای این ایده امکانپذیر نمی باشد')->persistent('بستن');
+        }
+
     }
 }
