@@ -67,6 +67,7 @@ class IdeaController extends BaseController
         $this->validate($request,[
             'group'                     =>'required|numeric',
             'category'                  =>'required|numeric',
+            'avatar'                    =>'required|mimes:jpeg,jpg,bmp,gif,png|max:600',
             'status'                    =>'required|numeric',
             'group_name'                =>'required|string',
             'full_name'                 =>'required|array',
@@ -81,6 +82,7 @@ class IdeaController extends BaseController
             'idea_property'             =>'required|string',
             'amountcapitals_id'         =>'required|numeric',
             'your_request'              =>'nullable|string',
+
         ]);
 
         $request['full_name']=implode(',',$request->full_name);
@@ -96,6 +98,17 @@ class IdeaController extends BaseController
             'date_fa'   =>$this->dateNow,
             'time_fa'   =>$this->timeNow,
         ]);
+
+        if($request->has('avatar')&&$request->file('avatar')->isValid())
+        {
+            $file=$request->file('avatar');
+            $personal_image="idea-".$status->id.".".$request->file('avatar')->extension();
+            $path=public_path('/images/idea/');
+            $files=$request->file('avatar')->move($path, $personal_image);
+            $request->personal_image=$personal_image;
+            $status->avatar=$personal_image;
+            $status->save();
+        }
 
         if($status)
         {
@@ -219,6 +232,11 @@ class IdeaController extends BaseController
             ->where('user_id','=',Auth::user()->id)
             ->select('ideas.*')
             ->get();
+
+        foreach($ideas as $item)
+        {
+            $item->demandUser=$this->get_demand(NULL,NULL,$item->id,NULL,1,NULL,'get')->count();
+        }
         return view('acckt_master.pages.panel.idea_list')
                     ->with('ideas',$ideas);
     }
@@ -233,6 +251,26 @@ class IdeaController extends BaseController
         else
         {
             alert()->error('امکان ارسال درخواست برای این ایده امکانپذیر نمی باشد')->persistent('بستن');
+        }
+
+    }
+
+    public function showdemand(idea $idea)
+    {
+        if($idea->user_id==Auth::user()->id)
+        {
+            $ideas=idea::join('demands','ideas.id','=','demands.idea_id')
+                    ->join('users','users.id','=','demands.user_id')
+                    ->where('ideas.id','=',$idea->id)
+                    ->select('demands.*','users.fname','users.lname')
+                    ->get();
+            return view('acckt_sarmayeh.pages.panel.listDemand_idea')
+                        ->with('demands',$ideas);
+        }
+        else
+        {
+            alert()->error('شما دسترسی به این ایده ندارید')->persistent('بستن');
+            return back();
         }
 
     }

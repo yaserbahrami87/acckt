@@ -39,14 +39,12 @@
                                                 </div>
                                             </div>
                                         @endif
-                                        <form  id="new_wizard_form"  data-request-validate class="wizard-validation" >
+                                            <form  id="new_wizard_form"  data-request-validate class="wizard-validation" >
 
                                         <!-- Step 1 -->
                                             <h6>
                                                 <i class="step-icon"></i>
-                                                <span class="fonticon-wrap">
-                                              <i class="livicon-evo" data-options="name:morph-doc.svg; size: 50px; style:lines; strokeColor:#adb5bd;"></i>
-                                            </span>
+                                                <span class="fonticon-wrap"></span>
                                             </h6>
                                             <!-- Step 1 end-->
                                             <!-- body content step 1 -->
@@ -78,6 +76,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
+
                                                 <div class="row">
                                                     <div class="col-sm-6">
                                                         <div class="form-group">
@@ -89,15 +88,14 @@
                                                             </select>
                                                         </div>
                                                     </div>
+
                                                 </div>
                                             </fieldset>
                                             <!-- body content step 1 end-->
                                             <!-- Step 2 -->
                                             <h6>
                                                 <i class="step-icon"></i>
-                                                <span class="fonticon-wrap">
-                                              <i class="livicon-evo" data-options="name:users.svg; size: 50px; style:lines; strokeColor:#adb5bd;"></i>
-                                            </span>
+                                                <span class="fonticon-wrap"></span>
                                             </h6>
                                             <!-- Step 2 end-->
                                             <!-- body content of step 2 -->
@@ -284,9 +282,7 @@
                                             <!-- Step 3 -->
                                             <h6>
                                                 <i class="step-icon"></i>
-                                                <span class="fonticon-wrap">
-                                              <i class="livicon-evo" data-options="name:home.svg; size: 50px; style:lines; strokeColor:#adb5bd;"></i>
-                                            </span>
+                                                <span class="fonticon-wrap"></span>
                                             </h6>
                                             <!-- Step 3 end-->
                                             <!-- body content of Step 3 -->
@@ -370,41 +366,4 @@
         </div>
     </div>
     <!-- END: Content-->
-
-    <!-- Vertically Centered modal Modal -->
-    <div class="modal fade" id="ModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-centered modal-dialog-scrollable" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalCenterTitle">ثبت ایده</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="بستن">
-                        <i class="bx bx-x"></i>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>
-                        با ثبت ایده در پرتال شتابدهنده به فروشگاه ایده وارد شوید
-                    </p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-light-secondary" data-dismiss="modal">
-                        <i class="bx bx-x d-block d-sm-none"></i>
-                        <span class="d-none d-sm-block">بعدا یاداوری کن</span>
-                    </button>
-                    <button type="button" class="btn btn-primary ml-1" data-dismiss="modal">
-                        <i class="bx bx-check d-block d-sm-none"></i>
-                        <span class="d-none d-sm-block">ثبت ایده</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-@endsection
-
-@section('footerScript')
-    <script type="text/javascript">
-        $(window).on('load', function() {
-            $('#ModalCenter').modal('show');
-        });
-    </script>
 @endsection

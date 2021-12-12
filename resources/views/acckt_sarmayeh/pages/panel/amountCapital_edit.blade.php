@@ -122,6 +122,9 @@
                                                                         <label for="statute">در صورت سرمایه گذاری بخش حقوقی (شرکت / موسسه حقوقی ) اساسنامه شرکت پیوست گردد</label>
                                                                         <input type="file" class="form-control-file" id="statute" name="statute" />
                                                                     </div>
+                                                                    @if(!is_null($amountcapital->statute)||$amountcapital->statute!="")
+                                                                        <a href="{{asset('/documents/users/sarmayeh/'.$amountcapital->statute)}}">دانلود</a>
+                                                                    @endif
                                                                 </div>
                                                             </div>
                                                             <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">

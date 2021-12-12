@@ -59,31 +59,38 @@
               </div>
               <div class="users-list-table">
                     <div class="row">
-                        @foreach($idea as $item)
-                        <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
-                            <div class="card" style="width: 18rem;">
-                                <img src="{{asset('/images/idea/'.$item->avatar)}}" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title text-center">{{$item->group_name}}</h5>
-                                    <small>سرمایه موردنیاز:</small>
-                                    <p class="card-text text-center">{{$item->amountcapitals}}</p>
-                                    <p >تعداد پیشنهاد:
-                                    @if($item->demand>0)
-                                        @for($i=0;$i<$item->demand;$i++)
-                                            <i class="bi bi-star-fill text-warning"></i>
-                                        @endfor
-                                    @endif
-                                    </p>
-                                    <a href="{{asset('/portal/idea/'.$item->id)}}" class="btn btn-primary btn-sm">نمایش</a>
-                                    @if($item->demandUser==0)
-                                        <a href="{{asset('/portal/idea/'.$item->id.'/create')}}" class="btn btn-primary btn-sm">ثبت درخواست</a>
-                                    @else
-                                        <a href="#" class="btn btn-warning btn-sm">درخواست ارسال شده</a>
-                                    @endif
+                        @if($idea->count() >0)
+                            @foreach($idea as $item)
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="{{asset('/images/idea/'.$item->avatar)}}" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center">{{$item->group_name}}</h5>
+                                        <small>سرمایه موردنیاز:</small>
+                                        <p class="card-text text-center">{{$item->amountcapitals}}</p>
+                                        <p >تعداد پیشنهاد:
+                                        @if($item->demand>0)
+                                            @for($i=0;$i<$item->demand;$i++)
+                                                <i class="bi bi-star-fill text-warning"></i>
+                                            @endfor
+                                        @endif
+                                        </p>
+                                        <a href="{{asset('/portal/idea/'.$item->id)}}" class="btn btn-primary btn-sm">نمایش</a>
+                                        @if($item->demandUser==0)
+                                            <a href="{{asset('/portal/idea/'.$item->id.'/create')}}" class="btn btn-primary btn-sm">ثبت درخواست</a>
+                                        @else
+                                            <a href="#" class="btn btn-warning btn-sm">درخواست ارسال شده</a>
+                                            <a href="{{asset('/message/idea/'.$item->id)}}" class="btn btn-success btn-sm btn-block mt-1" >ارسال پیام</a>
+                                        @endif
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        @endforeach
+                            @endforeach
+                        @else
+                            <div class="col-12 alert alert-warning">
+                                در حال حاضر پروژه ای وجود ندارد.
+                            </div>
+                        @endif
                         {{$idea->links()}}
                     </div>
               </div>

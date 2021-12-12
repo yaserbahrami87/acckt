@@ -61,24 +61,31 @@
                                               <th>عنوان ایده</th>
                                               <th>خلاصه ایده</th>
                                               <th>زمان ثبت</th>
+                                              <th>تعداد درخواست</th>
                                               <th>وضعیت</th>
                                               <th>ویرایش</th>
                                           </tr>
                                       </thead>
                                       <tbody>
-                                        @foreach($ideas as $item)
-                                          <tr>
-                                              <td>1</td>
-                                              <td><a href="/portal_idea/idea/{{$item->id}}">{{$item->group_name}}</a></td>
-                                              <td>{{$item->description}}</td>
-                                              <td>{{$item->date_fa}}</td>
-                                              <td><span class="badge bg-rgba-success text-success">فعال</span></td>
-                                              <td>
-                                                  <a href="/portal_idea/idea/{{$item->id}}/edit"><i class="bx bx-edit-alt"></i></a>
-                                              </td>
-                                          </tr>
-                                        @endforeach
+                                            @foreach($ideas as $item)
+                                              <tr>
+                                                  <td>{{$loop->iteration}}</td>
+                                                  <td><a href="/portal_idea/idea/{{$item->id}}">{{$item->group_name}}</a></td>
+                                                  <td>{{$item->description}}</td>
+                                                  <td> {{$item->date_fa}}</td>
+                                                  <td>
+                                                      <a href="/portal_idea/idea/{{$item->id}}/demand" >
+                                                          <span class="badge bg-rgba-success text-success">{{$item->demandUser}}</span>
+                                                      </a>
+                                                  </td>
+                                                  <td><span class="badge bg-rgba-success text-success">فعال</span></td>
+                                                  <td>
+                                                      <a href="/portal_idea/idea/{{$item->id}}/edit"><i class="bx bx-edit-alt"></i></a>
+                                                  </td>
+                                              </tr>
+                                            @endforeach
                                       </tbody>
+
                                   </table>
                               </div>
                               <!-- datatable ends -->
@@ -92,4 +99,39 @@
       </div>
     </div>
     <!-- END: Content-->
+@endsection
+
+@section('footerScript')
+    <script>
+        $('#exampleModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget);
+            var recipient = button.data('whatever');
+            var modal = $(this);
+            modal.find('.modal-body p').text(recipient)
+            $.ajax(
+                {
+                   type:'get',
+                   url:'/portal_idea/idea/'+recipient+'/demand',
+                    data:{
+                        "_token"    : "{{ csrf_token() }}",
+                    },
+                    success:function(data)
+                    {
+                        modal.find('.modal-body').html(data)
+
+                    },
+                    error : function(data)
+                    {
+                        modal.find('.modal-body p').html(data.responseJSON.errors)
+                        errorsHtml='<div class="alert alert-danger text-left"><ul>';
+                        $.each( data.responseJSON.errors, function( key, value ) {
+                            errorsHtml += '<li>'+ value[0] + '</li>'; //showing only the first error.
+                        });
+                        errorsHtml += '</ul></div>';
+
+                        modal.find('.modal-body p').htm( errorsHtml );
+                    }
+                });
+        })
+    </script>
 @endsection

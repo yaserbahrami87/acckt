@@ -20,8 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f0467a3-24f9-4bd2-92a8-1d1263ae5c34" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/demand_list.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/listDemand_Idea.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/idea_demand_create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/idea_demand_create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AmountcapitalController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AmountcapitalController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IdeaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IdeaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/idea_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/idea_edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/idea_list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/idea_list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/idea_show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/idea_show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/new_idea.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/new_idea.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/amountCapital_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/amountCapital_edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/idea_list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/idea_list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,7 +240,10 @@
       <workItem from="1638946220480" duration="6569000" />
       <workItem from="1638953550621" duration="10047000" />
       <workItem from="1638996297558" duration="9014000" />
-      <workItem from="1639029767044" duration="3170000" />
+      <workItem from="1639029767044" duration="10661000" />
+      <workItem from="1639158047091" duration="49000" />
+      <workItem from="1639241911890" duration="5575000" />
+      <workItem from="1639290586858" duration="671000" />
     </task>
     <servers />
   </component>
@@ -253,13 +267,13 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1637818263922" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1637438905974">
+    <state x="339" y="162" key="run.anything.popup" timestamp="1639258890112">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1637438905974" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1639004111859">
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1639258890112" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1639260904949">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1639004111859" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1639260904949" />
   </component>
 </project>

@@ -60,7 +60,7 @@ class AmountcapitalController extends Controller
             'injectioncapital_id'   =>'required|numeric',
             'outstanding_investment'=>'required|string|max:250',
             'request'               =>'required|string|max:250',
-            'statute'               =>'nullable,max:600|mimes:jpeg,jpg,png',
+            'statute'               =>'nullable|max:600|mimes:jpeg,jpg,png,pdf',
         ]);
 
         $request['trl']=implode(',',$request->trl);
@@ -74,7 +74,7 @@ class AmountcapitalController extends Controller
         {
             $file=$request->file('statute');
             $statute="statute_".$status->id.".".$request->file('statute')->extension();
-            $path=public_path('images/users/');
+            $path=public_path('documents/users/sarmayeh');
             $files=$request->file('statute')->move($path,$statute);
             if($files)
             {

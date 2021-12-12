@@ -39,14 +39,12 @@
                                             </div>
                                         </div>
                                     @endif
-                                    <form method="POST" id="new_wizard_form"  data-request-validate class="wizard-validation" action="/portal_idea/idea">
+                                    <form method="POST" id="new_wizard_form"  data-request-validate class="wizard-validation" action="/portal_idea/idea" enctype="multipart/form-data">
                                         {{csrf_field()}}
                                         <!-- Step 1 -->
                                         <h6>
                                             <i class="step-icon"></i>
-                                            <span class="fonticon-wrap">
-                                              <i class="livicon-evo" data-options="name:morph-doc.svg; size: 50px; style:lines; strokeColor:#adb5bd;"></i>
-                                            </span>
+                                            <span class="fonticon-wrap"></span>
                                         </h6>
                                         <!-- Step 1 end-->
                                         <!-- body content step 1 -->
@@ -80,6 +78,12 @@
                                             <div class="row">
                                                 <div class="col-sm-6">
                                                     <div class="form-group">
+                                                        <label for="avatar">پوستر ایده</label>
+                                                        <input type="file" class="form-control-file" id="avatar" name="avatar" required />
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <div class="form-group">
                                                         <label>وضعیت</label>
                                                         <select class="form-control" id="status" name="status">
                                                             <option value="1">فعال</option>
@@ -94,9 +98,7 @@
                                         <!-- Step 2 -->
                                         <h6>
                                             <i class="step-icon"></i>
-                                            <span class="fonticon-wrap">
-                                              <i class="livicon-evo" data-options="name:users.svg; size: 50px; style:lines; strokeColor:#adb5bd;"></i>
-                                            </span>
+                                            <span class="fonticon-wrap"></span>
                                         </h6>
                                         <!-- Step 2 end-->
                                         <!-- body content of step 2 -->
@@ -283,9 +285,7 @@
                                         <!-- Step 3 -->
                                         <h6>
                                             <i class="step-icon"></i>
-                                            <span class="fonticon-wrap">
-                                              <i class="livicon-evo" data-options="name:home.svg; size: 50px; style:lines; strokeColor:#adb5bd;"></i>
-                                            </span>
+                                            <span class="fonticon-wrap"></span>
                                         </h6>
                                         <!-- Step 3 end-->
                                         <!-- body content of Step 3 -->
