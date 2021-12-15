@@ -264,7 +264,7 @@ class IdeaController extends BaseController
                     ->where('ideas.id','=',$idea->id)
                     ->select('demands.*','users.fname','users.lname')
                     ->get();
-            return view('acckt_sarmayeh.pages.panel.listDemand_idea')
+            return view('acckt_sarmayeh.pages.panel.listDemand_Idea')
                         ->with('demands',$ideas);
         }
         else
