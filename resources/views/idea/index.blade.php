@@ -3,20 +3,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no, shrink-to-fit=no">
-    <link href="{{asset('/acckt/css/idea_style.css')}}" rel="stylesheet" type="text/css">
-
-
 
     <link rel="shortcut icon" href="{{asset('/acckt/img/favicon.ico')}}" type="" sizes="" color="">
     <link rel="icon" href="{{asset('/acckt/img/favicon-16x16.png')}}" type="image/png" sizes="16x16" color="">
     <link rel="icon" href="{{asset('/acckt/img/favicon-32x32.png')}}" type="image/png" sizes="32x32" color="">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lalezar">
-    <link rel="stylesheet" href="{{asset('/acckt/css/bootstrap.min.css')}}"> -->
+    <link rel="stylesheet" href="{{asset('/acckt/css/bootstrap.min.css')}}">
     <!------------------------------ Add the slick-theme.css if you want default styling ------------------------>
     <link rel="stylesheet" type="text/css" href="{{asset('/acckt/css/slick.css')}}"/>
     <!------------------------------ Add the slick-theme.css if you want default styling ------------------------>
     <link rel="stylesheet" type="text/css" href="{{asset('/acckt/css/slick-theme.css')}}"/>
     <link rel="stylesheet" href="{{asset('/acckt/css/home.css')}}">
+    <link href="{{asset('/acckt/css/idea_style.css')}}" rel="stylesheet" type="text/css">
+
 </head>
 <body>
 <!----------------------------------START ANIMATION ------------------->
@@ -69,7 +68,7 @@
                 </ul>
             </div>
             <a class="navbar-brand" href="/">
-                <img src="{{('/acckt/img/logo.png')}}" height="36">
+                <img src="{{('/acckt/img/logo.png')}}" height="40">
             </a>
         </div>
     </nav>
@@ -92,52 +91,46 @@
                 شتابدهنده اندیشه خوارزم
             </h1>
             <br/>
-            <p class="scroll-down"><a href="#" id="show-next-section" class="animate">More</a></p>
+            <p class="scroll-down"><a href="#section-section2" id="show-next-section" class="animate">More</a></p>
         </div>
     </section>
     <!------------------------------END SECTION PAGE1 ---------------->
     <!------------------------------START SECTION PAGE2 ---------------->
-    <section class="panel panel1 mt-4" data-section-name="second" data-role="section" id="section-section2">
+    <section class="panel panel1 mt-5 section-item-recpancive" data-section-name="one" data-role="section" id="section-section2">
         <div class="container" style="height: 100vh">
             <div class="section2-item">
-                <div class="row">
+                <div class="row slick-slide">
                     <div class=" text-center mt-5 ">
                         <h2>ویدئو های شبکه شتابدهی خوارزم </h2>
                     </div>
-                    <div class="col-4 video-list mt-5 ml-5 float-left">
-                        <div class="mb-4">
-                            <p class="float-left mr-3" style="font-size: 18px;"> وتوضیحات ویدئوی شماره 1</p>
-                            <img src="{{asset('/acckt/img/01-600x400.jpg')}}" width="35%" alt="" class="d-inline" width="30%" alt="">
+                    <div class=" col-xl-8 col-lg-8 col-md-8 col-sm-12 col-sx-12 mt-3 float-left">
+                        <div id="laptop" class="position-absolute">
                         </div>
-                        <div class="mb-4">
-                            <p class="float-left mr-3" style="font-size: 18px;"> وتوضیحات ویدئوی شماره 1</p>
-                            <img src="{{asset('/acckt/img/01-600x400.jpg')}}" width="35%" alt="" class="d-inline" width="30%" alt="">
-                        </div>
-                        <div class="mb-4">
-                            <p class="float-left mr-3" style="font-size: 18px;"> وتوضیحات ویدئوی شماره 1</p>
-                            <img src="{{asset('/acckt/img/01-600x400.jpg')}}" width="35%" alt="" class="d-inline" width="30%" alt="">
-                        </div>
-                        <div class="mb-4">
-                            <p class="float-left mr-3" style="font-size: 18px;"> وتوضیحات ویدئوی شماره 1</p>
-                            <img src="{{asset('/acckt/img/01-600x400.jpg')}}" width="35%" alt="" class="d-inline" width="30%" alt="">
-                        </div>
-                    </div>
-                    <div class=" col-8 laptop d-inline relative mt-5 text-right" id="laptop">
-                        <video autoplay loop muted playsinline class="text-center" width="45%">
-                            <source src="{{asset('/acckt/video/section2-1.webm')}}" width="50% " type='video/webm; codecs="vp8, vorbis"'>
-                            <source src="{{asset('/acckt/video/section2-1.mp4')}}" type="video/mp4">
+                        <video autoplay loop muted playsinline class="video-list-item1 mt-4 ml-5" width="70%">
+                            <source src="{{asset('/acckt/video/moshen.webm')}}" width="50% " type='video/webm; codecs="vp8, vorbis"'>
+                            <source src="{{asset('/acckt/video/moshen.mp4')}}" type="video/mp4">
                             مرورگر شما از نمایش ویدئو پشتیبانی نمی کند
                         </video>
+
                     </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-sx-6 video-list mt-5 text-center">
+                        <img src="{{asset('/acckt/img/01-600x400.jpg')}}" width="35%" class="video-list-item mb-4" width="30%" alt="">
+                        <p class="float-left mr-3"> وتوضیحات ویدئوی شماره 1</p>
 
+                        <img src="{{asset('/acckt/img/01-600x400.jpg')}}" width="35%"  class="video-list-item mb-4" width="30%" alt="">
+                        <p class="float-left mr-3"> وتوضیحات ویدئوی شماره 1</p>
 
+                        <img src="{{asset('/acckt/img/01-600x400.jpg')}}" width="35%" alt="" class="video-list-item2 mb-4" width="30%" alt="">
+                        <p class="float-left mr-3 video-list-item2"> وتوضیحات ویدئوی شماره 1</p>
+
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <!------------------------------END SECTION PAGE2 ---------------->
     <!------------------------------START SECTION PAGE3 ---------------->
-    <section class="panel panel1" data-section-name="second">
+    <section class="panel panel1 mt-5 " data-section-name="second">
         <div class="container" style="height: 100vh">
             <div class="section2-item">
                 <div class="row slick-slide">
@@ -152,7 +145,10 @@
                         <div>
                             <h3>فرآیند جذب و شناسایی</h3>
                             <div class="section2-content">
-                                با ثبت نام در سایت و تکمیل فرم اطلاعات فردی، دوره های آموزشی فشرده همراه با مشاوره رایگان به صورت آنلاین برای صاحب ایده فراهم می شود، برگزاری آزمون رایگان استعدادیابی شغلی و مهارتی، ثبت ایده به همراه ارائه گواهی معتبر، و همچنین ارائه کارنامه تحلیلی برای صاحبان ایده تدارک دیده شده است.
+                                <p>
+                                    با ثبت نام در سایت و تکمیل فرم اطلاعات فردی، دوره های آموزشی فشرده همراه با مشاوره رایگان به صورت آنلاین برای صاحب ایده فراهم می شود، برگزاری آزمون رایگان استعدادیابی شغلی و مهارتی، ثبت ایده به همراه ارائه گواهی معتبر، و همچنین ارائه کارنامه تحلیلی برای صاحبان ایده تدارک دیده شده است.
+
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -227,11 +223,11 @@
                 </div>
             </div>
         </div>
-        </div>
+
     </section>
     <!------------------------------END SECTION PAGE3 ---------------->
     <!------------------------------START SECTION PAGE4 ---------------->
-    <section class="panel " data-section-name="third" data-role="section" id="section-section4">
+    <section class="panel mt-5" data-section-name="third" data-role="section" id="section-section4">
         <div class="section4">
             <div class="marquee mt-3 mx-auto">خدمات شتابدهی
                 <svg class="bullet" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -247,7 +243,7 @@
                     است که ما در اختیار شما قرار می‌دهیم. برای این منظور در دو بخش در کنار شما خواهیم بود.
                 </p>
             </div>
-            <div style="margin-top: 90px">
+            <div id="section3-slide">
                 <div class="section3-slider">
                     <div>
                         <img src="{{asset('/acckt/img/01-600x400.jpg')}}" class="item-image" alt=" ">
@@ -282,46 +278,46 @@
                         <span>بسته های تشویقی</span>
                     </div>
                 </div>
-                <!--<div class="section3-slider-responsive">
-                     <div>
-                         <img src="../assets/img/01-600x400.jpg" class="item-image" alt=" ">
-                         <span>فضای کار اشتراکی</span>
-                     </div>
-                     <div>
-                         <img src="../assets/img/02-600x400.jpg" class="item-image" alt=" ">
-                         <span>مشاوره فنی و مالی</span>
-                     </div>
-                     <div>
-                         <img src="../assets/img/03-600x400.jpg" class="item-image" alt=" ">
-                         <span>منتورینگ و کوچینگ</span>
-                     </div>
-                     <div>
-                         <img src="../assets/img/04-600x400.jpg" class="item-image" alt=" ">
-                         <span>امکانات سخت افزاری و نرم افزاری</span>
-                     </div>
-                     <div>
-                         <img src="../assets/img/05-600x400.jpg" class="item-image" alt=" ">
-                         <span>تشریح بازار مرتبط</span>
-                     </div>
-                     <div>
-                         <img src="../assets/img/06-600x400.jpg" class="item-image" alt=" ">
-                         <span>خرید سهام</span>
-                     </div>
-                     <div>
-                         <img src="../assets/img/07-600x400.jpg" class="item-image" alt=" ">
-                         <span>وام قرض الحسنه</span>
-                     </div>
-                     <div>
-                         <img src="../assets/img/08-600x400.jpg" class="item-image" alt=" ">
-                         <span>بسته های تشویقی</span>
-                     </div>
-                 </div> -->
+                <div class="section3-slider-responsive">
+                    <div>
+                        <img src="{{asset('/acckt/img/01-600x400.jpg')}}" class="item-image" alt=" ">
+                        <span>فضای کار اشتراکی</span>
+                    </div>
+                    <div>
+                        <img src="{{asset('/acckt/img/02-600x400.jpg')}}" class="item-image" alt=" ">
+                        <span>مشاوره فنی و مالی</span>
+                    </div>
+                    <div>
+                        <img src="{{asset('/acckt/img/03-600x400.jpg')}}" class="item-image" alt=" ">
+                        <span>منتورینگ و کوچینگ</span>
+                    </div>
+                    <div>
+                        <img src="{{asset('/acckt/img/04-600x400.jpg')}}" class="item-image" alt=" ">
+                        <span>امکانات سخت افزاری و نرم افزاری</span>
+                    </div>
+                    <div>
+                        <img src="{{asset('/acckt/img/05-600x400.jpg')}}" class="item-image" alt=" ">
+                        <span>تشریح بازار مرتبط</span>
+                    </div>
+                    <div>
+                        <img src="{{asset('/acckt/img/06-600x400.jpg')}}" class="item-image" alt=" ">
+                        <span>خرید سهام</span>
+                    </div>
+                    <div>
+                        <img src="{{asset('/acckt/img/07-600x400.jpg')}}" class="item-image" alt=" ">
+                        <span>وام قرض الحسنه</span>
+                    </div>
+                    <div>
+                        <img src="{{asset('/acckt/img/08-600x400.jpg')}}" class="item-image" alt=" ">
+                        <span>بسته های تشویقی</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     <!------------------------------ END SECTION PAGE4 ---------------->
     <!------------------------------START SECTION FOOTER ---------------->
-    <section class="panel panel3" data-section-name="third" data-role="section">
+    <section class="panel panel3 mt-5" data-section-name="third" data-role="section">
         <footer class="footer">
             <div class="container-fluid footer-container">
                 <div class="row">

@@ -57,7 +57,7 @@
                     <li><a href="#" class="disabled" ><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">فروشگاه ایده بازار</span></a></li>
                     <li><a href="#"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">مشاهده ایده ها</span></a>
                         <ul class="menu-content">
-                            <li><a href="/portal_idea/idea/my"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">ایده های شخصی</span></a></li>
+                            <li><a href="/portal_idea/idea/my"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">ایده های من</span></a></li>
                             <li><a href="#" class="disabled"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">دسترسی به بانک ایده ها</span></a></li>
                         </ul>
                     </li>
