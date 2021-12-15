@@ -56,10 +56,10 @@ class AmountcapitalController extends Controller
             'trl'                   =>'required|array|',
             'amountcapitals_id'     =>'required|numeric|',
             'description'           =>'required|string|max:250',
-            'description_startup'   =>'required|string|max:250',
+            'description_startup'   =>'nullable|string|max:250',
             'injectioncapital_id'   =>'required|numeric',
-            'outstanding_investment'=>'required|string|max:250',
-            'request'               =>'required|string|max:250',
+            'outstanding_investment'=>'nullable|string|max:250',
+            'request'               =>'nullable|string|max:250',
             'statute'               =>'nullable|max:600|mimes:jpeg,jpg,png,pdf',
         ]);
 
@@ -138,10 +138,10 @@ class AmountcapitalController extends Controller
             'trl'                   =>'required|array|',
             'amountcapitals_id'     =>'required|numeric|',
             'description'           =>'required|string|max:250',
-            'description_startup'   =>'required|string|max:250',
+            'description_startup'   =>'nullable|string|max:250',
             'injectioncapital_id'   =>'required|numeric',
-            'outstanding_investment'=>'required|string|max:250',
-            'request'               =>'required|string|max:250',
+            'outstanding_investment'=>'nullable|string|max:250',
+            'request'               =>'nullable|string|max:250',
         ]);
         $request['trl']=implode(',',$request->trl);
         $status=$amountcapital->update($request->all());

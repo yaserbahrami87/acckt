@@ -20,19 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f0467a3-24f9-4bd2-92a8-1d1263ae5c34" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/demand_list.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/listDemand_Idea.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AmountcapitalController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AmountcapitalController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IdeaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IdeaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/idea_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/idea_edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/idea_list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/idea_list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/idea_show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/idea_show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/new_idea.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/new_idea.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/amountCapital_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/amountCapital_edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/idea_list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/idea_list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/amountCapital_insert.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/amountCapital_insert.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,6 +235,9 @@
       <workItem from="1639158047091" duration="49000" />
       <workItem from="1639241911890" duration="5575000" />
       <workItem from="1639290586858" duration="671000" />
+      <workItem from="1639296839897" duration="204000" />
+      <workItem from="1639549064166" duration="766000" />
+      <workItem from="1639597340704" duration="5885000" />
     </task>
     <servers />
   </component>
@@ -271,9 +265,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1639258890112" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1639260904949">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1639600656209">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1639260904949" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1639600656209" />
   </component>
 </project>
