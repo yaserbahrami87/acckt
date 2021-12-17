@@ -31,32 +31,6 @@
         </div>
         <div class="content-body"><!-- users list start -->
           <section class="users-list-wrapper">
-              <div class="users-list-filter px-1">
-                  <form>
-                      <div class="row border rounded py-2 mb-2">
-                          <div class="col-12 col-sm-6 col-lg-4">
-                              <label for="users-list-role">عنوان ایده</label>
-                              <fieldset class="form-group">
-                                <input type="text" class="form-control text-left" id="users-list-role">
-                              </fieldset>
-                          </div>
-                          <div class="col-12 col-sm-6 col-lg-4">
-                              <label for="users-list-status">وضعیت</label>
-                              <fieldset class="form-group">
-                                  <select class="form-control" id="users-list-status">
-                                      <option value="">همه</option>
-                                      <option value="فعال">فعال</option>
-                                      <option value="بسته شده">بسته شده</option>
-                                      <option value="غیرفعال">غیرفعال</option>
-                                  </select>
-                              </fieldset>
-                          </div>
-                          <div class="col-12 col-sm-6 col-lg-4 d-flex align-items-center">
-                              <button type="reset" class="btn btn-primary btn-block glow users-list-clear mb-0 mt-75">پاکسازی</button>
-                          </div>
-                      </div>
-                  </form>
-              </div>
               <div class="users-list-table">
                     <div class="row">
                         @if($idea->count() >0)
@@ -80,7 +54,7 @@
                                             <a href="{{asset('/portal/idea/'.$item->id.'/create')}}" class="btn btn-primary btn-sm">ثبت درخواست</a>
                                         @else
                                             <a href="#" class="btn btn-warning btn-sm">درخواست ارسال شده</a>
-                                            <a href="{{asset('/message/idea/'.$item->id)}}" class="btn btn-success btn-sm btn-block mt-1" >ارسال پیام</a>
+                                            <!-- <a href="{{asset('/message/idea/'.$item->id)}}" class="btn btn-success btn-sm btn-block mt-1" >ارسال پیام</a> -->
                                         @endif
                                     </div>
                                 </div>

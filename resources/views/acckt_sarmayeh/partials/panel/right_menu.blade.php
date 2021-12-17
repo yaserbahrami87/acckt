@@ -13,7 +13,7 @@
                             <img class="round" src="{{asset('/images/users/'.Auth::user()->avatar)}}" width="40">
                         @endif
                     </div>
-                    <h5 class="brand-text mb-0" style="font-size: 1.2rem;"></h5>
+                    <h5 class="brand-text mb-0" style="font-size: 1.2rem;">{{Auth::user()->lname}}</h5>
                 </a>
             </li>
         </ul>
@@ -34,7 +34,7 @@
                     <li><a href="/portal/user/change_password"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">تغییر رمز</span></a></li>
                 </ul>
             </li>
-            <li class=" nav-item has-sub {% if this.page.id == 'panel-inbox' or this.page.id == 'panel-inbox_detail' or this.page.id == 'panel-coworking_space_request_list' or this.page.id == 'panel-coworking_space_request' %}sidebar-group-active open{% endif %}"><a href="#"><span class="menu-title" data-i18n="Email">کارتابل</span></a>
+            <li class=" nav-item has-sub   "><a href="#"><span class="menu-title" data-i18n="Email">کارتابل</span></a>
                 <ul class="menu-content">
                     <!--<li><a href="/portal/inbox"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">نامه های وارده</span></a></li>-->
                     <li><a href="#" class="disabled"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">نامه های وارده</span></a></li>
@@ -65,7 +65,7 @@
             </li>
             <li class=" nav-item"><a href="#"><span class="menu-title" data-i18n="Chat">فهرست سرمایه ها</span></a>
                 <ul class="menu-content">
-                    <li><a href="#" class="disabled" ><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">سرمایه های من</span></a></li>
+                    <li><a href="/portal/amountcapital/my"  ><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">سرمایه های من</span></a></li>
                     <li><a href="#" class="disabled"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">دسترسی به بانک سرمایه گذاران</span></a></li>
                 </ul>
             </li>

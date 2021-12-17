@@ -82,6 +82,7 @@ Route::middleware(['can:isUser'])->prefix('portal')->group(function () {
     Route::resource('verify','VerifyController');
 
     //amount capital
+    Route::get('/amountcapital/my','AmountcapitalController@my');
     Route::resource('amountcapital','AmountcapitalController');
 
     //investmentmodel

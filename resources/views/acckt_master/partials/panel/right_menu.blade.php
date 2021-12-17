@@ -13,7 +13,7 @@
                             <img class="round" src="{{asset('/images/users/'.Auth::user()->avatar)}}" width="40">
                         @endif
                     </div>
-                    <h5 class="brand-text mb-0" style="font-size: 1.2rem;"></h5>
+                    <h5 class="brand-text mb-0" style="font-size: 1.2rem;">{{Auth::user()->lname}}</h5>
                 </a>
             </li>
         </ul>
@@ -77,7 +77,11 @@
                         </li>
                     </ul>
                 </li>
-                <li class=" nav-item"><a href="#"><span class="menu-title" data-i18n="Chat">خدمات آنلاین</span></a>
+                <li class=" nav-item">
+                    <a href="#">
+                        <i class="bi bi-ui-checks"></i>
+                        <span class="menu-title" >خدمات آنلاین</span>
+                    </a>
                     <ul class="menu-content">
                         <li><a href="/portal/online_class" class="disabled"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">کلاس ها</span></a></li>
                         <li><a href="/portal/online_meeting" class="disabled" ><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">جلسات</span></a></li>
@@ -86,7 +90,11 @@
                         <li><a href="#" class="disabled"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">فضای اختصاصی</span></a></li>
                     </ul>
                 </li>
-                <li class=" nav-item"><a href="#"><span class="menu-title" data-i18n="Chat">گواهینامه ها و افتخارات</span></a>
+                <li class=" nav-item">
+                    <a href="#">
+                        <i class="bi bi-briefcase-fill"></i>
+                        <span class="menu-title"  >گواهینامه ها و افتخارات</span>
+                    </a>
                     <ul class="menu-content">
                         <li><a href="#" class="disabled"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">شخصی</span></a></li>
                         <!--<li><a href="/portal/certificates"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">دریافت شده از شتابدهنده</span></a></li>-->
@@ -94,7 +102,12 @@
                     </ul>
                 </li>
                 <!--<li class=" nav-item"><a href="/portal/news"><i class="menu-livicon" data-icon="notebook"></i><span class="menu-title" data-i18n="Chat">اخبار</span></a></li>-->
-                <li class=" nav-item"><a href="#" class="disabled"><span class="menu-title" data-i18n="Chat">اخبار</span></a></li>
+                <li class=" nav-item">
+                    <a href="#" class="disabled">
+                        <i class="bi bi-newspaper"></i>
+                        <span class="menu-title" >اخبار</span>
+                    </a>
+                </li>
                 <li class=" nav-item"><a href="#"><span class="menu-title" data-i18n="Invoice">امتیازات</span></a>
                     <ul class="menu-content">
                         <li><a href="/portal/scores_list"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">لیست امتیازات</span></a></li>
@@ -103,13 +116,20 @@
                     </ul>
                 </li>
             @endif
-            <li class=" nav-item"><a href="#"><span class="menu-title" data-i18n="Chat">تماس با ما</span></a>
+            <li class=" nav-item"><a href="#">
+                <i class="bi bi-chat-left-dots-fill"></i>
+                <span class="menu-title">تماس با ما</span></a>
                 <ul class="menu-content">
                     <li><a href="/portal/contact"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">انتقادات و پیشنهادات</span></a></li>
                     <li><a href="#" class="disabled"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">راه های ارتباطی</span></a></li>
                 </ul>
             </li>
-            <li class=" nav-item {% if this.page.id == 'panel-faq' %}sidebar-group-active{% endif %}"><a href="/portal/faq"><span class="menu-title" data-i18n="Chat">سوالات متداول</span></a></li>
+            <li class=" nav-item  ">
+                <a href="/portal/faq">
+                    <i class="bi bi-question-circle"></i>
+                    <span class="menu-title"  >سوالات متداول</span>
+                </a>
+            </li>
             <!--<li class=" nav-item {% if this.page.id == 'panel-coming_soon' %}sidebar-group-active{% endif %}"><a href="/portal/coming_soon"><i class="menu-livicon" data-icon="loader-15"></i><span class="menu-title" data-i18n="Kanban">به زودی</span></a></li>-->
         </ul>
     </div>

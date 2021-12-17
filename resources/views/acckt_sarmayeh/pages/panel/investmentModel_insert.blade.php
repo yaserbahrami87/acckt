@@ -55,7 +55,6 @@
                                                                 <div class="form-group">
                                                                     <label for="investmentmodel_id">کدامیک از مدل های سرمایه گذاری زیر برای شما امکان پذیر است ؟</label>
                                                                     <select class="form-control" id="investmentmodel_id" name="investmentmodel_id[]" multiple>
-                                                                        <option disabled selected>یک گزینه انتخاب کنید</option>
                                                                         <option value="1">سرمایه گذاری جسورانه</option>
                                                                         <option value="2">مشارکت در توسعه و فروش محصولات</option>
                                                                         <option value="3">دریافت سهام از استارتاپ توسعه یافته </option>

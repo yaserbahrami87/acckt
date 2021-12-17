@@ -29,15 +29,15 @@ class AmountcapitalController extends Controller
             ->where('amountcapitals.user_id','=',Auth::user()->id)
             ->select('amountcapitals.*')
             ->first();
-        if(is_null($amountcapital) )
-        {
+//        if(is_null($amountcapital) )
+//        {
             return view('acckt_sarmayeh.pages.panel.amountCapital_insert');
-        }
-        else
-        {
-            return view('acckt_sarmayeh.pages.panel.amountCapital_edit')
-                ->with('amountcapital',$amountcapital);
-        }
+//        }
+//        else
+//        {
+//            return view('acckt_sarmayeh.pages.panel.amountCapital_edit')
+//                ->with('amountcapital',$amountcapital);
+//        }
         //return view('panelUser.amountCapital_insert');
     }
 
@@ -120,7 +120,16 @@ class AmountcapitalController extends Controller
      */
     public function edit(amountcapital $amountcapital)
     {
-        dd($amountcapital);
+        if($amountcapital->user_id==Auth::user()->id)
+        {
+            return view('acckt_sarmayeh.pages.panel.amountCapital_edit')
+                            ->with('amountcapital',$amountcapital);
+        }
+        else
+        {
+            alert()->error('این سرمایه مربوط به شما نمی باشد')->persistent('بستن');
+            return back();
+        }
     }
 
     /**
@@ -182,6 +191,51 @@ class AmountcapitalController extends Controller
      */
     public function destroy(amountcapital $amountcapital)
     {
-        //
+        if($amountcapital->user_id==Auth::user()->id)
+        {
+            $status=$amountcapital->delete();
+            if($status)
+            {
+                alert()->success('سرمایه با موفقیت حذف شد')->persistent('بستن');
+            }
+            else
+            {
+                alert()->error('خطا در حذف')->persistent('بستن');
+            }
+
+            return back();
+        }
+        else
+        {
+            alert()->error('شما مجاز به حذف این سرمایه نمی باشید')->persistent('بستن');
+            return back();
+        }
+    }
+
+    public function my()
+    {
+        $amountcapitals=amountcapital::where('user_id','=',Auth::user()->id)
+                        ->orderby('id','desc')
+                        ->paginate(20);
+
+        foreach ($amountcapitals as $item)
+        {
+            switch ($item->capitalgroup_id)
+            {
+                case '1':$item->capitalgroup="تجارت الکترونیک";
+                            break;
+                case '2':$item->capitalgroup="سلامت";
+                            break;
+                case '3':$item->capitalgroup="گردشگری";
+                            break;
+                case '4':$item->capitalgroup="مرتبط با IT";
+                            break;
+                default:$item->capitalgroup='خطا';
+            }
+
+        }
+
+        return view('acckt_sarmayeh.pages.panel.amountCapital_my')
+                            ->with('amountcapitals',$amountcapitals);
     }
 }
