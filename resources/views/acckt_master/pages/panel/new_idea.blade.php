@@ -80,6 +80,7 @@
                                                     <div class="form-group">
                                                         <label for="avatar">پوستر ایده</label>
                                                         <input type="file" class="form-control-file" id="avatar" name="avatar" required />
+                                                        <small>فایل های مجاز: JPG، PNG و GIF. حداکثر اندازه مجاز: 600KB</small>
                                                     </div>
                                                 </div>
                                                 <div class="col-sm-6">

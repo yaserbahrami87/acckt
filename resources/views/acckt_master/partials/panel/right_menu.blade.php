@@ -30,64 +30,67 @@
                     <li><a href="/portal_idea/user/change_password"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">تغییر رمز</span></a></li>
                 </ul>
             </li>
-            <li class=" nav-item has-sub {% if this.page.id == 'panel-inbox' or this.page.id == 'panel-inbox_detail' or this.page.id == 'panel-coworking_space_request_list' or this.page.id == 'panel-coworking_space_request' %}sidebar-group-active open{% endif %}"><a href="#"><span class="menu-title" data-i18n="Email">کارتابل</span></a>
-                <ul class="menu-content">
-                    <!--<li><a href="/portal/inbox"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">نامه های وارده</span></a></li>-->
-                    <li><a href="#" class="disabled"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">نامه های وارده</span></a></li>
-                    <li><a href=" nav-item has-sub {% if this.page.id == 'panel-coworking_space_request_list' or this.page.id == 'panel-coworking_space_request' %}sidebar-group-active open{% endif %}"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">درخواست ها</span></a>
-                        <ul class="menu-content">
-                            <!--<li><a href="/portal/coworking_space_request"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">فضای کار اشتراکی</span></a></li>-->
-                            <li><a href="#" class="disabled"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">فضای کار اشتراکی</span></a></li>
-                            <li><a href="#" class="disabled"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">جلسه منتورینگ و کوچینگ</span></a></li>
-                            <li><a href="#" class="disabled"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">گواهینامه و معرفی نامه</span></a></li>
-                            <li><a href="#" class="disabled"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">سایر درخواست ها</span></a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li class=" nav-item"><a href="#"><span class="menu-title" data-i18n="Chat">ایده/طرح</span></a>
-                <ul class="menu-content">
-                    <li><a href="/portal_idea/idea/create" ><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">ثبت ایده</span></a></li>
-                    <li><a href="#"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">ثبت طرح</span></a>
-                        <ul class="menu-content">
-                            <li><a href="/portal/business_model" class="disabled" ><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">مدل کسب و کار</span></a></li>
-                            <li><a href="#" class="disabled"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">Business Plan</span></a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#" class="disabled" ><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">فروشگاه ایده بازار</span></a></li>
-                    <li><a href="#"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">مشاهده ایده ها</span></a>
-                        <ul class="menu-content">
-                            <li><a href="/portal_idea/idea/my"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">ایده های من</span></a></li>
-                            <li><a href="#" class="disabled"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">دسترسی به بانک ایده ها</span></a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li class=" nav-item"><a href="#"><span class="menu-title" data-i18n="Chat">خدمات آنلاین</span></a>
-                <ul class="menu-content">
-                    <li><a href="/portal/online_class" class="disabled"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">کلاس ها</span></a></li>
-                    <li><a href="/portal/online_meeting" class="disabled" ><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">جلسات</span></a></li>
-                    <li><a href="/portal/courses" class="disabled" ><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">دوره ها</span></a></li>
-                    <li><a href="#" class="disabled" ><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">نشست ها</span></a></li>
-                    <li><a href="#" class="disabled"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">فضای اختصاصی</span></a></li>
-                </ul>
-            </li>
-            <li class=" nav-item"><a href="#"><span class="menu-title" data-i18n="Chat">گواهینامه ها و افتخارات</span></a>
-                <ul class="menu-content">
-                    <li><a href="#" class="disabled"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">شخصی</span></a></li>
-                    <!--<li><a href="/portal/certificates"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">دریافت شده از شتابدهنده</span></a></li>-->
-                    <li><a href="#" class="disabled"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">دریافت شده از شتابدهنده</span></a></li>
-                </ul>
-            </li>
-            <!--<li class=" nav-item"><a href="/portal/news"><i class="menu-livicon" data-icon="notebook"></i><span class="menu-title" data-i18n="Chat">اخبار</span></a></li>-->
-            <li class=" nav-item"><a href="#" class="disabled"><span class="menu-title" data-i18n="Chat">اخبار</span></a></li>
-            <li class=" nav-item"><a href="#"><span class="menu-title" data-i18n="Invoice">امتیازات</span></a>
-                <ul class="menu-content">
-                    <li><a href="/portal/scores_list"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">لیست امتیازات</span></a></li>
-                    <li><a href="#" class="disabled"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">افزایش امتیاز</span></a></li>
-                    <li><a href="#" class="disabled"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">شبکه بازار همکار</span></a></li>
-                </ul>
-            </li>
+
+            @if(Auth::user()->tel_verify==1)
+                <li class=" nav-item has-sub {% if this.page.id == 'panel-inbox' or this.page.id == 'panel-inbox_detail' or this.page.id == 'panel-coworking_space_request_list' or this.page.id == 'panel-coworking_space_request' %}sidebar-group-active open{% endif %}"><a href="#"><span class="menu-title" data-i18n="Email">کارتابل</span></a>
+                    <ul class="menu-content">
+                        <!--<li><a href="/portal/inbox"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">نامه های وارده</span></a></li>-->
+                        <li><a href="#" class="disabled"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">نامه های وارده</span></a></li>
+                        <li><a href=" nav-item has-sub {% if this.page.id == 'panel-coworking_space_request_list' or this.page.id == 'panel-coworking_space_request' %}sidebar-group-active open{% endif %}"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">درخواست ها</span></a>
+                            <ul class="menu-content">
+                                <!--<li><a href="/portal/coworking_space_request"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">فضای کار اشتراکی</span></a></li>-->
+                                <li><a href="#" class="disabled"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">فضای کار اشتراکی</span></a></li>
+                                <li><a href="#" class="disabled"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">جلسه منتورینگ و کوچینگ</span></a></li>
+                                <li><a href="#" class="disabled"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">گواهینامه و معرفی نامه</span></a></li>
+                                <li><a href="#" class="disabled"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">سایر درخواست ها</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item"><a href="#"><span class="menu-title" data-i18n="Chat">ایده/طرح</span></a>
+                    <ul class="menu-content">
+                        <li><a href="/portal_idea/idea/create" ><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">ثبت ایده</span></a></li>
+                        <li><a href="#"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">ثبت طرح</span></a>
+                            <ul class="menu-content">
+                                <li><a href="/portal/business_model" class="disabled" ><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">مدل کسب و کار</span></a></li>
+                                <li><a href="#" class="disabled"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">Business Plan</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" class="disabled" ><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">فروشگاه ایده بازار</span></a></li>
+                        <li><a href="#"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">مشاهده ایده ها</span></a>
+                            <ul class="menu-content">
+                                <li><a href="/portal_idea/idea/my"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">ایده های من</span></a></li>
+                                <li><a href="#" class="disabled"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">دسترسی به بانک ایده ها</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item"><a href="#"><span class="menu-title" data-i18n="Chat">خدمات آنلاین</span></a>
+                    <ul class="menu-content">
+                        <li><a href="/portal/online_class" class="disabled"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">کلاس ها</span></a></li>
+                        <li><a href="/portal/online_meeting" class="disabled" ><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">جلسات</span></a></li>
+                        <li><a href="/portal/courses" class="disabled" ><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">دوره ها</span></a></li>
+                        <li><a href="#" class="disabled" ><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">نشست ها</span></a></li>
+                        <li><a href="#" class="disabled"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">فضای اختصاصی</span></a></li>
+                    </ul>
+                </li>
+                <li class=" nav-item"><a href="#"><span class="menu-title" data-i18n="Chat">گواهینامه ها و افتخارات</span></a>
+                    <ul class="menu-content">
+                        <li><a href="#" class="disabled"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">شخصی</span></a></li>
+                        <!--<li><a href="/portal/certificates"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">دریافت شده از شتابدهنده</span></a></li>-->
+                        <li><a href="#" class="disabled"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">دریافت شده از شتابدهنده</span></a></li>
+                    </ul>
+                </li>
+                <!--<li class=" nav-item"><a href="/portal/news"><i class="menu-livicon" data-icon="notebook"></i><span class="menu-title" data-i18n="Chat">اخبار</span></a></li>-->
+                <li class=" nav-item"><a href="#" class="disabled"><span class="menu-title" data-i18n="Chat">اخبار</span></a></li>
+                <li class=" nav-item"><a href="#"><span class="menu-title" data-i18n="Invoice">امتیازات</span></a>
+                    <ul class="menu-content">
+                        <li><a href="/portal/scores_list"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">لیست امتیازات</span></a></li>
+                        <li><a href="#" class="disabled"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">افزایش امتیاز</span></a></li>
+                        <li><a href="#" class="disabled"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">شبکه بازار همکار</span></a></li>
+                    </ul>
+                </li>
+            @endif
             <li class=" nav-item"><a href="#"><span class="menu-title" data-i18n="Chat">تماس با ما</span></a>
                 <ul class="menu-content">
                     <li><a href="/portal/contact"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">انتقادات و پیشنهادات</span></a></li>

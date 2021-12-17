@@ -226,10 +226,14 @@ class IdeaController extends BaseController
         //
     }
 
-    public function myIdea()
+    public function myIdea(Request $request)
     {
         $ideas=idea::join('users','ideas.user_id','=','users.id')
             ->where('user_id','=',Auth::user()->id)
+            ->when($request->q, function($query)use($request)
+            {
+               return $query->where('group_name','like',"%$request->q%");
+            })
             ->select('ideas.*')
             ->get();
 

@@ -44,15 +44,36 @@ class HomeController extends BaseController
 
 
 
+
+        $checkTimeCode=verify::where('tel','=',Auth::user()->tel)
+            ->where('verify','=',1)
+            ->latest()
+            ->first();
+
+        $verifyStatus=false;
+        if(!is_null( $checkTimeCode))
+        {
+            $date=($checkTimeCode['created_at']);
+            $checkDays=$date->addMinutes(2);
+            if($checkDays>Carbon::now())
+            {
+                $verifyStatus=true;
+            }
+        }
+
+
+
         if(Auth::user()->type==2)
         {
             return view('acckt_master.pages.panel.index')
-                ->with('verifyTel',$verifyTel);
+                ->with('verifyTel',$verifyTel)
+                ->with('verifyStatus',$verifyStatus);
         }
         elseif(Auth::user()->type==1)
         {
             return view('acckt_sarmayeh.pages.panel.index')
-                ->with('verifyTel',$verifyTel);
+                ->with('verifyTel',$verifyTel)
+                ->with('verifyStatus',$verifyStatus);
         }
 
 

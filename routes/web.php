@@ -109,6 +109,12 @@ Route::middleware(['can:isIdea'])->prefix('portal_idea')->group(function () {
     Route::get('/idea/my','IdeaController@myIdea');
     Route::get('/idea/{idea}/demand','IdeaController@showdemand');
     Route::resource('idea','IdeaController');
+
+
+    //Verify
+    Route::post('/verify/sendCode/tel','VerifyController@sendCodeTel');
+    Route::post('/verify/checkCode/tel','VerifyController@checkCodeTel');
+    Route::resource('verify','VerifyController');
 });
 
 //test

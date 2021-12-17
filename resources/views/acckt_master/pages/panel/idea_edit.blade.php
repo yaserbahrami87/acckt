@@ -163,111 +163,87 @@
                                                                                 <div class="col-md-2 col-2 form-group">
                                                                                     <input type="text" name="specialty[]" class="form-control text-left" placeholder="تخصص در تیم" dir="ltr" value="{{$idea->specialty[0]}}"  >
                                                                                 </div>
-                                                                                <!--<div class="col-md-1 col-1 form-group">
-                                                                                    <button class="btn btn-icon btn-danger rounded-circle" type="button" data-repeater-delete="">
-                                                                                        <i class="bx bx-x"></i>
-                                                                                    </button>
-                                                                                </div>-->
+
                                                                             </div>
                                                                             <div class="row justify-content-between" data-repeater-item="">
-                                                                                <div class="col-md-2 col-2 form-group d-flex align-items-center">
-                                                                                    <input type="text" name="full_name[]" class="form-control" placeholder="نام و نام خانوادگی">
+                                                                                <div class="col-md-2 col-2 form-group">
+                                                                                    <input type="text" name="full_name[]" class="form-control required" placeholder="نام و نام خانوادگی" value="{{$idea->full_name[1]}}" >
                                                                                 </div>
                                                                                 <div class="col-md-2 col-2 form-group">
-                                                                                    <input type="text" name="birth_date[]" class="form-control birthdate-picker" placeholder="تاریخ تولد">
+                                                                                    <input type="text" name="birth_date[]" class="form-control birthdate-picker required" placeholder="تاریخ تولد" value="{{$idea->birth_date[1]}}" >
                                                                                 </div>
                                                                                 <div class="col-md-2 col-2 form-group">
-                                                                                    <input type="text" name="mobile[]" class="form-control text-left" placeholder="تلفن همراه" dir="ltr">
+                                                                                    <input type="text" name="mobile[]" class="form-control text-left required" placeholder="تلفن همراه" dir="ltr" value="{{$idea->mobile[1]}}" >
                                                                                 </div>
                                                                                 <div class="col-md-2 col-2 form-group">
-                                                                                    <input type="text" name="email[]" class="form-control text-left" placeholder="پست الکترونیکی" dir="ltr">
+                                                                                    <input type="text" name="email[]" class="form-control text-left required" placeholder="پست الکترونیکی" dir="ltr" value="{{$idea->email[1]}}"  >
                                                                                 </div>
                                                                                 <div class="col-md-2 col-2 form-group">
-                                                                                    <input type="text" name="degree_and_field_of_study[]" class="form-control text-left" placeholder="مدرک تحصیلی و رشته تحصیلی" dir="ltr">
+                                                                                    <input type="text" name="degree_and_field_of_study[]" class="form-control text-left required" placeholder="مدرک تحصیلی و رشته تحصیلی" dir="ltr" value="{{$idea->degree_and_field_of_study[1]}}"  >
                                                                                 </div>
                                                                                 <div class="col-md-2 col-2 form-group">
-                                                                                    <input type="text" name="specialty[]" class="form-control text-left" placeholder="تخصص در تیم" dir="ltr">
+                                                                                    <input type="text" name="specialty[]" class="form-control text-left" placeholder="تخصص در تیم" dir="ltr" value="{{$idea->specialty[1]}}"  >
                                                                                 </div>
-                                                                                <!--<div class="col-md-1 col-1 form-group">
-                                                                                    <button class="btn btn-icon btn-danger rounded-circle" type="button" data-repeater-delete="">
-                                                                                        <i class="bx bx-x"></i>
-                                                                                    </button>
-                                                                                </div>-->
                                                                             </div>
                                                                             <div class="row justify-content-between" data-repeater-item="">
-                                                                                <div class="col-md-2 col-2 form-group d-flex align-items-center">
-                                                                                    <input type="text" name="full_name[]" class="form-control" placeholder="نام و نام خانوادگی">
+                                                                                <div class="col-md-2 col-2 form-group">
+                                                                                    <input type="text" name="full_name[]" class="form-control required" placeholder="نام و نام خانوادگی" value="{{$idea->full_name[2]}}" >
                                                                                 </div>
                                                                                 <div class="col-md-2 col-2 form-group">
-                                                                                    <input type="text" name="birth_date[]" class="form-control birthdate-picker" placeholder="تاریخ تولد">
+                                                                                    <input type="text" name="birth_date[]" class="form-control birthdate-picker required" placeholder="تاریخ تولد" value="{{$idea->birth_date[2]}}" >
                                                                                 </div>
                                                                                 <div class="col-md-2 col-2 form-group">
-                                                                                    <input type="text" name="mobile[]" class="form-control text-left" placeholder="تلفن همراه" dir="ltr">
+                                                                                    <input type="text" name="mobile[]" class="form-control text-left required" placeholder="تلفن همراه" dir="ltr" value="{{$idea->mobile[2]}}" >
                                                                                 </div>
                                                                                 <div class="col-md-2 col-2 form-group">
-                                                                                    <input type="text" name="email[]" class="form-control text-left" placeholder="پست الکترونیکی" dir="ltr">
+                                                                                    <input type="text" name="email[]" class="form-control text-left required" placeholder="پست الکترونیکی" dir="ltr" value="{{$idea->email[2]}}"  >
                                                                                 </div>
                                                                                 <div class="col-md-2 col-2 form-group">
-                                                                                    <input type="text" name="degree_and_field_of_study[]" class="form-control text-left" placeholder="مدرک تحصیلی و رشته تحصیلی" dir="ltr">
+                                                                                    <input type="text" name="degree_and_field_of_study[]" class="form-control text-left required" placeholder="مدرک تحصیلی و رشته تحصیلی" dir="ltr" value="{{$idea->degree_and_field_of_study[2]}}"  >
                                                                                 </div>
                                                                                 <div class="col-md-2 col-2 form-group">
-                                                                                    <input type="text" name="specialty[]" class="form-control text-left" placeholder="تخصص در تیم" dir="ltr">
+                                                                                    <input type="text" name="specialty[]" class="form-control text-left" placeholder="تخصص در تیم" dir="ltr" value="{{$idea->specialty[2]}}"  >
                                                                                 </div>
-                                                                                <!--<div class="col-md-1 col-1 form-group">
-                                                                                    <button class="btn btn-icon btn-danger rounded-circle" type="button" data-repeater-delete="">
-                                                                                        <i class="bx bx-x"></i>
-                                                                                    </button>
-                                                                                </div>-->
                                                                             </div>
                                                                             <div class="row justify-content-between" data-repeater-item="">
-                                                                                <div class="col-md-2 col-2 form-group d-flex align-items-center">
-                                                                                    <input type="text" name="full_name[]" class="form-control" placeholder="نام و نام خانوادگی">
+                                                                                <div class="col-md-2 col-2 form-group">
+                                                                                    <input type="text" name="full_name[]" class="form-control required" placeholder="نام و نام خانوادگی" value="{{$idea->full_name[3]}}" >
                                                                                 </div>
                                                                                 <div class="col-md-2 col-2 form-group">
-                                                                                    <input type="text" name="birth_date[]" class="form-control birthdate-picker" placeholder="تاریخ تولد">
+                                                                                    <input type="text" name="birth_date[]" class="form-control birthdate-picker required" placeholder="تاریخ تولد" value="{{$idea->birth_date[3]}}" >
                                                                                 </div>
                                                                                 <div class="col-md-2 col-2 form-group">
-                                                                                    <input type="text" name="mobile[]" class="form-control text-left" placeholder="تلفن همراه" dir="ltr">
+                                                                                    <input type="text" name="mobile[]" class="form-control text-left required" placeholder="تلفن همراه" dir="ltr" value="{{$idea->mobile[3]}}" >
                                                                                 </div>
                                                                                 <div class="col-md-2 col-2 form-group">
-                                                                                    <input type="text" name="email[]" class="form-control text-left" placeholder="پست الکترونیکی" dir="ltr">
+                                                                                    <input type="text" name="email[]" class="form-control text-left required" placeholder="پست الکترونیکی" dir="ltr" value="{{$idea->email[3]}}"  >
                                                                                 </div>
                                                                                 <div class="col-md-2 col-2 form-group">
-                                                                                    <input type="text" name="degree_and_field_of_study[]" class="form-control text-left" placeholder="مدرک تحصیلی و رشته تحصیلی" dir="ltr">
+                                                                                    <input type="text" name="degree_and_field_of_study[]" class="form-control text-left required" placeholder="مدرک تحصیلی و رشته تحصیلی" dir="ltr" value="{{$idea->degree_and_field_of_study[3]}}"  >
                                                                                 </div>
                                                                                 <div class="col-md-2 col-2 form-group">
-                                                                                    <input type="text" name="specialty[]" class="form-control text-left" placeholder="تخصص در تیم" dir="ltr">
+                                                                                    <input type="text" name="specialty[]" class="form-control text-left" placeholder="تخصص در تیم" dir="ltr" value="{{$idea->specialty[3]}}"  >
                                                                                 </div>
-                                                                                <!--<div class="col-md-1 col-1 form-group">
-                                                                                    <button class="btn btn-icon btn-danger rounded-circle" type="button" data-repeater-delete="">
-                                                                                        <i class="bx bx-x"></i>
-                                                                                    </button>
-                                                                                </div>-->
                                                                             </div>
                                                                             <div class="row justify-content-between" data-repeater-item="">
-                                                                                <div class="col-md-2 col-2 form-group d-flex align-items-center">
-                                                                                    <input type="text" name="full_name[]" class="form-control" placeholder="نام و نام خانوادگی">
+                                                                                <div class="col-md-2 col-2 form-group">
+                                                                                    <input type="text" name="full_name[]" class="form-control required" placeholder="نام و نام خانوادگی" value="{{$idea->full_name[4]}}" >
                                                                                 </div>
                                                                                 <div class="col-md-2 col-2 form-group">
-                                                                                    <input type="text" name="birth_date[]" class="form-control birthdate-picker" placeholder="تاریخ تولد">
+                                                                                    <input type="text" name="birth_date[]" class="form-control birthdate-picker required" placeholder="تاریخ تولد" value="{{$idea->birth_date[4]}}" >
                                                                                 </div>
                                                                                 <div class="col-md-2 col-2 form-group">
-                                                                                    <input type="text" name="mobile[]" class="form-control text-left" placeholder="تلفن همراه" dir="ltr">
+                                                                                    <input type="text" name="mobile[]" class="form-control text-left required" placeholder="تلفن همراه" dir="ltr" value="{{$idea->mobile[4]}}" >
                                                                                 </div>
                                                                                 <div class="col-md-2 col-2 form-group">
-                                                                                    <input type="text" name="email[]" class="form-control text-left" placeholder="پست الکترونیکی" dir="ltr">
+                                                                                    <input type="text" name="email[]" class="form-control text-left required" placeholder="پست الکترونیکی" dir="ltr" value="{{$idea->email[4]}}"  >
                                                                                 </div>
                                                                                 <div class="col-md-2 col-2 form-group">
-                                                                                    <input type="text" name="degree_and_field_of_study[]" class="form-control text-left" placeholder="مدرک تحصیلی و رشته تحصیلی" dir="ltr">
+                                                                                    <input type="text" name="degree_and_field_of_study[]" class="form-control text-left required" placeholder="مدرک تحصیلی و رشته تحصیلی" dir="ltr" value="{{$idea->degree_and_field_of_study[4]}}"  >
                                                                                 </div>
                                                                                 <div class="col-md-2 col-2 form-group">
-                                                                                    <input type="text" name="specialty[]" class="form-control text-left" placeholder="تخصص در تیم" dir="ltr">
+                                                                                    <input type="text" name="specialty[]" class="form-control text-left" placeholder="تخصص در تیم" dir="ltr" value="{{$idea->specialty[4]}}"  >
                                                                                 </div>
-                                                                                <!--<div class="col-md-1 col-1 form-group">
-                                                                                    <button class="btn btn-icon btn-danger rounded-circle" type="button" data-repeater-delete="">
-                                                                                        <i class="bx bx-x"></i>
-                                                                                    </button>
-                                                                                </div>-->
                                                                             </div>
                                                                         </div>
                                                                     </div>

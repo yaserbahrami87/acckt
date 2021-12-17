@@ -5,172 +5,304 @@
     src: url("../Fonts/SGKara-Regular_p30download.com.ttf");
     src: url("../Fonts/SGKara-SemiBold_p30download.com.ttf");
 }
-html, body {
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-    background-color: black;
-    direction: rtl;
-}
-
-section, header, footer, nav, div, span, ul, li, a {
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,500);
+* {
     box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    overflow: hidden;
 }
-.menu{
-    font-family: kara;
-    font-size: 15px;
-}
-header {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    background-color: rgba(0,0,0,0);
-}
-header nav {
-}
-
-header ul {
-    margin: 0;
+html, body {
+    height: 100vh;
     padding: 0;
-    list-style: none;
+    margin: 0;
+    background-color: rgb(0, 0, 0);
+    direction: rtl;
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
 }
-
-header ul li {
-    display: inline-block;
-    padding: 0 20px;
+li >a{
+    font-family: kara;
 }
-
-header ul a {
-    font-weight: 700;
-    text-decoration: none;
-    color: #cacaca;
-    height: 30px;
-    display: block;
-    position: relative;
-}
-
-header ul a span {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    display: inline-block;
-}
-
 section {
     float: left;
     display: block;
     height: 100%;
-    padding:30px 0 0 0;
-    margin: 0;
-}
+    background-color: rgb(0, 0, 0);
 
-#section-section1 {
-    background: #2c3e50;
-}
+    /*padding-top:60px;*/
 
-/*.horizon-prev, .horizon-next {
-    position: fixed;
-    top: 50%;
-    margin-top: -24px;
-    z-index: 9999;
-}
 
-.horizon-prev {
-    left: 20px;
 }
-
-.horizon-next {
-    right: 20px;
-}*/
 /*-------------------------PROJECT----------------------------*/
-/*--------------------------- RASANE -------------------------*/
+/*-------------------------MENUE----------------------------*/
 
-.container-fluid{
-    width: 100%;
-    height: 100%;
+/*-------------------------AVAL----------------------------*/
+
+.full {
+    width:100%;
+    height:100vh;
+    object-fit:cover;
 }
-body{
-    margin:0;
+.text-hover{
+    opacity: 0.5;
+    margin: 60px;
+    transition: transform .2s;
+    margin: 0 auto;
+
 }
-.height{
-    width: 100%;
-    text-align: center;
-    float: left;
+.text-hover:hover{
+    transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5);
+    opacity: 1;
+}
+.mid-text > video{
+    opacity: 0.3;
+}
+.mid-text > video:hover{
+    opacity: 1;
+    transition: 1.5s;
+}
+.mid-text{
+    display: grid;
+    align-items: center;
+}
+.text-1{
+    font-size: 2rem;
+    z-index: 100;
+}
+.text-border
+{
+    border: 1px dashed rgb(255, 255, 255, 0.5)
+}
+#section-section1 {
+    background: #000000;
+}
+.menu-1{
+    font-family: kara;
+    font-size: 1.5rem;
+    color: #fff;
+}
+.menu-1:hover{
+    text-decoration: none;
+    font-size: .7em;
+    color: #fff;
+}
+
+/*--------------------------- RASANE -------------------------*/
+.videos{
     position: relative;
 }
-#row-2{
-    margin-top: -58px;
+.videos video{
+    float: left;
+    opacity: 1;
+    width: 100%;
 }
-#heram{
-    z-index: 2;
+/*.videos video:hover{
+    opacity: 1;
+}*/
+video + div{
+    opacity: 1;
+    width: 100%;
 }
-.text{
-    background-image: url("../images/animation.gif");
-    background-color:rgb(255, 255, 255);
-    height: 150px;
-    z-index: -1;
-    background-position: -1060px 0px;
+video + div:hover{
+    opacity: 0;
 }
-.text:hover{
-    background-image: url("../images/animation.gif");
-    background-color:rgb(0, 0, 0 ,0);
-    background-position-x: 0px;
+#moshen{
+    background: url("../images/cover-moshen.jpg") no-repeat;
+    background-size: contain;
+    height: 100%;
+    width: 100%;
 }
-.text1{
-    background-image: url("../images/launch-normal.png");
+#cover-ide{
+    background: url("../images/cover1.jpg") no-repeat;
+    background-size: contain;
+    height: 100%;
+    width: 100%;
 }
-.text1:hover{
-    background-image: url("../images/launch-over.png");
-    background-color:rgb(0,0,0,);
+#cover-aparat{
+    background: url("../images/cover-aparat-stive-jobz.jpg") no-repeat;
+    background-size: contain;
+    height: 100%;
+    width: 100%;
+}
 
+.box-what{
+    background: #fff;
+    background-image: url("../images/Asset 3.png");
+    height: 25vh;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
+.box-what:before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: rotate3d(0,0,1,45deg) scale3d(1.5,0,1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: all .15s;
+    background-image: url("../images/Asset 4.png");
+    background-color:rgb(0,0,0,1);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.box-what:hover:before{
+    background-color:rgb(0,0,0,1);
+    opacity: 1;
+    transform: rotate3d(0,0,1,0deg) scale3d(1.5,1,1);
+}
+.box-risponsive{
+    background: #fff;
+    background-image: url("../images/Asset 3.png");
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.box-risponsive:before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: rotate3d(0,0,1,45deg) scale3d(1.5,0,1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: all .15s;
+    background-image: url("../images/Asset 4.png");
+    background-color:rgb(0,0,0,1);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.box-risponsive:hover:before{
+    background-color:rgb(0,0,0,1);
+    opacity: 1;
+    transform: rotate3d(0,0,1,0deg) scale3d(1.5,1,1);
+}
+
+
+/*@media only screen and (max-width:990px){
+    .box{ margin: 0 0 30px; }
+}*/
+
 #image{
-    background-image: url("../images/cemera.jfif");
+    background-image: url("../images/Asset 2.png");
     z-index: -1;
-    height:193px;;
-}
+    background-repeat: no-repeat;
+    height: 100vh;
 
+
+}
+/*-------------------------------------- START GLOBAL MANAGEMENT --------------------*/
+
+.global {
+    font-size: 40px;
+    margin: 0;
+}
+.block-wrap {
+    background: url("../images/background (2).jpg");
+    background-size: 100% 100%;
+    width: 100%;
+    overflow: hidden;
+}
+#video{
+    position: fixed;
+}
+.block {
+    display: inline-block;
+    float: left;
+    width: 5%;
+    height: 65px;
+    background: #000;
+    -webkit-transition: all 0.2s ease-in;
+    -webkit-transition-delay: 0.4s;
+    -moz-transition: all 0.2s ease-in;
+    -moz-transition-delay: 0.4s;
+    transition: all 0.2s ease-in;
+    transition-delay: 0.4s;
+}
+.off {
+    opacity: 0;
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+}
 /*--------------------------- MODELS -------------------------*/
 
-.main{
-    background-color: rgb(0, 0, 0);
-    overflow: hidden;
-    height: 100%;
-}
 .container{
+    background: url("../images/flou.jpg") no-repeat;
+    height: 100vh;
+    background-position: center center;
+    text-align: center;
+}
+#back-home{
     background: url("../images/background.jpg") no-repeat;
     height: 100vh;
     background-position: center center;
 }
-#back-home{
-    background: url("../images/flou.jpg") no-repeat;
-    height: 100vh;
-    background-position: center center;
+.parallax-obj{
+    position: reletive;
+    left: 0px;
 }
-#find{
-    height: 219px;
-    margin-top: 218px;
-    background: url("../images/launch.png") no-repeat;
+#launch{
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: absolute;
+    z-index: 100;
+    background-image: url(../images/launch.png);
     background-position: center center;
-    opacity: 0.1;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
 }
-#find :hover{
+#launch:hover{
     opacity: 1;
+}
+.scene{
+    height: 100vh;
+    text-align: center!important;
+}
+.scene>span{
+    color: #FFF;
+    font-size: 1.4rem;
+    line-height: 24px;
+    position: absolute;
+    z-index: 120;
+    margin-left: 41%;
+}
+#span{
+    margin-top: 23%;
+}
+#risk{
+    position:relative;
+    margin-left: 36%;
+    margin-top: 5%;
+    font-family: kara;
+}
+#risk2{
+    position:absolute;
+    margin-left: 36%;
+    margin-top: 40%;
+    font-family: kara;
+
 }
 #stroke{
     width: 100%;
     height: 100%;
-    margin-top: 11%;
-    margin-left: 1%;
     background: url("../images/stroke.png") no-repeat;
     background-position: center center;
 }
 #stroke1{
     width: 100%;
-    margin-top: 12%;
     background: url("../images/stroke1.png") no-repeat;
     background-position: center center;
     height: 100%;
@@ -178,85 +310,231 @@ body{
 #stroke2{
     width:100%;
     height: 100%;
-    margin-top: 11%;
-    margin-left: 3%;
     background-image: url("../images/stroke2.png");
     background-repeat: no-repeat;
     background-position: center center;
 }
-/*-------------------------------------- START GLOBAL MANAGEMENT --------------------*/
-@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,500);
-* {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  overflow: hidden;
+#known{
+    margin: auto auto;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    margin: auto auto;
 }
-
-.global {
-  font-family: "Ubuntu", sans-serif;
-  font-size: 30px;
-  background: #000;
-  margin: 0;
-}
-
-.block-wrap {
-  background: url("../images/background (2).jpg");
-  background-size: 100% 100%;
-  width: 100%;
-  overflow: hidden;
-}
-#video{
-  position: fixed;
-}
-.block {
-  display: inline-block;
-  float: left;
-  color: #fff;
-  width: 4%;
-  padding: 2%;
-  line-height: 0;
-  background: #000;
-  -webkit-transition: all 0.2s ease-in;
-  -webkit-transition-delay: 0.4s;
-  -moz-transition: all 0.2s ease-in;
-  -moz-transition-delay: 0.4s;
-  transition: all 0.2s ease-in;
-  transition-delay: 0.4s;
-  text-align: center;
-  position: relative;
-}
-.off {
-    opacity: 0;
-    -webkit-transition: none;
-    -moz-transition: none;
-    transition: none;
-  }
- /* ------------------------------------------------------------- ABOUT US -----------------
-#client-grid{
-    background-image: url("../images/background.png");
-    width: 100%;
-    height: 100%;
+#lines{
+    width: 566px;
+    height: 1px;
+    position: absolute;
+    margin-top: 50vh;
+    background-image: url(../images/lines.png);
     background-position: center center;
-    top:0;
-    left: 0;
-    z-index: 100;
+    background-repeat: no-repeat;
+}
+#stockholm{
+    width: 8px;
+    height: 141px;
+    margin-top: 15%;
+    margin-left:13%;
+    background-image: url(../images/stockholm.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+/* ------------------------------------------------------------- ABOUT US -----------------
+#client-grid{
+   background-image: url("../images/background.png");
+   width: 100%;
+   height: 100%;
+   background-position: center center;
+   top:0;
+   left: 0;
+   z-index: 100;
 }*/
 #logo-about{
-    background-image: url("/acckt/images/Asset.png") ;
+    background: url("../images/litel-logo.png") ;
     background-repeat: no-repeat;
-    position: absolute;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    background-position: center center;
-    top:-45px;
+    background-position: top center;
     z-index: 200;
 }
 #grid{
     background-image: url("/acckt/images/launch-4.png");
     width: 90px;
     height: 80px;
-    bottom:45%;
-    left:47%;
+    bottom:48%;
+    left:46%;
     z-index: 110;
+    background-position: top center;
+}
+@media screen and (max-width:320px) {
+    #section-section1, #section2, #section-section3,#section-section4, #section-section6{
+        margin-top: 66px;
+    }
+    .text-1{
+        font-size: 12px;
+    }
+    .box-risponsive{
+        background-size: 65%;
+    }
+    #bottom-rasane, #image, .box-what{
+        display: none;
+    }
+    .text{
+        height: 53px;
+    }
+    .text1{
+        padding: 34px!important;
+    }
+    .global{
+        font-size: 18px!important;
+    }
+    .block {
+        height: 22px;
+    }
+    #span, #risk, #risk2{
+        font-size: 1.3em;
+    }
+    #span{
+        margin-top: 89%;
+        margin-left: 31%;
+    }
+    #risk{
+        margin-left: 30%;
+        margin-top: 50%;
+    }
+    #risk2{
+        margin-left: 27%;
+        margin-top: 134%;
+    }
+    #launch, #lines, #stroke{
+        background-size: 39%;
+    }
+    #stroke1{
+        background-size: 45%;
+    }
+    #stroke2 {
+        background-size: 59%;
+    }
+    #logo-about{
+        background-size: contain;
+    }
+}
+
+@media screen and (max-width:425px) and (min-width:321px) {
+    #section-section1, #section2, #section-section3,#section-section4, #section-section6{
+        margin-top: 66px;
+    }
+    .text-1{
+        font-size: 12px;
+    }
+    .videos{
+        height: auto;
+    }
+    .box-risponsive{
+        background-size: 72%;
+    }
+    #bottom-rasane, .box-what, #image {
+        display: none;
+    }
+    .text{
+        height: 70px;
+    }
+    .text1{
+        padding: 39px!important;
+    }
+    .block {
+        height: 29px;
+    }
+    .global{
+        font-size: 20px!important;
+    }
+    #span, #risk, #risk2{
+        font-size: 1.3em;
+    }
+    #span{
+        margin-top: 75%;
+        margin-left: 32%;
+    }
+    #risk{
+        margin-left: 30%;
+        margin-top: 33%;
+    }
+    #risk2{
+        margin-left: 27%;
+        margin-top: 114%;
+    }
+    #stockholm {
+        margin-top: 56%;
+    }
+    #launch, #lines, #stroke{
+        background-size: 39%;
+    }
+    #stroke1{
+        background-size: 45%;
+    }
+    #stroke2 {
+        background-size: 59%;
+    }
+
+}
+@media screen and (max-width:768px) and (min-width:426px) {
+    #section-section1, #section2, #section-section3,#section-section4, #section-section6{
+        margin-top: 66px;
+    }
+    .box-risponsive{
+        display: none;
+    }
+    .text-1{
+        font-size: 12px;
+    }
+
+    .text1{
+        padding: 71px!important;
+    }
+    .global{
+        font-size: 20px!important;
+    }
+    .box-risponsive{
+        background-size: 65%;
+    }
+}
+@media screen and (max-width:1024px) and (min-width:769px){
+    .navbar-dark .navbar-nav .nav-link {
+        font-size: 0.7em!important;
+    }
+    #logo-about {
+        margin-top: 10%!important;
+    }
+    .box-risponsive{
+        display: none;
+    }
+    #section-section4, #section2{
+        margin-top:66px;
+    }
+    .box-what{
+        background-size: 65%;
+    }
+}
+
+@media screen and (max-width:1440px) and (min-width:1025px){
+    #logo-about {
+        margin-top: 10%!important;
+    }
+    .videos{
+        height: 50vh;
+    }
+    #section2 {
+        margin-top:50px;
+    }
+    #section-section4 {
+        margin-top:66px;
+    }
+    .box-what{
+        background-size: 65%;
+    }
 }

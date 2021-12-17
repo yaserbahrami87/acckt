@@ -32,7 +32,36 @@
                     <div class="card-body">
                       <div class="tab-content">
                         <div role="tabpanel" class="tab-pane active" id="account-vertical-general" aria-labelledby="account-pill-general" aria-expanded="true">
-                            @if($errors->any())
+                        @if(Auth::user()->tel_verify==0)
+                            <div class="col-12">
+                                @if ($verifyStatus==false)
+                                    <div class="alert alert-danger">
+                                        <i class="bi bi-exclamation-triangle-fill"></i>
+                                        برای ادامه فعالیت باید تلفن همراه خود را در سیستم ثبت کنید
+                                        <form class="d-inline" method="post" action="/portal_idea/verify/sendCode/tel">
+                                            {{csrf_field()}}
+                                            <button class="btn btn-info text-light btn-sm text-dark" type="submit" id="activeMobile" data-toggle="modal" data-target="#ModalMobile">ارسال کد فعال سازی</button>
+                                        </form>
+                                    </div>
+                                @else
+                                    <div class="alert alert-warning">
+                                        جهت فعال سازی کد ارسال شده به تلفن همراه را وارد کنید
+                                        <form method="post" action="/portal_idea/verify/checkCode/tel" class="mt-2">
+                                            {{csrf_field()}}
+                                            <div class="input-group">
+                                                <input id="tel" type="text" class="form-control @error('code') is-invalid @enderror" name="code" value="{{ old('code') }}" required autocomplete="tel">
+                                                <div class="input-group-prepend ">
+                                                    <button class="btn btn-outline-secondary btn-info text-light m-0" type="submit" id="activeMobile" data-toggle="modal" data-target="#ModalMobile">فعال سازی</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                @endif
+
+                            </div>
+                        @endif
+
+                        @if($errors->any())
                                 <div class="col-12">
                                     <div class="alert alert-danger" role="alert">
                                         @foreach($errors->all() as $error)

@@ -23,18 +23,19 @@
         <div class="content-body"><!-- users list start -->
           <section class="users-list-wrapper">
               <div class="users-list-filter px-1">
-                  <form>
+                  <form method="get" action="/portal_idea/idea/my">
+                      {{csrf_field()}}
                       <div class="row border rounded py-2 mb-2">
                           <div class="col-12 col-sm-6 col-lg-4">
                               <label for="users-list-role">عنوان ایده</label>
                               <fieldset class="form-group">
-                                <input type="text" class="form-control text-left" id="users-list-role">
+                                <input type="text" class="form-control text-left" id="users-list-role" name="q" />
                               </fieldset>
                           </div>
                           <div class="col-12 col-sm-6 col-lg-4">
                               <label for="users-list-status">وضعیت</label>
                               <fieldset class="form-group">
-                                  <select class="form-control" id="users-list-status">
+                                  <select class="form-control" id="users-list-status" name="status">
                                       <option value="">همه</option>
                                       <option value="فعال">فعال</option>
                                       <option value="بسته شده">بسته شده</option>
@@ -43,7 +44,7 @@
                               </fieldset>
                           </div>
                           <div class="col-12 col-sm-6 col-lg-4 d-flex align-items-center">
-                              <button type="reset" class="btn btn-primary btn-block glow users-list-clear mb-0 mt-75">پاکسازی</button>
+                              <button type="submit" class="btn btn-primary btn-block glow users-list-clear mb-0 mt-75">پاکسازی</button>
                           </div>
                       </div>
                   </form>
