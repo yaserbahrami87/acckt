@@ -58,7 +58,13 @@ body {
     font-size:60%;
     font-family: 'iransans-light', sans-serif;
     background: #280d3a;
+    height: 100vh;
 }
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: lalezar;
+}
+/*---------------------------- PAGE1 --------------------*/
 video.fullscreen {
     width:100%;
     height:100%;
@@ -68,15 +74,43 @@ video.fullscreen {
     object-fit:fill;
 }
 
-h1,h2,h3,h4,h5,h6 {
-    font-family: Lalezar;
+/*--------------------RASANE -------------------------*/
+
+.vdeo-tv{
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 #laptop{
-    background: url('../img/tv.png');
-    background-size: cover;
-    width: 45vw;
-    height: 70vh;
+    height: auto;
 }
+#laptop img{
+    vertical-align: middle;
+    border-style: none;
+}
+.video-list-item1{
+    width: 83%;
+    height: auto;
+}
+.videos{
+    position: relative;
+}
+.videos video{
+    opacity: 1;
+    width: 100%;
+}
+/*.videos video:hover{
+    opacity: 1;
+}*/
+video + img{
+    opacity: 1;
+    width: 100%;
+    top:0;
+}
+video + img:hover{
+    opacity: 0;
+}
+/*--------------------PAGE3 -------------------------*/
 
 .vertical-center {
     text-align:center;
@@ -92,11 +126,11 @@ h1,h2,h3,h4,h5,h6 {
 .inner {
     position: relative;
     height:100%;
-
     width:80%;
     margin:0 auto;
     overflow: hidden;
 }
+
 .panel {
     overflow: hidden;
 }
@@ -125,30 +159,30 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .footer-link {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .footer-link:before, .footer-link:after {
-    content: '';
-    flex-grow:0;
-    height: 1px;
-    background-color: currentColor;
-    transition: flex-grow .6s cubic-bezier(.4,0,.2,1);
-    margin: 0 -2rem;
-    position: relative;
-    bottom: -15px;
+  content: '';
+  flex-grow:0;
+  height: 1px;
+  background-color: currentColor;
+  transition: flex-grow .6s cubic-bezier(.4,0,.2,1);
+  margin: 0 -2rem;
+  position: relative;
+bottom: -15px;
 
 }
 .footer-link:before {
-    left:-50px;
+  left:-50px;
 }
 .footer-link:after {
-    right:-50px
-}
+  right:-50px
+ }
 .footer-link:hover:before, .footer-link:hover:after {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 .code {
@@ -180,7 +214,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .my-video-content {
-    width: 35%;
+    width: 82%;
     display: inline-block;
     font-size: 1.75em;
     text-align: right;
@@ -200,7 +234,6 @@ h1,h2,h3,h4,h5,h6 {
     width: 45%;
     display: inline-block;
     margin-top: 5%;
-    margin-right: 15%;
 }
 
 .my-video video {
@@ -231,7 +264,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .slick-dots li.slick-active::after {
-    content: url("data:image/svg+xml; utf8, <svg height="2" width="50"><line x1="0" y1="0" x2="50" y2="1" style="stroke:rgb(255,0,0);stroke-width:2" /></svg>")
+	content: url("data:image/svg+xml; utf8, <svg height="2" width="50"><line x1="0" y1="0" x2="50" y2="1" style="stroke:rgb(255,0,0);stroke-width:2" /></svg>")
 }
 
 .marquee {
@@ -268,7 +301,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .section3-slider div {
-    text-align: center;
+	text-align: center;
     font-size: 1.3em;
 }
 
@@ -303,12 +336,11 @@ h1,h2,h3,h4,h5,h6 {
     font-size: 1em;
     margin: 0 5px;
     color: #fff;
-    /*
+    
     background-color: #21165b;
-    */
-    /*
+   
     border: 1px solid #fff;
-    */
+   
     background-image: linear-gradient(45deg, #7e4df6, #c082fd);
     border: 1px solid #522075;
 
@@ -320,7 +352,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .btn-actions {
-    width: 200px;
+	width: 200px;
     border-radius: 30px;
     line-height: 2em;
     height: 60px;
@@ -339,10 +371,10 @@ h1,h2,h3,h4,h5,h6 {
 }
 .navbar-nav {
     direction: rtl;
-    font-family: 'lalezar';
-    float: right;
-    text-align: right;
-    padding-right: 0;
+	font-family: 'lalezar';
+	float: right;
+	text-align: right;
+	padding-right: 0;
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -377,7 +409,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .footer {
-    background: #14094f
+	background: #14094f
 }
 
 .footer-container {
@@ -402,7 +434,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .footer-link a {
-    color:white;
+	color:white;
 }
 .footer-link a:hover {
     text-decoration: none;
@@ -494,7 +526,7 @@ h1,h2,h3,h4,h5,h6 {
     -moz-animation: pulse 1.5s 0s infinite normal ease forwards;
     -o-animation: pulse 1.5s 0s infinite normal ease forwards;
     animation: pulse 1.5s 0s infinite normal ease forwards;
-    /*background-image: url("https://jamesmuspratt.com/codepen/img/arrow-down.svg");*/
+   /*background-image: url("https://jamesmuspratt.com/codepen/img/arrow-down.svg");*/
     background-image: url("../img/double-down-arrow.svg");
     transform: rotate(-90deg);
     background-repeat: no-repeat;
@@ -557,7 +589,7 @@ circle {
     stroke: white;
     stroke-width: 2px;
     stroke-opacity: 1;
-}
+} 
 
 .circle-pulse {
     fill: white;
@@ -590,24 +622,32 @@ circle {
     width: 100%;
     font-size: 2em;
 }
-
 .my-header .nav-item {
-    margin: 0 5px;
+    margin: 0 5px 0 5px;
 }
-@media (min-width:320px) and (max-width:425px){
-    h1{
-        font-size: 20px;
+.video-list-item1 {
+    width: 100%;
+    height: auto;
+}
+
+
+@media (min-width:320px){
+    .videos img {
+        height: 65%!important;
+        width: 96%!important;
     }
-    h2{
-        font-size: 23px;
+    #laptop{
+        width: 91%!important;
     }
-    #laptop, .slick-dots{
-        display: none;
+    .rasaneh{
+        margin-top:3%!important;
     }
     .my-video-content{
-        width: 98%;
-        font-size: 11px;
-        margin: 0 15px 0 0;
+        width: 82% !important;
+        margin: 6% 0 0 15px;
+    }
+    .my-video-content h3 {
+        font-size: 1.5rem !important;
     }
     .my-video video {
         width: 90%;
@@ -615,23 +655,49 @@ circle {
     .marquee {
         font-size: 2em;
     }
-    /*.my-video {
-        width: 100%;
-        display: inline-block;
-        margin-top: 7%;
-        margin-right: 15%;
-    }*/
-    /*.my-video-content {
-        width: 100%;
-        display: inline-block;
-        font-size: 1.75em;
-        text-align: right;
-        padding-right: 10px;
-        direction: rtl;
-        vertical-align: top;
-        margin-top: 14%;
-        line-height: 1.7em;
-    }*/
+    .my-video{
+        width:90%!important;
+    }
+    .slick-active{
+        text-align: center;
+    }
+    .slick-active span{
+        font-size: 14px;
+    }
+    .slick-dots {
+        margin-bottom: 0px !important;
+    }
+    .section3-text p{
+        font-size: 0.8rem !important;
+    }
+}
+@media (min-width:321px) and (max-width:375px){
+    h1{
+        font-size: 20px;
+    }
+    h2{
+        font-size: 23px;
+    }
+    .videos {
+        margin-top: 10%;
+
+    }
+    .videos img {
+        height: 69%!important;
+        width: 90%!important;
+    }
+    #stive2 {
+        left: 8%;
+    }
+    .video-list-item1{
+        width: 99%;
+        height: auto;
+    }
+    
+    .slick-dots{
+        display: none;
+    }
+    
     .slick-dots {
         margin-bottom: 0px;
     }
@@ -645,12 +711,7 @@ circle {
         font-size: 12px;
         margin: 7%;
     }
-    .slick-active{
-        text-align: center;
-    }
-    .slick-active span{
-        font-size: 14px;
-    }
+    
     .video-list-item1{
         margin-top: 0px!important;
     }
@@ -658,20 +719,48 @@ circle {
         margin-top: 14px!important;
 
     }
+    .item-image {
+        width: 91% !important;
+    }
 
 }
-@media (min-width :426px){
+@media (min-width:376px) and (max-width:425px){
+    #laptop {
+        width: 93%!important;
+    }
+    .videos img {
+        height: 72%!important;
+        width: 91%!important;
+    }
+    #stive{
+        left: 2%;
+    }
+    #stive2{
+        left: 7%;
+    }
+    .section3-text p {
+        font-size: 1rem;
+        margin-bottom: 2.5rem;
+    }
+    .my-video-content{
+        margin-top: 7% !important;
+    }
+}
+@media (min-width:426px) and (max-width:67px){
     #laptop{
-        display: none;
+        width: 92%;
     }
 }
 
 @media (min-width:768px) {
     #laptop {
-        width: 603px;
-        height: 356px;
         display: inline-block;
         margin-top: -3px;
+        width: 83%!important;
+    }
+    .video-list-item1 {
+        width: 86%;
+        height: auto;
     }
     h1 {
         font-size:4vw;
@@ -679,21 +768,30 @@ circle {
     h2 {
         font-size:2vw;
     }
-
+    .videos img {
+        height: 72%!important;
+        width: 97%!important;
+    }
+    .rasaneh {
+        margin-top: 13% !important;
+    }
+    .my-video-content h3 {
+        font-size: 1.8rem !important;
+    }
     .my-video-content p{
-        font-size: 13px;
+       font-size: 1.2rem;
     }
     .my-video video{
-        width:100%;
+        width: 100% !important;
+        float: left;
     }
     .my-video {
-        width: 45%;
+        width: 100%;
         display: inline-block;
         margin-top: 7%;
-        margin-right: 15%;
     }
     .my-video-content {
-        width: 35%;
+        width: 46% !important;
         display: inline-block;
         font-size: 1.75em;
         text-align: right;
@@ -712,38 +810,37 @@ circle {
     .slick-active{
         text-align: center;
     }
-    .video-list img{
-        width: 80%;
-    }
+
     #section3-slide{
         margin-top: 80px;
     }
     .video-list p{
-        font-size: 14px;
-        display: inline-block;
+       font-size: 14px;
+       display: inline-block;
     }
     .container-fluid {
-        padding-right:0;
-        padding-left:0;
+  	padding-right:0;
+    padding-left:0;
     }
     .container-fluid section {
         padding-right:15px;
-        padding-left:15px;
+    padding-left:15px;
     }
     .navbar .container-fluid,
     footer .container-fluid{
         padding-right:15px;
-        padding-left:15px;
+    padding-left:15px;
     }
+    
 }
 
 @media (min-width:1400px) {
     .item-image {
         width: 400px;
     }
-    .my-header .nav-item {
-        margin: 0 1vw;
-    }
+    /*.my-header .nav-item {
+    	margin: 0 1vw;
+	}*/
     #laptop{
         width: 606px;
     }
@@ -753,11 +850,10 @@ circle {
     .my-video {
         width: 45%;
         display: inline-block;
-        margin-top: 7%;
-        margin-right: 15%;
+        margin-top: 3%;
     }
     .my-video-content {
-        width: 35%;
+        width: 46%;
         display: inline-block;
         font-size: 1.75em;
         text-align: right;
@@ -766,17 +862,24 @@ circle {
         vertical-align: top;
         margin-top: 14%;
         line-height: 1.7em;
+    }
+    .my-video-content p {
+        line-height: 2.8rem;
     }
 }
 @media (min-width:1440px) {
     .item-image {
         width: 400px;
     }
-    .my-header .nav-item {
-        margin: 0 1vw;
-    }
+    /*.my-header .nav-item {
+    	margin: 0 1vw;
+	}*/
     #laptop{
-        width: 606px;
+        width: 84%;
+        height: auto;
+    }
+    .videos img{
+        height: 82%;
     }
     .my-video video{
         width:100%;
@@ -785,10 +888,9 @@ circle {
         width: 45%;
         display: inline-block;
         margin-top: 7%;
-        margin-right: 15%;
     }
     .my-video-content {
-        width: 35%;
+        width: 46%;
         display: inline-block;
         font-size: 1.75em;
         text-align: right;
@@ -797,6 +899,12 @@ circle {
         vertical-align: top;
         margin-top: 14%;
         line-height: 1.7em;
+    }
+    .marquee {
+        font-size: 2.5rem;
+    }
+    .section3-text p {
+        font-size: 1.4rem;
     }
 }
 
@@ -810,30 +918,21 @@ circle {
     .item-image {
         width: 300px;
     }
-
+    
 }
 
 @media(max-width:1024px) {
     h1 {
-        font-size:7vw;
+        font-size:6vw;
     }
     h2 {
-        font-size:5vw;
+        font-size:4vw;
     }
-    #laptop {
-        width: 720px;
-        margin-right: -52px;
-        margin-top: -11px;
-        height: 100%;
+    #laptop{
+        width: 82%;
     }
-    .video-list-item2{
-        display: none!important;
-    }
-    .video-list-item1{
-        width: 100%;
-    }
-    #img{
-        margin-right: 10%;
+    .videos img{
+        height: 80$$%;
     }
     .section-item-recpancive{
         direction: rtl!important;
@@ -852,53 +951,52 @@ circle {
         width: 100%;
         text-align: justify;
     }
-    .my-video-content {
+    /*.my-video-content {
         width: 80%
-    }
+    }*/
     .my-video video{
         width:80%;
     }
     .my-video {
-        width: 50vw;
+        width: 50%;
         display: inline-block;
         margin-top: 7%;
-        margin-right: 15%;
     }
-    /*.my-video-content {
-        width: 35%;
+    .my-video-content {
+        width: 46%;
         display: inline-block;
-        font-size: 1.75em;
+        font-size: 1.75rem !important;
         text-align: right;
         padding-right: 10px;
         direction: rtl;
         vertical-align: top;
         margin-top: 14%;
         line-height: 1.7em;
-    }*/
+    }
     .my-video-content h3 {
         font-size: 1.5em;
         margin-bottom: 10px;
     }
+    .my-video-content p {
+        font-size: .9rem;
+        line-height: 1.8rem;
+    }
     .slick-dots {
         margin-bottom: -30px;
     }
-
     .panel3 {
         background: url(https://acckt.ir/themes/acckt/assets/img/signup-bg-mobile.jpg);
         background-size: cover;
-        background-position:center;
-        background-repeat:none;
+      background-position:center;
+      background-repeat:none;
     }
-
     .section4-text {
         margin-top: 70%;
         font-size: 1.5em;
     }
-
     .btn-actions {
         margin: 10px 20px;
     }
-
     .footer-col {
         display: block;
         width: 100%;
@@ -928,7 +1026,6 @@ circle {
     .slick-next {
         right: 0px;
     }
-
     .side-bullets {
         display: none;
     }
@@ -951,13 +1048,17 @@ circle {
     .footer-link a {
         font-size:14px;
     }
-
     .navbar-brand img {
-        height: 40px;
+    	height: 40px;
     }
-
+    .navbar-nav {
+        font-size: 1rem;
+    }
     .section3 {
-        margin-top: 20%;
+    	margin-top: 20%;
+	}
+    .section3-text p {
+        font-size: 1.1rem;
     }
 }
 
@@ -1011,20 +1112,20 @@ circle {
     to {height: 0; bottom: -50%}
 }
 
-.bottom-stripe {
-    position: absolute;
-    bottom: 0;
-    background: #5f42b6;
-    height: 80px;
-    width: 100%;
-}
-.top-stripe {
-    position: absolute;
-    top: 0;
-    background: #5f42b6;
-    height: 80px;
-    width: 100%;
-}
+		.bottom-stripe {
+			position: absolute;
+			bottom: 0;
+			background: #5f42b6;
+			height: 80px;
+			width: 100%;
+		}
+		.top-stripe {
+			position: absolute;
+			top: 0;
+			background: #5f42b6;
+			height: 80px;
+			width: 100%;
+		}
 
 .enamad {
     position: relative;
@@ -1040,5 +1141,5 @@ circle {
 }
 
 .bg-dark {
-    background: #160a3199!important;
+	background: #160a3199!important;
 }

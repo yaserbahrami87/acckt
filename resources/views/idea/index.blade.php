@@ -26,7 +26,6 @@
 <div class="bottom-curtain">
     <div class="top-stripe"></div>
 </div>
-<!----------------------------------END ANIMATION ------------------->
 <!-------------------------------- START Navigation ----------------->
 <header class="my-header ">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -73,11 +72,6 @@
         </div>
     </nav>
 </header>
-<!------------------------------END Navigation ---------------->
-
-<!-- <div class="horizon-prev"><img src="images/l-arrow.png"></div>
-<div class="horizon-next"><img src="images/r-arrow.png"></div> -->
-<!------------------------------START PAGES ------------------->
 <!------------------------------START SECTION PAGE1 ---------------->
 <main>
     <section data-role="section" id="section-section1">
@@ -94,7 +88,6 @@
             <p class="scroll-down"><a href="#section-section2" id="show-next-section" class="animate">More</a></p>
         </div>
     </section>
-    <!------------------------------END SECTION PAGE1 ---------------->
     <!------------------------------START SECTION PAGE2 ---------------->
     <section class="panel panel1 mt-5 section-item-recpancive" data-section-name="one" data-role="section" id="section-section2">
         <div class="container" style="height: 100vh">
@@ -103,45 +96,56 @@
                     <div class=" text-center mt-5 ">
                         <h2>ویدئو های شبکه شتابدهی خوارزم </h2>
                     </div>
-                    <div class=" col-xl-8 col-lg-8 col-md-8 col-sm-12 col-sx-12 mt-3 float-left">
-                        <div id="laptop" class="position-absolute">
+                    <div class=" col-xl-8 col-lg-8 col-md-8 col-12 mt-5 rasaneh float-left">
+                        <div class="video_container">
+                            <div class="video-tv">
+                                <img src="{{asset('/acckt/img/tv.png')}}" id="laptop" class="img-fluid position-absolute">
+                                <video autoplay loop muted playsinline class="video-list-item1">
+                                <!--<source src="{{asset('/acckt/video/moshen.webm')}}" type='video/webm; codecs="vp8, vorbis"'> -->
+                                    <source src="{{asset('/acckt/video/moshen.mp4')}}" type="video/mp4">
+                                    مرورگر شما از نمایش ویدئو پشتیبانی نمی کند
+                                </video>
+                            </div>
                         </div>
-                        <video autoplay loop muted playsinline class="video-list-item1 mt-4 ml-5" width="70%">
-                            <source src="{{asset('/acckt/video/moshen.webm')}}" width="50% " type='video/webm; codecs="vp8, vorbis"'>
-                            <source src="{{asset('/acckt/video/moshen.mp4')}}" type="video/mp4">
-                            مرورگر شما از نمایش ویدئو پشتیبانی نمی کند
-                        </video>
-
                     </div>
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-sx-6 video-list mt-5 text-center">
-                        <img src="{{asset('/acckt/img/01-600x400.jpg')}}" width="35%" class="video-list-item mb-4" width="30%" alt="">
-                        <p class="float-left mr-3"> وتوضیحات ویدئوی شماره 1</p>
-
-                        <img src="{{asset('/acckt/img/01-600x400.jpg')}}" width="35%"  class="video-list-item mb-4" width="30%" alt="">
-                        <p class="float-left mr-3"> وتوضیحات ویدئوی شماره 1</p>
-
-                        <img src="{{asset('/acckt/img/01-600x400.jpg')}}" width="35%" alt="" class="video-list-item2 mb-4" width="30%" alt="">
-                        <p class="float-left mr-3 video-list-item2"> وتوضیحات ویدئوی شماره 1</p>
-
+                        <div class="row videos text-center">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-6 text-center float-left mb-2 p-1">
+                                <video autoplay loop muted playsinline>
+                                    <source src="{{asset('/sarmayeh/videos/استیو جابز.mp4')}}" type="video/mp4">
+                                    مرورگر شما از نمایش ویدئو پشتیبانی نمی کند
+                                </video>
+                                <img id="stive" src="{{asset('/sarmayeh/images/cover-aparat-stive-jobz.jpg')}}" class=" position-absolute" alt="">
+                                <p class="mr-2"> وتوضیحات ویدئوی شماره 1</p>
+                            </div>
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-6 text-center float-left mb-2 p-1">
+                                <video autoplay loop muted playsinline>
+                                    <source src="{{asset('/sarmayeh/videos/acckt-video.mp4')}}" type="video/mp4">
+                                    مرورگر شما از نمایش ویدئو پشتیبانی نمی کند
+                                </video>
+                                <img id="stive2" src="{{asset('/acckt/img/cover1.jpg')}}" class=" position-absolute " alt="">
+                                <p class="mr-2 mt-2"> وتوضیحات ویدئوی شماره 1</p>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
     </section>
-    <!------------------------------END SECTION PAGE2 ---------------->
     <!------------------------------START SECTION PAGE3 ---------------->
     <section class="panel panel1 mt-5 " data-section-name="second">
         <div class="container" style="height: 100vh">
             <div class="section2-item">
                 <div class="row slick-slide">
-                    <div class="my-video">
+                    <div class= "col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 my-video">
                         <video autoplay loop muted playsinline>
                             <source src="{{asset('/acckt/video/section2-1.webm')}}" type='video/webm; codecs="vp8, vorbis"'>
                             <source src="{{asset('/acckt/video/section2-1.mp4')}}" type="video/mp4">
                             مرورگر شما از نمایش ویدئو پشتیبانی نمی کند
                         </video>
                     </div>
-                    <div class="my-video-content text-justify">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 my-video-content text-justify">
                         <div>
                             <h3>فرآیند جذب و شناسایی</h3>
                             <div class="section2-content">
@@ -153,15 +157,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="row slick-slide">
-                    <div class="my-video">
+                <div class=" row slick-slide">
+                    <div class=" col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 my-video">
                         <video autoplay loop muted>
                             <source src="{{asset('/acckt/video/section2-2.webm')}}" type='video/webm; codecs="vp8, vorbis"'>
                             <source src="{{asset('/acckt/video/section2-2.mp4')}}" type="video/mp4">
                             مرورگر شما از نمایش ویدئو پشتیبانی نمی کند
                         </video>
                     </div>
-                    <div class="my-video-content text-justify">
+                    <div class=" col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 my-video-content text-justify">
                         <h3>فرآیند انتخاب</h3>
                         <div class="section2-content">
                             <p>
@@ -171,14 +175,14 @@
                     </div>
                 </div>
                 <div class="row slick-slide">
-                    <div class="my-video">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 my-video">
                         <video autoplay loop muted>
                             <source src="{{asset('/acckt/video/section2-3.webm')}}" type="video/webm">
                             <source src="{{asset('/acckt/video/section2-3.mp4')}}" type="video/mp4">
                             مرورگر شما از نمایش ویدئو پشتیبانی نمی کند
                         </video>
                     </div>
-                    <div class="my-video-content text-justify">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 my-video-content text-justify">
                         <h3>دوره ی پیش شتابدهی</h3>
                         <div class="section2-content">
                             <p>
@@ -187,15 +191,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="row slick-slide">
-                    <div class="my-video">
+                <div class=" row slick-slide">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 my-video">
                         <video autoplay loop muted>
                             <source src="{{asset('/acckt/video/section2-4.webm')}}" type="video/webm">
                             <source src="{{asset('/acckt/video/section2-4.mp4')}}" type="video/mp4">
                             مرورگر شما از نمایش ویدئو پشتیبانی نمی کند
                         </video>
                     </div>
-                    <div class="my-video-content text-justify">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 my-video-content text-justify">
                         <h3>دوره ی شتابدهی</h3>
                         <div class="section2-content">
                             <p>
@@ -205,14 +209,14 @@
                     </div>
                 </div>
                 <div class="row slick-slide">
-                    <div class="my-video">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 my-video">
                         <video autoplay loop muted>
                             <source src="{{asset('/acckt/video/section2-5.webm')}}" type="video/webm">
                             <source src="{{asset('/acckt/video/section2-4.mp4')}}" type="video/mp4">
                             مرورگر شما از نمایش ویدئو پشتیبانی نمی کند
                         </video>
                     </div>
-                    <div class="my-video-content text-justify">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 my-video-content text-justify">
                         <h3>دوره ی پسا شتابدهی</h3>
                         <div class="section2-content">
                             <p>
@@ -225,11 +229,10 @@
         </div>
 
     </section>
-    <!------------------------------END SECTION PAGE3 ---------------->
     <!------------------------------START SECTION PAGE4 ---------------->
     <section class="panel mt-5" data-section-name="third" data-role="section" id="section-section4">
         <div class="section4">
-            <div class="marquee mt-3 mx-auto">خدمات شتابدهی
+            <div class="marquee mt-4 mx-auto">خدمات شتابدهی
                 <svg class="bullet" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5 10C7.76138 10 10 7.76142 10 5C10 2.23858 7.76138 1.95706e-07 5 4.37114e-07L5 10Z"
                           fill="white"/>
@@ -315,7 +318,6 @@
             </div>
         </div>
     </section>
-    <!------------------------------ END SECTION PAGE4 ---------------->
     <!------------------------------START SECTION FOOTER ---------------->
     <section class="panel panel3 mt-5" data-section-name="third" data-role="section">
         <footer class="footer">

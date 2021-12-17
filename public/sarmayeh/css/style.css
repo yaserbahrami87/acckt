@@ -20,6 +20,10 @@ html, body {
     direction: rtl;
     cursor: -webkit-grabbing;
     cursor: grabbing;
+    font-size: 20px;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: Lalezar;
 }
 li >a{
     font-family: kara;
@@ -36,6 +40,98 @@ section {
 }
 /*-------------------------PROJECT----------------------------*/
 /*-------------------------MENUE----------------------------*/
+.my-header {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    font-size: 2em;
+}
+
+.my-header .nav-item {
+    margin: 0 5px 0 5px;
+    font-size: 1rem;
+    font-family: kara;
+}
+
+.btn-actions-header, #launch {
+    width: 100px;
+    border-radius: 20px;
+    height: 43px;
+    font-size: 1em;
+    margin: 0 5px;
+    color: #fff;
+    /*
+    background-color: #21165b;
+    */
+    /*
+    border: 1px solid #fff;
+    */
+    background-image: linear-gradient(45deg, #3981a9, #59caea);
+    border: 1px solid #212075;
+
+}
+
+.btn-actions-header, #launch :hover {
+    background-color: #3981a9;
+    color: #fff;
+}
+
+.btn-actions, #launch {
+    width: 200px;
+    border-radius: 30px;
+    line-height: 2em;
+    height: 60px;
+    font-size: 2.5em;
+    margin: 0 50px;
+    color: #fff;
+    background-image: linear-gradient(45deg, #3981a9, 59caea);
+    border: 1px solid #212075;
+    font-family: lalezar;
+}
+
+.btn-actions, #launch:hover,
+.btn-actions-header:hover{
+    background-image: linear-gradient(160deg, #4087c9, transparent);
+    color: #fff;
+}
+.navbar-nav {
+    direction: rtl;
+    font-family: 'lalezar';
+    float: right;
+    text-align: right;
+    padding-right: 0;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+    position: relative;
+    padding-bottom: 2px;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.nav-link:hover {
+    /*text-shadow: 0px 10px 10px #c39327;*/
+}
+
+.nav-link:hover::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    height: 1px;
+    width: 80%;
+    left: 10%;
+    animation: button-hover;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes button-hover {
+    0%   {background: transparent}
+    50% {background: radial-gradient(#e0c381, transparent);}
+    100% {background: radial-gradient(#e0a90e, transparent);}
+}
 
 /*-------------------------AVAL----------------------------*/
 
@@ -252,14 +348,16 @@ video + div:hover{
     left: 0px;
 }
 #launch{
-    height: 100%;
-    width: 100%;
+    height: 200px;
+    width: 200px;
     display: block;
     position: absolute;
     z-index: 100;
-    background-image: url(../images/launch.png);
+    /*background-image: url(../images/launch.png);*/
     background-position: center center;
-    background-repeat: no-repeat;
+    /*background-repeat: no-repeat;*/
+    border-radius: 50%;
+    margin: auto auto;
     opacity: 0.7;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
@@ -270,30 +368,39 @@ video + div:hover{
 .scene{
     height: 100vh;
     text-align: center!important;
-}
-.scene>span{
-    color: #FFF;
-    font-size: 1.4rem;
-    line-height: 24px;
-    position: absolute;
-    z-index: 120;
-    margin-left: 41%;
+    display: grid;
+    align-items: center;
 }
 #span{
     margin-top: 23%;
+    color: #FFF;
+    font-size: 1.4rem;
+    z-index: 120;
+    margin-left: 40%;
 }
 #risk{
     position:relative;
-    margin-left: 36%;
+    margin:36%;
     margin-top: 5%;
     font-family: kara;
+    font-size: 1.1rem;
+    line-height: 30px;
+    color: #FFF;
+
+}
+#text-risk2{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    align-items: stretch;
 }
 #risk2{
     position:absolute;
-    margin-left: 36%;
-    margin-top: 40%;
+    margin: auto;
+    font-size: 1.1rem;
+    line-height: 30px;
     font-family: kara;
-
+    color: #FFF;
 }
 #stroke{
     width: 100%;
@@ -371,6 +478,7 @@ video + div:hover{
     z-index: 110;
     background-position: top center;
 }
+
 @media screen and (max-width:320px) {
     #section-section1, #section2, #section-section3,#section-section4, #section-section6{
         margin-top: 66px;
