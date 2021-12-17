@@ -1,5 +1,7 @@
 @extends('acckt_sarmayeh.layouts.panel')
-
+@section('headerScript')
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+@endsection
 @section('content')
 <!-- BEGIN: Content-->
 <div class="app-content content">

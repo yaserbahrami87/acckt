@@ -4,7 +4,7 @@
     <div class="navbar-header">
         <ul class="nav navbar-nav flex-row">
             <li class="nav-item mr-auto">
-                <a class="navbar-brand" href="/portal">
+                <a class="navbar-brand" href="/panel">
                     <!--<div class="brand-logo"><img class="logo" src="{{ asset('/acckt/assets/img/logo.png') }}" width=""></div>-->
                     <div class="brand-logo">
                         @if(is_null(Auth::user()->avatar))
@@ -22,7 +22,11 @@
     <div class="main-menu-content">
         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation" data-icon-style="lines">
             <li class=" navigation-header"><span>پورتال صاحبان ایده</span></li>
-            <li class=" nav-item has-sub {% if this.page.id == 'panel-index' or this.page.id == 'panel-further_information' or this.page.id == 'panel-social_networks' or this.page.id == 'panel-change_password' %}sidebar-group-active open{% endif %}"><a href="#"><span class="menu-title" data-i18n="Email">تنظیمات حساب کاربری</span></a>
+            <li class=" nav-item has-sub ">
+                <a href="#">
+                    <i class="bi bi-person-fill"></i>
+                    <span class="menu-title" >تنظیمات حساب کاربری</span>
+                </a>
                 <ul class="menu-content">
                     <li><a href="/panel"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">اطلاعات عمومی</span></a></li>
                     <li><a href="/portal_idea/user/user_further_information"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">اطلاعات تکمیلی</span></a></li>
@@ -32,11 +36,15 @@
             </li>
 
             @if(Auth::user()->tel_verify==1)
-                <li class=" nav-item has-sub {% if this.page.id == 'panel-inbox' or this.page.id == 'panel-inbox_detail' or this.page.id == 'panel-coworking_space_request_list' or this.page.id == 'panel-coworking_space_request' %}sidebar-group-active open{% endif %}"><a href="#"><span class="menu-title" data-i18n="Email">کارتابل</span></a>
+                <li class=" nav-item has-sub ">
+                    <a href="#">
+                        <i class="bi bi-archive-fill"></i>
+                        <span class="menu-title">کارتابل</span>
+                    </a>
                     <ul class="menu-content">
                         <!--<li><a href="/portal/inbox"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">نامه های وارده</span></a></li>-->
-                        <li><a href="#" class="disabled"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">نامه های وارده</span></a></li>
-                        <li><a href=" nav-item has-sub {% if this.page.id == 'panel-coworking_space_request_list' or this.page.id == 'panel-coworking_space_request' %}sidebar-group-active open{% endif %}"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">درخواست ها</span></a>
+                        <li><a href="#" class="disabled"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" >نامه های وارده</span></a></li>
+                        <li><a href=" nav-item has-sub "><i class="bx bx-left-arrow-alt"></i><span class="menu-item" >درخواست ها</span></a>
                             <ul class="menu-content">
                                 <!--<li><a href="/portal/coworking_space_request"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">فضای کار اشتراکی</span></a></li>-->
                                 <li><a href="#" class="disabled"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">فضای کار اشتراکی</span></a></li>
@@ -47,7 +55,11 @@
                         </li>
                     </ul>
                 </li>
-                <li class=" nav-item"><a href="#"><span class="menu-title" data-i18n="Chat">ایده/طرح</span></a>
+                <li class=" nav-item">
+                    <a href="#">
+                        <i class="bi bi-lightbulb-fill"></i>
+                        <span class="menu-title" >ایده/طرح</span>
+                    </a>
                     <ul class="menu-content">
                         <li><a href="/portal_idea/idea/create" ><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">ثبت ایده</span></a></li>
                         <li><a href="#"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">ثبت طرح</span></a>

@@ -4,7 +4,7 @@
     <div class="navbar-header">
         <ul class="nav navbar-nav flex-row">
             <li class="nav-item mr-auto">
-                <a class="navbar-brand" href="/portal">
+                <a class="navbar-brand" href="/panel">
                     <!--<div class="brand-logo"><img class="logo" src="{{ asset('/acckt/assets/img/logo.png') }}" width=""></div>-->
                     <div class="brand-logo">
                         @if(is_null(Auth::user()->avatar))
@@ -22,7 +22,11 @@
     <div class="main-menu-content">
         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation" data-icon-style="lines">
             <li class=" navigation-header"><span>پورتال صاحبان سرمایه</span></li>
-            <li class=" nav-item has-sub {% if this.page.id == 'panel-index' or this.page.id == 'panel-further_information' or this.page.id == 'panel-social_networks' or this.page.id == 'panel-change_password' %}sidebar-group-active open{% endif %}"><a href="#"><span class="menu-title" data-i18n="Email">تنظیمات حساب کاربری</span></a>
+            <li class=" nav-item has-sub ">
+                <a href="#">
+                    <i class="bi bi-person-fill"></i>
+                    <span class="menu-title" data-i18n="Email">تنظیمات حساب کاربری</span>
+                </a>
                 <ul class="menu-content">
                     <li><a href="/panel"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice List">اطلاعات عمومی</span></a></li>
                     <li><a href="/portal/user/user_further_information"><i class="bx bx-left-arrow-alt"></i><span class="menu-item" data-i18n="Invoice Add">اطلاعات تکمیلی</span></a></li>
