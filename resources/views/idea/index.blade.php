@@ -96,7 +96,7 @@
                     <div class=" text-center mt-5 ">
                         <h2>ویدئو های شبکه شتابدهی خوارزم </h2>
                     </div>
-                    <div class=" col-xl-8 col-lg-8 col-md-8 col-12 mt-2 rasaneh float-left">
+                    <div class="col-xl-8 col-lg-8 col-md-8 col-12 mt-2 rasaneh float-left">
                         <div class="video_container">
                             <div class="video-tv">
                                 <img src="{{asset('/acckt/img/tv.png')}}" id="laptop" class="img-fluid position-absolute">
@@ -108,7 +108,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-sx-6 video-list mt-5 text-center">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-sx-6 video-list mt-5 text-center d-xl-none">
                         <div class="row videos text-center">
                             <div class="col-xl-12 col-lg-12 col-md-12 col-6 text-center float-left mb-2 p-1">
                                 <video autoplay loop muted playsinline width="100%">
