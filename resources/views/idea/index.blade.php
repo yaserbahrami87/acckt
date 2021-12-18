@@ -96,11 +96,11 @@
                     <div class=" text-center mt-5 ">
                         <h2>ویدئو های شبکه شتابدهی خوارزم </h2>
                     </div>
-                    <div class=" col-xl-8 col-lg-8 col-md-8 col-12 mt-5 rasaneh float-left">
+                    <div class=" col-xl-8 col-lg-8 col-md-8 col-12 mt-2 rasaneh float-left">
                         <div class="video_container">
                             <div class="video-tv">
                                 <img src="{{asset('/acckt/img/tv.png')}}" id="laptop" class="img-fluid position-absolute">
-                                <video autoplay loop muted playsinline class="video-list-item1">
+                                <video autoplay loop muted playsinline class="video-list-item1" width="100%">
                                 <!--<source src="{{asset('/acckt/video/moshen.webm')}}" type='video/webm; codecs="vp8, vorbis"'> -->
                                     <source src="{{asset('/acckt/video/moshen.mp4')}}" type="video/mp4">
                                     مرورگر شما از نمایش ویدئو پشتیبانی نمی کند
@@ -111,7 +111,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-sx-6 video-list mt-5 text-center">
                         <div class="row videos text-center">
                             <div class="col-xl-12 col-lg-12 col-md-12 col-6 text-center float-left mb-2 p-1">
-                                <video autoplay loop muted playsinline>
+                                <video autoplay loop muted playsinline width="100%">
                                     <source src="{{asset('/sarmayeh/videos/استیو جابز.mp4')}}" type="video/mp4">
                                     مرورگر شما از نمایش ویدئو پشتیبانی نمی کند
                                 </video>
@@ -119,7 +119,7 @@
                                 <p class="mr-2"> وتوضیحات ویدئوی شماره 1</p>
                             </div>
                             <div class="col-xl-12 col-lg-12 col-md-12 col-6 text-center float-left mb-2 p-1">
-                                <video autoplay loop muted playsinline>
+                                <video autoplay loop muted playsinline width="100%">
                                     <source src="{{asset('/sarmayeh/videos/acckt-video.mp4')}}" type="video/mp4">
                                     مرورگر شما از نمایش ویدئو پشتیبانی نمی کند
                                 </video>
