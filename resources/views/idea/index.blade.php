@@ -33,6 +33,9 @@
             <button class="navbar-toggler row" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <a class="navbar-brand" href="/">
+                <img src="{{('/acckt/img/logo.png')}}" height="40">
+            </a>
             <div class="collapse navbar-collapse " id="navbarResponsive">
                 <ul class="navbar-nav ml-auto" style="margin: 0 auto">
                     <li class="nav-item">
@@ -54,7 +57,7 @@
                         <a class="nav-link" href="#">وبلاگ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#section-section5">تماس با ما</a>
+                        <a class="nav-link" href="#section-section5">درباره ما</a>
                     </li>
                     <li class="nav-item">
                         @if(Auth::check())
@@ -66,9 +69,7 @@
                     </li>
                 </ul>
             </div>
-            <a class="navbar-brand" href="/">
-                <img src="{{('/acckt/img/logo.png')}}" height="40">
-            </a>
+
         </div>
     </nav>
 </header>
@@ -230,7 +231,7 @@
 
     </section>
     <!------------------------------START SECTION PAGE4 ---------------->
-    <section class="panel mt-5" data-section-name="third" data-role="section" id="section-section4">
+    <section class="panel mt-5 pt-5" data-section-name="third" data-role="section" id="section-section4">
         <div class="section4">
             <div class="marquee mt-4 mx-auto">خدمات شتابدهی
                 <svg class="bullet" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -336,11 +336,11 @@ bottom: -15px;
     font-size: 1em;
     margin: 0 5px;
     color: #fff;
-    
+
     background-color: #21165b;
-   
+
     border: 1px solid #fff;
-   
+
     background-image: linear-gradient(45deg, #7e4df6, #c082fd);
     border: 1px solid #522075;
 
@@ -589,7 +589,7 @@ circle {
     stroke: white;
     stroke-width: 2px;
     stroke-opacity: 1;
-} 
+}
 
 .circle-pulse {
     fill: white;
@@ -693,11 +693,11 @@ circle {
         width: 99%;
         height: auto;
     }
-    
+
     .slick-dots{
         display: none;
     }
-    
+
     .slick-dots {
         margin-bottom: 0px;
     }
@@ -711,7 +711,7 @@ circle {
         font-size: 12px;
         margin: 7%;
     }
-    
+
     .video-list-item1{
         margin-top: 0px!important;
     }
@@ -831,7 +831,7 @@ circle {
         padding-right:15px;
     padding-left:15px;
     }
-    
+
 }
 
 @media (min-width:1400px) {
@@ -918,7 +918,7 @@ circle {
     .item-image {
         width: 300px;
     }
-    
+
 }
 
 @media(max-width:1024px) {
@@ -1142,4 +1142,17 @@ circle {
 
 .bg-dark {
 	background: #160a3199!important;
+}
+
+
+@font-face {
+    font-family: 'kara';
+    src: url("../fonts/SGKara-Light_p30download.com.ttf");
+    src: url("../fonts/SGKara-Regular_p30download.com.ttf");
+    src: url("../fonts/SGKara-SemiBold_p30download.com.ttf");
+}
+
+.my-header .nav-item
+{
+    font-family:'kara';
 }

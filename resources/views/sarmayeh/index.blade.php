@@ -7,7 +7,8 @@
 
 
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no, shrink-to-fit=no">
-    <link href="{{asset('/sarmayeh/css/style.css')}}" rel="stylesheet" type="text/css">
+    <link href="{{asset('/sarmayeh/css/style.css')}}" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
 <!--<link rel="stylesheet" href="{{asset('/acckt/css/home.css')}}">
 
     <link rel="stylesheet" href="https://use.typekit.net/jpv1bvw.css">
@@ -31,13 +32,16 @@
                             <a class="nav-link" href="/">صفحه اصلی</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#section2">رسانه</a>
+                            <a class="nav-link" href="#section2">رسانه خوارزم</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#section-section3">فرآیند مدیریت سرمایه و تجربیات جهانی</a>
+                            <a class="nav-link" href="#section-section3">فرآیند مدیریت سرمایه</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#section-section4 ">مدل های سرمایه گذاری</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">بانک سرمایه گذاران</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#section-section6">درباره ما</a>
@@ -652,9 +656,11 @@
                     <div id="logo-about" class="position-absolute mt-5"></div>
                     <div id="grid" class="position-absolute"></div>
                     <!--<a referrerpolicy="origin" target="_blank" href="https://trustseal.enamad.ir/?id=202462&amp;Code=OnP9iP7WhdPHvSabe0Km"><img referrerpolicy="origin" src="https://Trustseal.eNamad.ir/logo.aspx?id=202462&amp;Code=OnP9iP7WhdPHvSabe0Km" alt="" style="cursor:pointer" id="OnP9iP7WhdPHvSabe0Km"></a>      -->
+
                     <video autoplay muted loop>
                         <source src="{{asset('/acckt/video/about-us.mp4')}}" type="video/mp4">
                     </video>
+
                 </div>
             </div>
         </div>

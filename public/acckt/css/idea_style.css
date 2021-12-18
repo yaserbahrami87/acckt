@@ -29,7 +29,7 @@ header ul {
 
 header ul li {
     display: inline-block;
-    
+
 }
 
 header ul a {
@@ -71,3 +71,4 @@ section {
 .horizon-next {
     right: 20px;
 }
+
