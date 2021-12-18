@@ -20,13 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f0467a3-24f9-4bd2-92a8-1d1263ae5c34" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/acckt/css/cardStyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/acckt_master/pages/shop.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/acckt/img/cover1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/acckt/video/moshen.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sarmayeh/images/cover-aparat-stive-jobz.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sarmayeh/videos/Acckt Accelerator2.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sarmayeh/videos/acckt-video.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sarmayeh/videos/borj.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sarmayeh/videos/استیو جابز.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/sarmayeh/videos/موشن نهایی آکادمی شتابدهنده-1.mp4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BaseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/sarmayeh/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/sarmayeh/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,23 +170,23 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/acckt/css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/acckt/video" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\acckt\public\acckt\css" />
-      <recent name="C:\wamp64\www\acckt\public\sarmayeh\js" />
-      <recent name="C:\wamp64\www\acckt\public\sarmayeh" />
-      <recent name="C:\wamp64\www\acckt\public\sarmayeh\images" />
-      <recent name="C:\wamp64\www\acckt\public\acckt\images" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\acckt\resources\views\acckt_master\pages\panel" />
       <recent name="C:\wamp64\www\acckt\resources\views\acckt_sarmayeh\pages\panel" />
       <recent name="C:\wamp64\www\acckt\resources\views\acckt_sarmayeh\pages" />
       <recent name="C:\wamp64\www\acckt\resources\views\sarmayeh\master" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\acckt\public\acckt\video" />
+      <recent name="C:\wamp64\www\acckt\public\acckt\img" />
+      <recent name="C:\wamp64\www\acckt\public\sarmayeh\images" />
+      <recent name="C:\wamp64\www\acckt\public\sarmayeh\videos" />
+      <recent name="C:\wamp64\www\acckt\public\acckt\css" />
     </key>
   </component>
   <component name="RunManager">
@@ -249,7 +251,8 @@
       <workItem from="1639645917208" duration="1280000" />
       <workItem from="1639680480397" duration="3033000" />
       <workItem from="1639729367567" duration="2381000" />
-      <workItem from="1639751620562" duration="19128000" />
+      <workItem from="1639751620562" duration="19331000" />
+      <workItem from="1639804606011" duration="1629000" />
     </task>
     <servers />
   </component>
@@ -277,9 +280,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1639258890112" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1639785749474">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1639805000796">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1639785749474" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1639805000796" />
   </component>
 </project>
