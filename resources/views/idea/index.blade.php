@@ -39,10 +39,10 @@
                         <a class="nav-link" href="/">صفحه اصلی</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/value-adding-cycle">چرخه تولید ارزش</a>
+                        <a class="nav-link" href="#">چرخه تولید ارزش</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/acceleration-network">خدمات شتابدهی</a>
+                        <a class="nav-link" href="#">خدمات شتابدهی</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/online-acceleration">شتابدهی آنلاین</a>
@@ -51,10 +51,10 @@
                         <a class="nav-link" href="/shop">فروشگاه ایده</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/blog">وبلاگ</a>
+                        <a class="nav-link" href="#">وبلاگ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/contact">تماس با ما</a>
+                        <a class="nav-link" href="#section-section5">تماس با ما</a>
                     </li>
                     <li class="nav-item">
                         @if(Auth::check())
@@ -319,7 +319,7 @@
         </div>
     </section>
     <!------------------------------START SECTION FOOTER ---------------->
-    <section class="panel panel3 mt-5" data-section-name="third" data-role="section">
+    <section class="panel panel3 mt-5" data-section-name="third"  data-role="section" id="section-section5">
         <footer class="footer">
             <div class="container-fluid footer-container">
                 <div class="row">

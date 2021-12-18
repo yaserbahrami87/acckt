@@ -23,6 +23,10 @@ Route::get('/', function()
     return view('acckt_master.pages.main');
 });
 
+Route::get('/acceleration-network',function()
+{
+    return view('acckt_master.pages.khadamat_shetabdehi');
+});
 
 Route::get('/sarmaye', function()
 {
