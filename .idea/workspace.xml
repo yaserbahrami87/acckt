@@ -20,18 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f0467a3-24f9-4bd2-92a8-1d1263ae5c34" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/amountCapital_my.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/acckt/css/cardStyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/acckt_master/pages/shop.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AmountcapitalController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AmountcapitalController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/acckt_master/partials/panel/header_menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_master/partials/panel/header_menu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/acckt_master/partials/panel/right_menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_master/partials/panel/right_menu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/idea_list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/idea_list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/investmentModel_insert.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/investmentModel_insert.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/partials/panel/header_menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/partials/panel/header_menu.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/partials/panel/right_menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/partials/panel/right_menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BaseController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/sarmayeh/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/sarmayeh/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,6 +158,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1ypTd8oiFCzuxEuoL5odBWWhmJX" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -251,7 +249,7 @@
       <workItem from="1639645917208" duration="1280000" />
       <workItem from="1639680480397" duration="3033000" />
       <workItem from="1639729367567" duration="2381000" />
-      <workItem from="1639751620562" duration="15565000" />
+      <workItem from="1639751620562" duration="19128000" />
     </task>
     <servers />
   </component>
@@ -271,17 +269,17 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1637818263922">
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1639786217199">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1637818263922" />
+    <state x="413" y="118" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1639786217199" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1639258890112">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1639258890112" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1639778421145">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1639785749474">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1639778421145" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1639785749474" />
   </component>
 </project>

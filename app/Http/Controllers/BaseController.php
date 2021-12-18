@@ -19,7 +19,7 @@ class BaseController extends Controller
 
     public function get_user($id=NULL,$tel=NULL,$type=NULL,$paginate='get')
     {
-        User::when($id,function($query) use ($id)
+        return User::when($id,function($query) use ($id)
         {
             return $query->where('id','=',$id);
         })

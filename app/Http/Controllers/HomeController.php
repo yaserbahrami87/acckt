@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\idea;
 use App\verify;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -78,4 +79,6 @@ class HomeController extends BaseController
 
 
     }
+
+
 }

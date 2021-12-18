@@ -17,10 +17,12 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/panel', 'HomeController@index')->name('home');
+Route::get('/shop', 'PageController@ideaShop');
 Route::get('/', function()
 {
     return view('acckt_master.pages.main');
 });
+
 
 Route::get('/sarmaye', function()
 {

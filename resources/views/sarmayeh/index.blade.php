@@ -31,23 +31,23 @@
                             <a class="nav-link" href="/">صفحه اصلی</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/value-adding-cycle">رسانه</a>
+                            <a class="nav-link" href="#section2">رسانه</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/acceleration-network">فرآیند مدیریت سرمایه و تجربیات جهانی</a>
+                            <a class="nav-link" href="#section-section3">فرآیند مدیریت سرمایه و تجربیات جهانی</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/online-acceleration">مدل های سرمایه گذاری</a>
+                            <a class="nav-link" href="#section-section4 ">مدل های سرمایه گذاری</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/shop">درباره ما</a>
+                            <a class="nav-link" href="#section-section6">درباره ما</a>
                         </li>
                         <li class="nav-item">
                             @if(Auth::check())
                                 <a href="/panel" class="btn btn-actions-header">پروفایل</a>
                             @else
                                 <a href="/login" class="btn btn-actions-header">ورود</a>
-                                <a href="/register_idea" class="btn btn-actions-header">ثبت ایده</a>
+                                <a href="/register" class="btn btn-actions-header">ثبت </a>
                             @endif
                         </li>
                     </ul>
