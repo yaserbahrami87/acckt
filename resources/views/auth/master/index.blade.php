@@ -181,6 +181,7 @@
 
                 </div> <!-- end login -->
                 <div class="col-12 col-md-6 col-xl-6 col-lg-6 logo pr-5 pt-5">
+                    @yield('title_login')
                     <img src="{{asset('/images/logo.png')}}" class="img-fluid" />
 
                     <div class="clearfix"></div>

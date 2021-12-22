@@ -1,5 +1,8 @@
 @extends('auth.master.index')
 
+@section('title_login')
+    <h3>پورتال صاحبان سرمایه</h3>
+@endsection
 @section('forms')
     <form method="POST" action="{{ route('register') }}">
         {{csrf_field()}}
@@ -63,11 +66,13 @@
                     {{ __('ورود') }}
                 </a>
             </div>
+            <!--
             <div class="col-md-12 text-right mt-3">
                 <a class="btn btn-success d-block text-light" href="/loginsms">
                     {{ __('ورود با کد یکبار مصرف') }}
                 </a>
-            </div>
+
+            </div>-->
         </div>
 
     </form>
