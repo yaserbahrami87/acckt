@@ -21,9 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5f0467a3-24f9-4bd2-92a8-1d1263ae5c34" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/acckt/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/acckt/css/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/sarmayeh/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/sarmayeh/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/idea/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/idea/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/sarmayeh/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/sarmayeh/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -254,7 +251,7 @@
       <workItem from="1640088526489" duration="152000" />
       <workItem from="1640088725246" duration="1254000" />
       <workItem from="1640160180358" duration="21000" />
-      <workItem from="1640188304080" duration="4033000" />
+      <workItem from="1640188304080" duration="5178000" />
     </task>
     <servers />
   </component>

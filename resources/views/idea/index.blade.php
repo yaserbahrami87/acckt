@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=0,user-scalable=no, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no, shrink-to-fit=no">
 
     <link rel="shortcut icon" href="{{asset('/acckt/img/favicon.ico')}}" type="" sizes="" color="">
     <link rel="icon" href="{{asset('/acckt/img/favicon-16x16.png')}}" type="image/png" sizes="16x16" color="">
