@@ -159,30 +159,30 @@ video + img:hover{
 }
 
 .footer-link {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .footer-link:before, .footer-link:after {
-  content: '';
-  flex-grow:0;
-  height: 1px;
-  background-color: currentColor;
-  transition: flex-grow .6s cubic-bezier(.4,0,.2,1);
-  margin: 0 -2rem;
-  position: relative;
-bottom: -15px;
+    content: '';
+    flex-grow:0;
+    height: 1px;
+    background-color: currentColor;
+    transition: flex-grow .6s cubic-bezier(.4,0,.2,1);
+    margin: 0 -2rem;
+    position: relative;
+    bottom: -15px;
 
 }
 .footer-link:before {
-  left:-50px;
+    left:-50px;
 }
 .footer-link:after {
-  right:-50px
- }
+    right:-50px
+}
 .footer-link:hover:before, .footer-link:hover:after {
-  flex-grow: 1;
+    flex-grow: 1;
 }
 
 .code {
@@ -264,7 +264,7 @@ bottom: -15px;
 }
 
 .slick-dots li.slick-active::after {
-	content: url("data:image/svg+xml; utf8, <svg height="2" width="50"><line x1="0" y1="0" x2="50" y2="1" style="stroke:rgb(255,0,0);stroke-width:2" /></svg>")
+    content: url("data:image/svg+xml; utf8, <svg height="2" width="50"><line x1="0" y1="0" x2="50" y2="1" style="stroke:rgb(255,0,0);stroke-width:2" /></svg>")
 }
 
 .marquee {
@@ -301,7 +301,7 @@ bottom: -15px;
 }
 
 .section3-slider div {
-	text-align: center;
+    text-align: center;
     font-size: 1.3em;
 }
 
@@ -352,7 +352,7 @@ bottom: -15px;
 }
 
 .btn-actions {
-	width: 200px;
+    width: 200px;
     border-radius: 30px;
     line-height: 2em;
     height: 60px;
@@ -371,10 +371,10 @@ bottom: -15px;
 }
 .navbar-nav {
     direction: rtl;
-	font-family: 'lalezar';
-	float: right;
-	text-align: right;
-	padding-right: 0;
+    font-family: 'lalezar';
+    float: right;
+    text-align: right;
+    padding-right: 0;
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -409,7 +409,7 @@ bottom: -15px;
 }
 
 .footer {
-	background: #14094f
+    background: #14094f
 }
 
 .footer-container {
@@ -434,7 +434,7 @@ bottom: -15px;
 }
 
 .footer-link a {
-	color:white;
+    color:white;
 }
 .footer-link a:hover {
     text-decoration: none;
@@ -449,7 +449,9 @@ bottom: -15px;
     color: #fff;
     animation: fade 6s;
 }
-
+.logo img{
+    height: 230px;
+}
 .footer-info {
     margin: 10px 0;
     font-size: 14px;
@@ -526,7 +528,7 @@ bottom: -15px;
     -moz-animation: pulse 1.5s 0s infinite normal ease forwards;
     -o-animation: pulse 1.5s 0s infinite normal ease forwards;
     animation: pulse 1.5s 0s infinite normal ease forwards;
-   /*background-image: url("https://jamesmuspratt.com/codepen/img/arrow-down.svg");*/
+    /*background-image: url("https://jamesmuspratt.com/codepen/img/arrow-down.svg");*/
     background-image: url("../img/double-down-arrow.svg");
     transform: rotate(-90deg);
     background-repeat: no-repeat;
@@ -779,7 +781,7 @@ circle {
         font-size: 1.8rem !important;
     }
     .my-video-content p{
-       font-size: 1.2rem;
+        font-size: 1.2rem;
     }
     .my-video video{
         width: 100% !important;
@@ -815,21 +817,21 @@ circle {
         margin-top: 80px;
     }
     .video-list p{
-       font-size: 14px;
-       display: inline-block;
+        font-size: 14px;
+        display: inline-block;
     }
     .container-fluid {
-  	padding-right:0;
-    padding-left:0;
+        padding-right:0;
+        padding-left:0;
     }
     .container-fluid section {
         padding-right:15px;
-    padding-left:15px;
+        padding-left:15px;
     }
     .navbar .container-fluid,
     footer .container-fluid{
         padding-right:15px;
-    padding-left:15px;
+        padding-left:15px;
     }
 
 }
@@ -987,8 +989,8 @@ circle {
     .panel3 {
         background: url(https://acckt.ir/themes/acckt/assets/img/signup-bg-mobile.jpg);
         background-size: cover;
-      background-position:center;
-      background-repeat:none;
+        background-position:center;
+        background-repeat:none;
     }
     .section4-text {
         margin-top: 70%;
@@ -1049,14 +1051,14 @@ circle {
         font-size:14px;
     }
     .navbar-brand img {
-    	height: 40px;
+        height: 40px;
     }
     .navbar-nav {
         font-size: 1rem;
     }
     .section3 {
-    	margin-top: 20%;
-	}
+        margin-top: 20%;
+    }
     .section3-text p {
         font-size: 1.1rem;
     }
@@ -1112,20 +1114,20 @@ circle {
     to {height: 0; bottom: -50%}
 }
 
-		.bottom-stripe {
-			position: absolute;
-			bottom: 0;
-			background: #5f42b6;
-			height: 80px;
-			width: 100%;
-		}
-		.top-stripe {
-			position: absolute;
-			top: 0;
-			background: #5f42b6;
-			height: 80px;
-			width: 100%;
-		}
+.bottom-stripe {
+    position: absolute;
+    bottom: 0;
+    background: #5f42b6;
+    height: 80px;
+    width: 100%;
+}
+.top-stripe {
+    position: absolute;
+    top: 0;
+    background: #5f42b6;
+    height: 80px;
+    width: 100%;
+}
 
 .enamad {
     position: relative;
@@ -1141,18 +1143,5 @@ circle {
 }
 
 .bg-dark {
-	background: #160a3199!important;
-}
-
-
-@font-face {
-    font-family: 'kara';
-    src: url("../fonts/SGKara-Light_p30download.com.ttf");
-    src: url("../fonts/SGKara-Regular_p30download.com.ttf");
-    src: url("../fonts/SGKara-SemiBold_p30download.com.ttf");
-}
-
-.my-header .nav-item
-{
-    font-family:'kara';
+    background: #160a3199!important;
 }

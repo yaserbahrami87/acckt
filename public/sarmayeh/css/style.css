@@ -48,15 +48,15 @@ section {
 }
 
 .my-header .nav-item {
-    margin: 0 5px 0 5px;
+    margin: 0 2px 0 2px;
     font-size: 0.90rem;
     font-family: kara;
 }
 
 .btn-actions-header, #launch {
-    width: 100px;
+    width: 137px;
     border-radius: 20px;
-    height: 43px;
+    height: 40px;
     font-size: 1em;
     margin: 0 5px;
     color: #fff;
@@ -102,12 +102,20 @@ section {
     padding-right: 0;
 }
 
+.navbar-brand img{
+    height: 54px;
+    padding: 0%;
+    margin: 0 0 0 40px;
+}
 .navbar-dark .navbar-nav .nav-link {
     color: #fff;
     position: relative;
     padding-bottom: 2px;
     text-decoration: none;
     font-size: 0.9em;
+}
+.bg-dark {
+    padding: 1px;
 }
 
 .nav-link:hover {
@@ -242,20 +250,20 @@ video + div:hover{
     left: 0;
     z-index: 1;
     transition: all .15s;
-    background-image: url("../images/Asset 4.png");
+    background-image: url("../images/logo-acckt-w.png");
     background-color:rgb(0,0,0,1);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
 }
 .box-what:hover:before{
-    background-color:rgb(0,0,0,1);
+    background-color: #3a81a8;
     opacity: 1;
     transform: rotate3d(0,0,1,0deg) scale3d(1.5,1,1);
 }
 .box-risponsive{
     background: #fff;
-    background-image: url("../images/Asset 3.png");
+    background-image:url("../images/Asset 3.png");
     height: 100%;
     background-repeat: no-repeat;
     background-position: center center;
@@ -289,12 +297,18 @@ video + div:hover{
 }*/
 
 #image{
-    background-image: url("../images/Asset 2.png");
+    background-image: url("../images/social.jpg");
     z-index: -1;
     background-repeat: no-repeat;
     height: 100vh;
-
-
+    background-position: top center;
+}
+#bottom-rasane{
+    background-image: url("../images/camera.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    height: 100%;
+}
 }
 /*-------------------------------------- START GLOBAL MANAGEMENT --------------------*/
 
@@ -310,6 +324,9 @@ video + div:hover{
 }
 #video{
     position: fixed;
+}
+.block-text{
+    margin-top:50%;
 }
 .block {
     display: inline-block;
@@ -333,7 +350,7 @@ video + div:hover{
 /*--------------------------- MODELS -------------------------*/
 
 .container{
-    background: url("../images/flou.jpg") no-repeat;
+    background: url("../images/model-back.jpg") no-repeat;
     height: 100vh;
     background-position: center center;
     text-align: center;
@@ -344,7 +361,7 @@ video + div:hover{
     background-position: center center;
 }
 .parallax-obj{
-    position: reletive;
+    position: relative;
     left: 0px;
 }
 #launch{
@@ -372,16 +389,18 @@ video + div:hover{
     align-items: center;
 }
 #span{
-    margin-top: 23%;
     color: #FFF;
     font-size: 1.4rem;
     z-index: 120;
-    margin-left: 40%;
+    font-family: kara;
+    margin: 24% 0 0 42%;
+
 }
+
 #risk{
     position:relative;
     margin:36%;
-    margin-top: 5%;
+    margin-top: 8%;
     font-family: kara;
     font-size: 1.1rem;
     line-height: 30px;
@@ -393,14 +412,17 @@ video + div:hover{
     width: 100%;
     height: 100%;
     align-items: stretch;
+
+
 }
 #risk2{
     position:absolute;
     margin: auto;
     font-size: 1.1rem;
-    line-height: 30px;
+    line-height: 45px;
     font-family: kara;
     color: #FFF;
+    margin-left: 20%;
 }
 #stroke{
     width: 100%;
@@ -470,13 +492,22 @@ video + div:hover{
     z-index: 200;
 }
 #grid{
-    background-image: url("/acckt/images/launch-4.png");
+    background-image: url('/acckt/images/launch-4.png');
     width: 90px;
     height: 80px;
     bottom:48%;
     left:46%;
     z-index: 110;
     background-position: top center;
+}
+
+.social{
+    height: auto;
+    background-color: rgba(0,0,0,.5);
+}
+.namad{
+    width: 50%;
+    margin-top: 12px;
 }
 
 @media screen and (max-width:320px) {

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width,initial-scale=0,user-scalable=no, shrink-to-fit=no">
 
     <link rel="shortcut icon" href="{{asset('/acckt/img/favicon.ico')}}" type="" sizes="" color="">
     <link rel="icon" href="{{asset('/acckt/img/favicon-16x16.png')}}" type="image/png" sizes="16x16" color="">
@@ -324,29 +324,29 @@
         <footer class="footer">
             <div class="container-fluid footer-container">
                 <div class="row">
-                    <div class="col-12" style="padding-left:0;margin-right:45px;min-width: 300px;">
-                        <div class="row">
-                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-sx-12">
-                                <img src="{{asset('/acckt/img/logo.png')}}" style="height: 30px">
+                    <div class="col-12">
+                        <div class="row ">
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-sx-12 text-center logo">
+                                <img src="{{asset('/acckt/img/logo.png')}}" class="img-fluid" style="height: auto !important;">
                             </div>
                             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-sx-12 justify-content-md-center">
                                 <div class="row">
-                                    <div class="footer-link col-2">
+                                    <div class="footer-link col-6">
                                         <a href="/value-adding-cycle" class="link--elara">درباره ما </a>
                                     </div>
-                                    <div class="footer-link col-2">
+                                    <div class="footer-link col-6">
                                         <a href="/store">استارتاپ ها</a>
                                     </div>
-                                    <div class="footer-link col-2">
+                                    <div class="footer-link col-6">
                                         <a href="/acceleration-network">منتورها</a>
                                     </div>
-                                    <div class="footer-link col-2">
+                                    <div class="footer-link col-6">
                                         <a href="">شبکه ها</a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-sx-12 enamad">
-                                <div class="row  text-right">
+                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-sx-12 enamad text-center">
+                                <div class="row text-right">
                                     <div class="col-12">
                                         <img src="{{asset('/acckt/img/logo.aspx.png')}}" class=" p-3 mb-1">
                                         <img src="{{asset('/acckt/img/star1.png')}}" class=" p-3 mb-1" >
@@ -357,27 +357,40 @@
                                 <div class="footer-info">ایمیل: acckt2020.co@gmail.com</div>
                                 <div class="footer-info ">آدرس: مشهد، سعدی ۱۴، پلاک ۱۵۳</div>
                                 <div class="footer-info">شماره تماس: ۰۹۰۵۳۴۰۲۴۹۳</div>
-                                <div class="footer-info">شبکه های اجتماعی</div>
-                                <div class="footer-info">
-                                    <div class="row text-center">
-                                        <img src="{{asset('/acckt/img/social/linkedin.png')}}" class=" p-0">
-                                        <img src="{{asset('/acckt/img/social/twitter.png')}}" class=" p-0">
-                                        <img src="{{asset('/acckt/img/social/aparat.png')}}" class=" p-0" >
-                                        <img src="{{asset('/acckt/img/social/telegram.png')}}" class=" p-0" >
-                                        <img src="{{asset('/acckt/img/social/instagram.png')}}" class=" p-0" >
+                            </div>
+                            <div class="row position-absolute fixed-bottom social">
+                                <div class="col-xl-4 col-lg-4 col-md-4"></div>
+                                <div class="col-4">
+                                    <div class="row">
+                                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" >
+                                            <img src="{{asset('/acckt/img/social/aparat.png')}}">
+                                        </div>
+                                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" >
+                                            <img src="{{asset('/acckt/img/social/instagram.png')}}">
+                                        </div>
+                                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" >
+                                            <img src="{{asset('/acckt/img/social/linkedin.png')}}">
+                                        </div>
+                                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" >
+                                            <img src="{{asset('/acckt/img/social/telegram.png')}}">
+                                        </div>
+                                        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" >
+                                            <img src="{{asset('/acckt/img/social/twitter.png')}}">
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                                <div class="col-xl-4 col-lg-4 col-md-4"></div>
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </footer>
     </section>
 </main>
 <!------------------------------END SECTION FOOTER ---------------->
 <div class="loader" style="display: none">
-    <img src="{{asset('/acckt/img/logo-acckt.gif')}}" />
+    <img src="{{asset('/acckt/img/logo-acckt.gif')}}" class="img-fluid" />
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="{{asset('/acckt/js/popper.min.js')}}"></script>

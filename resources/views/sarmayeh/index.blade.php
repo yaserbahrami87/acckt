@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 
 
-    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width,initial-scale=0,user-scalable=no, shrink-to-fit=no">
     <link href="{{asset('/sarmayeh/css/style.css')}}" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
 <!--<link rel="stylesheet" href="{{asset('/acckt/css/home.css')}}">
@@ -51,13 +51,13 @@
                                 <a href="/panel" class="btn btn-actions-header">پروفایل</a>
                             @else
                                 <a href="/login" class="btn btn-actions-header">ورود</a>
-                                <a href="/register" class="btn btn-actions-header">ثبت </a>
+                                <a href="/register" class="btn btn-actions-header ">ثبت سرمایه  </a>
                             @endif
                         </li>
                     </ul>
                 </div>
                 <a class="navbar-brand" href="/">
-                    <img src="{{('/acckt/img/logo.png')}}" height="36">
+                    <img src="{{asset('/acckt/img/logo-acckt.png')}}" height="">
                 </a>
             </div>
         </nav>
@@ -115,7 +115,7 @@
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 p-0">
                     <div class="row ">
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-4 col-6 p-0" >
-                            <img id="bottom-rasane" src="{{asset('/sarmayeh/images/Asset 1.png')}}"/>
+                            <div id="bottom-rasane"></div>
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-6 p-0">
                             <div class="row ">
@@ -621,23 +621,22 @@
     <!------------------------------------------------------------- MODELS ----------------->
     <section data-role="section" id="section-section4 ">
         <div class="main ">
-            <div class="container ">
+            <div class="container">
                 <div class="row ">
                     <div class="col-12">
                         <div id="scene" class="scene text-center ">
                             <div id="launch" class=" parallax-obj" data-depth="0.1" data-top="-112" data-left="-108" >
                             </div>
-                            <span id="span" class="parallax-obj position-absolute ">مدل های سرمایه گذاری</span>
-                            <div id="text-risk2" data-depth="0.3" data-top="40" data-left="-382">
+                            <span id="span" class="parallax-obj position-absolute ">مدل های<br/> سرمایه گذاری</span>
+                            <div id="text-risk2" class="text-center" data-depth="0.3" data-top="40" data-left="-382">
                                 <h3 id="risk" class="parallax-obj">سرمایه گذاری خطر پذیر</h3>
-                                <h4 id="risk2" class="parallax-obj">تامین سرمایه لازم برای شرکت ها و کسب و کارهای نوپا(استارتاپ) و کار آفرین جهش و رشد ارزش هستندو البته دارای ریسک فراوانی است.</h4>
+                                <h4 id="risk2" class="parallax-obj">تامین سرمایه لازم برای شرکت ها و کسب و کارهای نوپا(استارتاپ) <br/>و کار آفرین جهش و رشد ارزش هستندو البته دارای ریسک فراوانی است.</h4>
                             </div>
                             <div id="find" class="parallax-obj" data-depth="0.2" data-top="-203" data-left="-407"></div>
                             <div id="known" class="parallax-obj" data-depth="0.2" data-top="193" data-left="-136">
                             </div>
                             <div id="lines" class="parallax-obj" data-depth="0.3" data-top="0" data-left="-282" style="display: block; margin-left: 25%;"></div>
                             <div id="stockholm" class="parallax-obj" data-depth="0.3" data-top="40" data-left="-382" >سرمایه گذاری جسورانه</div>
-
                             <div id="stroke" class="parallax-obj" data-depth="0.4" data-top="-1009" data-left="-1009" ></div>
                             <div id="stroke1" class="parallax-obj" data-depth="0.9" data-top="-1071" data-left="-1700"></div>
                             <div id="stroke2" class="parallax-obj" data-depth="0.6" data-top="-1048" data-left="-1409"></div>
@@ -660,7 +659,33 @@
                     <video autoplay muted loop>
                         <source src="{{asset('/acckt/video/about-us.mp4')}}" type="video/mp4">
                     </video>
-
+                </div>
+                <div class="row position-absolute fixed-bottom social">
+                    <div class="col-xl-3 col-lg-3 col-md-3"></div>
+                    <div class="col-6">
+                        <div class="row">
+                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" >
+                                <img src="../acckt/img/social/aparat.png">
+                            </div>
+                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" >
+                                <img src="../acckt/img/social/instagram.png">
+                            </div>
+                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" >
+                                <img src="../acckt/img/social/linkedin.png">
+                            </div>
+                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" >
+                                <img src="../acckt/img/social/telegram.png">
+                            </div>
+                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" >
+                                <img src="../acckt/img/social/twitter.png">
+                            </div>
+                            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2" >
+                                <img src="../acckt/img/logor.png" class="float-left namad">
+                                <img src="../acckt/img/star2.png" class="float-left namad">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3"></div>
                 </div>
             </div>
         </div>
