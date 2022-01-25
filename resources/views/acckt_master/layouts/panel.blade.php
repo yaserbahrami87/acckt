@@ -78,8 +78,43 @@
   @include('sweet::alert')
   @include('acckt_master.partials.panel.header_menu')
   @include('acckt_master.partials.panel.right_menu')
+  <!-- BEGIN: Content-->
+  <div class="app-content content">
+      <div class="content-overlay"></div>
+      <div class="content-wrapper">
+          <div class="content-header row">
+              <div class="content-header-left col-12 mb-2 mt-1">
+                  <div class="row breadcrumbs-top">
+                      <div class="col-12">
+                          <h5 class="content-header-title float-left pr-1">لیست ایده ها</h5>
+                          <div class="breadcrumb-wrapper">
+                              <ol class="breadcrumb p-0 mb-0">
+                                  <li class="breadcrumb-item"><a href="/portal"><i class="bx bx-home-alt"></i></a></li>
+                                  <li class="breadcrumb-item active"> لیست ایده ها</li>
+                              </ol>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="content-body"><!-- users list start -->
+                @if($errors->any())
+                      <div class="col-12">
+                          <div class="alert alert-danger" role="alert">
+                              @foreach($errors->all() as $error)
+                                  <li>{{$error}}</li>
+                              @endforeach
+                          </div>
+                      </div>
+                @endif
+                @yield('content')
 
-  @yield('content')
+          <!-- users list ends -->
+          </div>
+      </div>
+  </div>
+  <!-- END: Content-->
+
 
     <!-- widget chat demo ends -->
 

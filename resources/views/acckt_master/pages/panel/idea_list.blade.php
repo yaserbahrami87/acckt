@@ -1,26 +1,7 @@
 @extends('acckt_master.layouts.panel')
 @section('content')
 
-    <!-- BEGIN: Content-->
-    <div class="app-content content">
-      <div class="content-overlay"></div>
-      <div class="content-wrapper">
-        <div class="content-header row">
-            <div class="content-header-left col-12 mb-2 mt-1">
-                <div class="row breadcrumbs-top">
-                    <div class="col-12">
-                        <h5 class="content-header-title float-left pr-1">لیست ایده ها</h5>
-                        <div class="breadcrumb-wrapper">
-                            <ol class="breadcrumb p-0 mb-0">
-                                <li class="breadcrumb-item"><a href="/portal"><i class="bx bx-home-alt"></i></a></li>
-                                <li class="breadcrumb-item active"> لیست ایده ها</li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="content-body"><!-- users list start -->
+
           <section class="users-list-wrapper">
               <div class="users-list-filter px-1">
                   <form method="get" action="/portal_idea/idea/my">
@@ -68,7 +49,7 @@
                                           </tr>
                                       </thead>
                                       <tbody>
-                                            @foreach($ideas as $item)
+                                            @foreach(Auth::user()->ideas as $item)
                                               <tr>
                                                   <td>{{$loop->iteration}}</td>
                                                   <td><a href="/portal_idea/idea/{{$item->id}}">{{$item->group_name}}</a></td>
@@ -76,7 +57,7 @@
                                                   <td> {{$item->date_fa}}</td>
                                                   <td>
                                                       <a href="/portal_idea/idea/{{$item->id}}/demand" >
-                                                          <span class="badge bg-rgba-success text-success">{{$item->demandUser}}</span>
+                                                          <span class="badge bg-rgba-success text-success">{{$item->demands->count()}}</span>
                                                       </a>
                                                   </td>
                                                   <td><span class="badge bg-rgba-success text-success">فعال</span></td>
@@ -95,11 +76,6 @@
                   </div>
               </div>
           </section>
-          <!-- users list ends -->
-        </div>
-      </div>
-    </div>
-    <!-- END: Content-->
 @endsection
 
 @section('footerScript')

@@ -21,11 +21,20 @@
   <component name="ChangeListManager">
     <list default="true" id="5f0467a3-24f9-4bd2-92a8-1d1263ae5c34" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/venturecapital_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/venturecapital_edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/venturecapital_insert.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/venturecapital_insert.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/master/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/master/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register_idea.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register_idea.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IdeaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IdeaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/idea.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/idea.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/acckt_master/layouts/panel.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_master/layouts/panel.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/forgot_password.htm" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/forgot_password.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/further_information.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/further_information.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/idea_list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/idea_list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/new_idea.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/new_idea.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/social_networks.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/social_networks.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,7 +264,10 @@
       <workItem from="1640088526489" duration="152000" />
       <workItem from="1640088725246" duration="1254000" />
       <workItem from="1640160180358" duration="21000" />
-      <workItem from="1640188304080" duration="11980000" />
+      <workItem from="1640188304080" duration="12753000" />
+      <workItem from="1640236841977" duration="663000" />
+      <workItem from="1643051299610" duration="4767000" />
+      <workItem from="1643059018613" duration="4904000" />
     </task>
     <servers />
   </component>
@@ -283,9 +295,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1639258890112" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1639827591323">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1643059758028">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1639827591323" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1643059758028" />
   </component>
 </project>

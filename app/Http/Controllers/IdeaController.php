@@ -228,21 +228,23 @@ class IdeaController extends BaseController
 
     public function myIdea(Request $request)
     {
-        $ideas=idea::join('users','ideas.user_id','=','users.id')
-            ->where('user_id','=',Auth::user()->id)
-            ->when($request->q, function($query)use($request)
-            {
-               return $query->where('group_name','like',"%$request->q%");
-            })
-            ->select('ideas.*')
-            ->get();
+//        $ideas=idea::join('users','ideas.user_id','=','users.id')
+//            ->where('user_id','=',Auth::user()->id)
+//            ->when($request->q, function($query)use($request)
+//            {
+//               return $query->where('group_name','like',"%$request->q%");
+//            })
+//            ->select('ideas.*')
+//            ->get();
+//
+//
+//        foreach(Auth::user()->ideas as $item)
+//        {
+//            dd($item->demands);
+//            $item->demandUser=$this->get_demand(NULL,NULL,$item->id,NULL,1,NULL,'get')->count();
+//        }
 
-        foreach($ideas as $item)
-        {
-            $item->demandUser=$this->get_demand(NULL,NULL,$item->id,NULL,1,NULL,'get')->count();
-        }
-        return view('acckt_master.pages.panel.idea_list')
-                    ->with('ideas',$ideas);
+        return view('acckt_master.pages.panel.idea_list');
     }
 
     public function create_demand(idea $idea)

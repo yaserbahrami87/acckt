@@ -110,6 +110,8 @@ Route::middleware(['can:isIdea'])->prefix('portal_idea')->group(function () {
 //    Route::patch('/user/venturecapital/{user}/update','UserController@venturecapitalUpdate');
     Route::get('/user/user_further_information','UserController@userFurtherInformationCreate');
     Route::get('/user/social_networks','UserController@socialNetworksCreate');
+    Route::get('/user/change_password','UserController@changePassword')->middleware('password.confirm');
+    Route::post('/user/update_password','UserController@updatePassword');
     Route::resource('user','UserController');
 
     //Idea

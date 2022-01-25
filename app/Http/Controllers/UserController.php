@@ -7,6 +7,7 @@ use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -266,5 +267,35 @@ class UserController extends Controller
         {
             return view('acckt_master.pages.panel.social_networks');
         }
+    }
+
+    public function changePassword()
+    {
+        return view('acckt_master.pages.panel.forgot_password');
+    }
+
+    public function updatePassword(Request $request)
+    {
+        $this->validate($request,[
+            'password'  =>'required|string|min:8|confirmed'
+        ]);
+
+        $user=Auth::user();
+
+        $status=$user->update(
+        [
+            'password'  =>Hash::make($request->password),
+        ]);
+
+        if($status)
+        {
+            alert()->success('رمز با موفقیت تغییر کرد')->persistent('بستن');
+        }
+        else
+        {
+            alert()->error('خطا در تغییر رمز عبور')->persistent('بستن');
+        }
+
+        return back();
     }
 }

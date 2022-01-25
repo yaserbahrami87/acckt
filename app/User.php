@@ -41,4 +41,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(amountcapital::class);
     }
+
+    public function ideas()
+    {
+        return $this->hasMany('App\idea');
+    }
 }
