@@ -9,4 +9,9 @@ class demand extends Model
     protected $fillable=[
         'user_id','idea_id','proposed_price','proposed_price','status','date_fa','time_fa'
     ];
+
+    public function idea()
+    {
+        return $this->belongsTo('App\idea');
+    }
 }

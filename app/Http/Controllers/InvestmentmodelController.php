@@ -25,18 +25,13 @@ class InvestmentmodelController extends Controller
      */
     public function create()
     {
-        $investmentmodel=investmentmodel::join('users','users.id','=','investmentmodels.user_id')
-            ->where('investmentmodels.user_id','=',Auth::user()->id)
-            ->select('investmentmodels.*')
-            ->first();
-        if(is_null($investmentmodel) )
+        if(is_null(Auth::user()->investmentmodel) )
         {
             return view('acckt_sarmayeh.pages.panel.investmentModel_insert');
         }
         else
         {
-            return view('acckt_sarmayeh.pages.panel.investmentModel_edit')
-                ->with('investmentModel',$investmentmodel);
+            return view('acckt_sarmayeh.pages.panel.investmentModel_edit');
         }
     }
 

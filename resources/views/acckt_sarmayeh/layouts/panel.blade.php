@@ -47,15 +47,15 @@
       }
 
       .main-menu.menu-dark {
-        background: #153a64 !important;
+        background: #3981a9 !important;
       }
 
       .main-menu.menu-dark .navigation {
-        background: #153a64 !important;
+        background: #3981a9 !important;
       }
 
       .main-menu.menu-dark .navigation > li.nav-item.open.has-sub.open{
-        background-color: #153a64 !important;
+        background-color: #3981a9 !important;
       }
 
       .main-menu.menu-dark .navigation > li > ul > li:first-child > a.disabled {
@@ -77,7 +77,39 @@
   @include('sweet::alert')
   @include('acckt_sarmayeh.partials.panel.header_menu')
   @include('acckt_sarmayeh.partials.panel.right_menu')
-  @yield('content')
+
+  <!-- BEGIN: Content-->
+  <div class="app-content content">
+      <div class="content-overlay"></div>
+      <div class="content-wrapper">
+          <div class="content-header row">
+              <div class="content-header-left col-12 mb-2 mt-1">
+                  <div class="row breadcrumbs-top">
+                      <div class="col-12">
+                          <h5 class="content-header-title float-left pr-1">تنظیمات حساب کاربری</h5>
+
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="content-body"><!-- account setting page start -->
+                @if($errors->any())
+                  <div class="col-12">
+                      <div class="alert alert-danger" role="alert">
+                          @foreach($errors->all() as $error)
+                              <li>{{$error}}</li>
+                          @endforeach
+                      </div>
+                  </div>
+                @endif
+                @yield('content')
+
+          <!-- account setting page ends -->
+          </div>
+      </div>
+  </div>
+  <!-- END: Content-->
 
     <!-- widget chat demo ends -->
 

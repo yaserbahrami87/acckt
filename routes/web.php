@@ -94,6 +94,9 @@ Route::middleware(['can:isUser'])->prefix('portal')->group(function () {
     //investmentmodel
     Route::resource('investmentmodel',"InvestmentmodelController");
 
+    //change Portal
+    Route::get('/change portal/{portal}','HomeController@changePortal');
+
 
 });
 
@@ -124,6 +127,10 @@ Route::middleware(['can:isIdea'])->prefix('portal_idea')->group(function () {
     Route::post('/verify/sendCode/tel','VerifyController@sendCodeTel');
     Route::post('/verify/checkCode/tel','VerifyController@checkCodeTel');
     Route::resource('verify','VerifyController');
+
+
+    //change Portal
+    Route::get('/change portal/{portal}','HomeController@changePortal');
 });
 
 //test

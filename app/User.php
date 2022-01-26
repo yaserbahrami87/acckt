@@ -44,6 +44,17 @@ class User extends Authenticatable
 
     public function ideas()
     {
-        return $this->hasMany('App\idea');
+        return $this->hasMany('App\idea','user_id','id');
+    }
+
+    public function investmentmodel()
+    {
+        return $this->hasOne('App\investmentmodel');
+
+    }
+
+    public function demands()
+    {
+        return $this->hasMany('App\demand');
     }
 }

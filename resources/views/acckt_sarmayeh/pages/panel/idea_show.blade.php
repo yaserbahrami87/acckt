@@ -1,26 +1,6 @@
 @extends('acckt_sarmayeh.layouts.panel')
 
 @section('content')
-    <!-- BEGIN: Content-->
-    <div class="app-content content">
-        <div class="content-overlay"></div>
-        <div class="content-wrapper">
-            <div class="content-header row">
-                <div class="content-header-left col-12 mb-2 mt-1">
-                    <div class="row breadcrumbs-top">
-                        <div class="col-12">
-                            <h5 class="content-header-title float-left pr-1">ثبت ایده</h5>
-                            <div class="breadcrumb-wrapper">
-                                <ol class="breadcrumb p-0 mb-0">
-                                    <li class="breadcrumb-item"><a href="/portal"><i class="bx bx-home-alt"></i></a></li>
-                                    <li class="breadcrumb-item active">ثبت ایده</li>
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="content-body"><!-- Form wizard with icon tabs section start -->
                 <section id="icon-tabs">
                     <div class="row">
                         <div class="col-12">
@@ -30,15 +10,6 @@
                                 </div>
                                 <div class="card-content mt-2">
                                     <div class="card-body">
-                                        @if($errors->any())
-                                            <div class="col-12">
-                                                <div class="alert alert-danger" role="alert">
-                                                    @foreach($errors->all() as $error)
-                                                        <li>{{$error}}</li>
-                                                    @endforeach
-                                                </div>
-                                            </div>
-                                        @endif
                                         <form  id="new_wizard_form"  data-request-validate class="wizard-validation" >
 
                                         <!-- Step 1 -->
@@ -360,11 +331,4 @@
                         </div>
                     </div>
                 </section>
-                <!-- Form wizard with number tabs section end -->
-            </div>
-        </div>
-    </div>
-    <!-- END: Content-->
-
-
 @endsection

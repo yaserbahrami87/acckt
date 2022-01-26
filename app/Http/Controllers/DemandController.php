@@ -109,19 +109,21 @@ class DemandController extends BaseController
 
     public function my()
     {
-        $demand=demand::join('ideas','demands.idea_id','=','ideas.id')
-                    ->where('demands.user_id','=',Auth::user()->id)
-                    ->select('ideas.*')
-                    ->paginate(30);
+
+        $demand=Auth::user()->demands;
+//            demand::join('ideas','demands.idea_id','=','ideas.id')
+//                    ->where('demands.user_id','=',Auth::user()->id)
+//                    ->select('ideas.*')
+//                    ->paginate(30);
         foreach ($demand as $item)
         {
-            switch($item->amountcapitals_id)
+            switch($item->idea->amountcapitals_id)
             {
-                case 1:$item->amountcapitals='کمتر از یک میلیارد تومان';
+                case 1:$item->idea->amountcapitals='کمتر از یک میلیارد تومان';
                     break;
-                case 2:$item->amountcapitals='بین یک تا دو میلیارد تومان';
+                case 2:$item->idea->amountcapitals='بین یک تا دو میلیارد تومان';
                     break;
-                case 3:$item->amountcapitals='بیش از دو میلیارد تومان';
+                case 3:$item->idea->amountcapitals='بیش از دو میلیارد تومان';
                     break;
             }
 

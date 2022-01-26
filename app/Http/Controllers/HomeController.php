@@ -63,7 +63,6 @@ class HomeController extends BaseController
         }
 
 
-
         if(Auth::user()->type==2)
         {
             return view('acckt_master.pages.panel.index')
@@ -78,6 +77,25 @@ class HomeController extends BaseController
         }
 
 
+    }
+
+    public function changePortal($portal)
+    {
+        switch($portal)
+        {
+            case 'idea':Auth::user()->type=2;
+                        Auth::user()->save();
+                        alert()->warning('شما وارد بخش پورتال ایده شده اید.')->persistent('بستن');
+                        break;
+            case 'sarmayeh': Auth::user()->type=1;
+                        Auth::user()->save();
+                        alert()->warning('شما وارد بخش پورتال سرمایه شده اید.')->persistent('بستن');
+                        break;
+        }
+
+
+
+        return redirect('/panel');
     }
 
 

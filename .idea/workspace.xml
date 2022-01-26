@@ -21,19 +21,28 @@
   <component name="ChangeListManager">
     <list default="true" id="5f0467a3-24f9-4bd2-92a8-1d1263ae5c34" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/IdeaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/IdeaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DemandController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DemandController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/InvestmentmodelController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/InvestmentmodelController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/idea.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/idea.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/acckt_master/layouts/panel.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_master/layouts/panel.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/forgot_password.htm" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/forgot_password.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/further_information.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/further_information.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/idea_list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/idea_list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/new_idea.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/new_idea.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/social_networks.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/social_networks.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/demand.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/demand.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/listDemand_Idea.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_master/pages/panel/listDemand_Idea.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/acckt_master/partials/panel/right_menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_master/partials/panel/right_menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/layouts/panel.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/layouts/panel.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/amountCapital_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/amountCapital_edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/amountCapital_insert.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/amountCapital_insert.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/amountCapital_my.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/amountCapital_my.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/further_information.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/further_information.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/idea_demand_create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/idea_demand_create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/idea_list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/idea_list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/idea_show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/idea_show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/investmentModel_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/investmentModel_edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/investmentModel_insert.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/investmentModel_insert.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/social_networks.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/social_networks.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/venturecapital_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/venturecapital_edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/venturecapital_insert.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/pages/panel/venturecapital_insert.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/partials/panel/right_menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/acckt_sarmayeh/partials/panel/right_menu.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -268,6 +277,10 @@
       <workItem from="1640236841977" duration="663000" />
       <workItem from="1643051299610" duration="4767000" />
       <workItem from="1643059018613" duration="4904000" />
+      <workItem from="1643091513038" duration="963000" />
+      <workItem from="1643185960460" duration="8620000" />
+      <workItem from="1643199788125" duration="2246000" />
+      <workItem from="1643213830555" duration="6210000" />
     </task>
     <servers />
   </component>
@@ -295,9 +308,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1639258890112" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1643059758028">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1643218098560">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1643059758028" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1643218098560" />
   </component>
 </project>

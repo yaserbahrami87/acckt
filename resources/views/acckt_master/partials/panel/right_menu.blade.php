@@ -20,6 +20,15 @@
     </div>
     <div class="shadow-bottom"></div>
     <div class="main-menu-content">
+        <div class="btn-group btn-block" role="group">
+            <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                تغییر پورتال
+            </button>
+            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                <a class="dropdown-item" href="/portal_idea/change portal/idea">پورتال ایده</a>
+                <a class="dropdown-item" href="/portal_idea/change portal/sarmayeh">پورتال سرمایه</a>
+            </div>
+        </div>
         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation" data-icon-style="lines">
             <li class=" navigation-header"><span>پورتال صاحبان ایده</span></li>
             <li class=" nav-item has-sub ">
